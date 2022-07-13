@@ -1,0 +1,533 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>농장용수관리</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!-- Bootstrap Styles-->
+  <link href="css/bootstrap.css" rel="stylesheet" />
+  <!-- FontAwesome Styles-->
+  <link href="css/font-awesome.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+
+  <!-- jQuery Js -->
+  <script src="js/jquery-1.10.2.js"></script>
+
+  <!-- 달력 -->
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> -->
+  <script type="text/javascript" src="calendar/moment.js"></script>
+  <script type="text/javascript" src="calendar/moment-with-locales.js"></script>
+  <script type="text/javascript" src="calendar/daterangepicker.js"></script>
+  <script type="text/javascript" src="calendar/moment.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="calendar/daterangepicker.css" />
+
+  <!-- Custom Styles-->
+  <link href="css/custom-styles.css" rel="stylesheet" />
+  <link href="css/form.css" rel="stylesheet" />
+  <link href="css/table.css" rel="stylesheet" />
+  <link href="css/popup.css" rel="stylesheet" />
+  <link href="css/media.css" rel="stylesheet" />
+  <!-- Google Fonts-->
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="wrapper">
+    <article id="wrapper-top">
+      <nav class="navbar navbar-default top-navbar" role="navigation">
+        <%- include ('top-navbar.html') %>
+      </nav>
+      <!-- Dropdown Structure -->
+      <ul id="dropdown1" class="dropdown-content">
+        <li>
+          <a href="#"><i class="fa fa-user fa-fw"></i>기초정보</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-gear fa-fw"></i>설정</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-sign-out fa-fw"></i>로그아웃</a>
+        </li>
+      </ul>
+    </article>
+    <!--/. NAV TOP  -->
+    <article id="wrapper-under">
+      <div class="left-side">
+        <nav class="navbar-default navbar-side" role="navigation">
+          <div class="sidebar-collapse">
+            <ul class="nav" id="main-menu">
+              <li class="subsub ">
+                <a href="Z_farm_water1-d-use" class="waves-effect"><i class="fas fa-check-circle"></i>음수사용<span
+                    class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                  <li>
+                    <a href="Z_farm_water1-d-use" class="prog1-active">
+                      <span></span>음수사용<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level collapse in" aria-expanded="true">
+                      <li class="prog2-active">
+                        <a href="Z_farm_water1-d-use">1. 검침기측정</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">2. 임상관찰</a><button>수정</button>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="subsub ">
+                <a href="Z_farm_water2-a-use" class="waves-effect"><i class="fas fa-check-circle"></i>용수사용<span
+                    class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                  <li>
+                    <a href="Z_farm_water2-a-use" class="prog1-active">
+                      <span></span>용수사용<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level collapse in" aria-expanded="true">
+                      <li class="prog2-active">
+                        <a href="#">1. 검침기측정</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">2. 임상관찰</a><button>수정</button>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="subsub active">
+                <a href="Z_farm_water3-manage" class="waves-effect"><i class="fas fa-check-circle"></i>농장용수관리 / 점검</a>
+              </li>
+              <li class="subsub ">
+                <a href="Z_farm_water3-manage" class="waves-effect"><i class="fas fa-check-circle"></i>수질관리<span
+                    class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                  <li>
+                    <a href="Z_farm_water4_quality" class="prog1-active">
+                      <span></span>수질관리<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level collapse in" aria-expanded="true">
+                      <li class="prog2-active">
+                        <a href="Z_farm_water4_quality">1. 수질관리</a><button>수정</button>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- /. NAV SIDE  -->
+      <div id="page-wrapper">
+        <div id="page-inner">
+          <!-- /. ROW  -->
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 prog1 active">
+              <div class="row prog2 active">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                  <div class="top-card col-md-8">
+                    <div class="">
+                      <div class="inner-box">
+                        <form action="#">
+                          <div class="cardrow">
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">점검일시</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input type="text" class="datetime date-input" name="" value="" /><span><i class="far fa-calendar-alt"></i></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cardrow">
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">급수탱크청소상태</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <fieldset class="radio-bg ">
+                                    <div class="radio-group float-left" style="margin-right: 5px;">
+                                      <input type="radio" name="radio_1" value="양호" id="radio_1_1" class="float-left" checked />
+                                      <label class="float-left" for="radio_1_1">양호</label>
+                                    </div>
+                                    <div class="radio-group float-left">
+                                      <input type="radio" name="radio_1" value="미흡" id="radio_1_2" class="float-left" />
+                                      <label class="float-left" for="radio_1_2">미흡</label>
+                                    </div>
+                                  </fieldset>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">조치내역 / 결과</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form half">
+                                  <select name="" id="">
+                                    <option value="">내역선택</option>
+                                    <option value="">청소</option>
+                                  </select>
+                                </div>
+                                <div class="form half">
+                                  <select name="" id="">
+                                    <option value="">결과선택</option>
+                                    <option value="">청소완료</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cardrow">
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">급수탱크소독법</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <fieldset class="radio-bg ">
+                                    <div class="radio-group float-left" style="margin-right: 5px;">
+                                      <input type="radio" name="radio_2" value="양호" id="radio_2_1" class="float-left" checked />
+                                      <label class="float-left" for="radio_2_1">양호</label>
+                                    </div>
+                                    <div class="radio-group float-left">
+                                      <input type="radio" name="radio_2" value="미흡" id="radio_2_2" class="float-left" />
+                                      <label class="float-left" for="radio_2_2">미흡</label>
+                                    </div>
+                                  </fieldset>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">조치내역 / 결과</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form half">
+                                  <select name="" id="">
+                                    <option value="">내역선택</option>
+                                    <option value="">청소</option>
+                                  </select>
+                                </div>
+                                <div class="form half">
+                                  <select name="" id="">
+                                    <option value="">결과선택</option>
+                                    <option value="">청소완료</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cardrow">
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">급수구청소상태</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <fieldset class="radio-bg ">
+                                    <div class="radio-group float-left" style="margin-right: 5px;">
+                                      <input type="radio" name="radio_3" value="양호" id="radio_3_1" class="float-left" checked />
+                                      <label class="float-left" for="radio_3_1">양호</label>
+                                    </div>
+                                    <div class="radio-group float-left">
+                                      <input type="radio" name="radio_3" value="미흡" id="radio_3_2" class="float-left" />
+                                      <label class="float-left" for="radio_3_2">미흡</label>
+                                    </div>
+                                  </fieldset>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">조치내역 / 결과</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form half">
+                                  <select name="" id="">
+                                    <option value="">내역선택</option>
+                                    <option value="">청소</option>
+                                  </select>
+                                </div>
+                                <div class="form half">
+                                  <select name="" id="">
+                                    <option value="">결과선택</option>
+                                    <option value="">청소완료</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cardrow">
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">위해요소발견사항</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <fieldset class="radio-bg ">
+                                    <div class="radio-group float-left" style="margin-right: 5px;">
+                                      <input type="radio" name="radio_4" value="양호" id="radio_4_1" class="float-left" checked />
+                                      <label class="float-left" for="radio_4_1">양호</label>
+                                    </div>
+                                    <div class="radio-group float-left">
+                                      <input type="radio" name="radio_4" value="미흡" id="radio_4_2" class="float-left" />
+                                      <label class="float-left" for="radio_4_2">미흡</label>
+                                    </div>
+                                  </fieldset>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">조치내역 / 결과</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form half">
+                                  <select name="" id="">
+                                    <option value="">내역선택</option>
+                                    <option value="">청소</option>
+                                  </select>
+                                </div>
+                                <div class="form half">
+                                  <select name="" id="">
+                                    <option value="">결과선택</option>
+                                    <option value="">청소완료</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cardrow">
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">수질검사의뢰기관</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input class="search-input" type="text" placeholder="" value="">
+                                  <div class="btn-group search-btn"><input type="button" class="input-btn " /><i class="fa fa-search"></i></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">수질검사결과</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input class="search-input" type="text" placeholder="" value="">
+                                  <div class="btn-group attach-btn">
+                                    <input type="button" class="input-btn" />
+                                    <i class="fas fa-paperclip"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-4 right-side">
+                <div class="row">
+                  <div class="col-xs-12">
+                      <div class="">
+                        <div class="inner-box">
+                          <form action="#">
+                            <div class="tabletop-btn">
+                              <button id="#" class="newbtn" onclick="return false" style="background-color: #223189; color: #fff;">신규등록</button>
+                              <button onclick="return false"><i class="fas fa-angle-double-left"></i></button>
+                              <button onclick="return false"><i class="fas fa-angle-left"></i></button>
+                              <button onclick="return false">1</button>
+                              <button onclick="return false">2</button>
+                              <button onclick="return false">3</button>
+                              <button onclick="return false"><i class="fas fa-angle-right"></i></button>
+                              <button onclick="return false"><i class="fas fa-angle-double-right"></i></button>
+                            </div>
+                            <div class="tablerow">
+                              <table>
+                                <thead>
+                                  <tr>
+                                    <th></th>
+                                    <th>등록일자</th>
+                                    <th>입고시각</th>
+                                    <th>제품명</th>
+                                    <th>제품명</th>
+                                    <th>제품명</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>
+                                      <span>2021-08-01</span>
+                                    </td>
+                                    <td>
+                                      <span>01:00:00</span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>
+                                      <span>2021-08-01</span>
+                                    </td>
+                                    <td>
+                                      <span>01:00:00</span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>
+                                      <span>2021-08-01</span>
+                                    </td>
+                                    <td>
+                                      <span>01:00:00</span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>
+                                      <span>2021-08-01</span>
+                                    </td>
+                                    <td>
+                                      <span>01:00:00</span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>
+                                      <span>2021-08-01</span>
+                                    </td>
+                                    <td>
+                                      <span>01:00:00</span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>
+                                      <span>2021-08-01</span>
+                                    </td>
+                                    <td>
+                                      <span>01:00:00</span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>
+                                      <span>2021-08-01</span>
+                                    </td>
+                                    <td>
+                                      <span>01:00:00</span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /. PAGE INNER  -->
+        </div>
+    </article>
+    <footer>
+      <div>
+        <div class="fbtn-group">
+          <button class="fpdf">PDF출력</button>
+          <button class="fexcel">엑셀 다운로드</button>
+          <button class="fexcel">엑셀 업로드</button>
+          <button class="finit">초기화</button>
+          <button class="fsave">저장</button>
+        </div>
+      </div>
+    </footer>
+    <!-- /. PAGE WRAPPER  -->
+  </div>
+  <!-- /. WRAPPER  -->
+  <!-- JS Scripts-->
+
+  <!-- Bootstrap Js -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="materialize/js/materialize.min.js"></script>
+
+  <!-- Metis Menu Js -->
+  <script src="js/jquery.metisMenu.js"></script>
+  <script src="js/mj_js.js"></script>
+  <!-- Custom Js -->
+  <script src="js/custom-scripts.js"></script>
+  <script src="js/common.js"></script>
+</body>
+
+</html>

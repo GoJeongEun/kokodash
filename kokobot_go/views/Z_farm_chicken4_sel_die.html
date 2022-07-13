@@ -1,0 +1,507 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>닭 도태 / 폐사</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!-- Bootstrap Styles-->
+  <link href="css/bootstrap.css" rel="stylesheet" />
+  <!-- FontAwesome Styles-->
+  <link href="css/font-awesome.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+
+  <!-- jQuery Js -->
+  <script src="js/jquery-1.10.2.js"></script>
+    
+  <!-- 달력 -->
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> -->
+  <script type="text/javascript" src="calendar/moment.js"></script>
+  <script type="text/javascript" src="calendar/moment-with-locales.js"></script>
+  <script type="text/javascript" src="calendar/daterangepicker.js"></script>
+  <script type="text/javascript" src="calendar/moment.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="calendar/daterangepicker.css" />
+
+  <!-- Custom Styles-->
+  <link href="css/custom-styles.css" rel="stylesheet" />
+  <link href="css/form.css" rel="stylesheet" />
+  <link href="css/table.css" rel="stylesheet" />
+  <link href="css/media.css" rel="stylesheet" />
+  <!-- Google Fonts-->
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="wrapper">
+    <article id="wrapper-top">
+      <nav class="navbar navbar-default top-navbar" role="navigation">
+        <div class="nav_top">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle waves-effect waves-dark" data-toggle="collapse"
+              data-target=".sidebar-collapse">
+              <span class="sr-only"></span>
+            </button>
+            <a class="navbar-brand waves-effect waves-dark" href="index.html"><img src="img/logo.png" />
+              <p><strong>KOKOBOT</strong></p>
+              <br /><span>양계 농장 통합관리 시스템</span>
+            </a>
+            <div id="sideNav" href="">
+              <i class="material-icons dp48">toc</i>
+            </div>
+          </div>
+          <ul class="nav navbar-top-links navbar-right">
+            <li>
+              <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown4"><i
+                  class="fa fa-envelope fa-fw"></i> 문서보관함<i class="material-icons right"></i></a>
+            </li>
+            <li>
+              <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown3"><i
+                  class="fa fa-tasks fa-fw"></i> 하하하<i class="material-icons right"></i></a>
+            </li>
+            <li>
+              <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown2"><i
+                  class="fa fa-bell fa-fw"></i><span class="badge">10</span>알림<i class="material-icons right"></i></a>
+            </li>
+            <li>
+              <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown1"><i
+                  class="fa fa-user fa-fw"></i>농장주<i class="material-icons right"></i></a>
+            </li>
+          </ul>
+          <div id="search-bar">
+            <div id="search-bar-bg">
+              <button id="search-btn" class="search-bar-btn">
+                <img src="img/search.png" />
+              </button>
+              <form action="#" method="post">
+                <input type="search" placeholder="검색어를 입력해보세요" />
+              </form>
+              <button id="close-btn" class="search-bar-btn">
+                <img src="img/close.png" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="nav_bot">
+          <div id="under-navbar" class="" role="navigation">
+            <ul>
+              <li class="active">
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보1<span class="after_tri active"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보2<span class="after_tri"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보3<span class="after_tri"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보4<span class="after_tri"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보5<span class="after_tri"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보6<span class="after_tri"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보7<span class="after_tri"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보8<span class="after_tri"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보9<span class="after_tri"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보10<span class="after_tri"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보11<span class="after_tri"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보12<span class="after_tri"></span>
+              </li>
+            </ul>
+          </div>
+          <div id="sub-navbar">
+            <ul class="active">
+              <li><a href="#">서브1</a></li>
+              <li><a href="#">서브1</a></li>
+              <li><a href="#">서브1</a></li>
+              <li><a href="#">서브1</a></li>
+              <li><a href="#">서브1</a></li>
+              <li><a href="#">서브1</a></li>
+              <li><a href="#">서브1</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브2</a></li>
+              <li><a href="#">서브2</a></li>
+              <li><a href="#">서브2</a></li>
+              <li><a href="#">서브2</a></li>
+              <li><a href="#">서브2</a></li>
+              <li><a href="#">서브2</a></li>
+              <li><a href="#">서브2</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브3</a></li>
+              <li><a href="#">서브3</a></li>
+              <li><a href="#">서브3</a></li>
+              <li><a href="#">서브3</a></li>
+              <li><a href="#">서브3</a></li>
+              <li><a href="#">서브3</a></li>
+              <li><a href="#">서브3</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브4</a></li>
+              <li><a href="#">서브4</a></li>
+              <li><a href="#">서브4</a></li>
+              <li><a href="#">서브4</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브5</a></li>
+              <li><a href="#">서브5</a></li>
+              <li><a href="#">서브5</a></li>
+              <li><a href="#">서브5</a></li>
+              <li><a href="#">서브5</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브6</a></li>
+              <li><a href="#">서브6</a></li>
+              <li><a href="#">서브6</a></li>
+              <li><a href="#">서브6</a></li>
+              <li><a href="#">서브6</a></li>
+              <li><a href="#">서브6</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브7</a></li>
+              <li><a href="#">서브7</a></li>
+              <li><a href="#">서브7</a></li>
+              <li><a href="#">서브7</a></li>
+              <li><a href="#">서브7</a></li>
+              <li><a href="#">서브7</a></li>
+              <li><a href="#">서브7</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브8</a></li>
+              <li><a href="#">서브8</a></li>
+              <li><a href="#">서브8</a></li>
+              <li><a href="#">서브8</a></li>
+              <li><a href="#">서브8</a></li>
+              <li><a href="#">서브8</a></li>
+              <li><a href="#">서브8</a></li>
+              <li><a href="#">서브8</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브9</a></li>
+              <li><a href="#">서브9</a></li>
+              <li><a href="#">서브9</a></li>
+              <li><a href="#">서브9</a></li>
+              <li><a href="#">서브9</a></li>
+              <li><a href="#">서브9</a></li>
+              <li><a href="#">서브9</a></li>
+              <li><a href="#">서브9</a></li>
+              <li><a href="#">서브9</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브10</a></li>
+              <li><a href="#">서브10</a></li>
+              <li><a href="#">서브10</a></li>
+              <li><a href="#">서브10</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브11</a></li>
+              <li><a href="#">서브11</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브12</a></li>
+              <li><a href="#">서브12</a></li>
+              <li><a href="#">서브12</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Dropdown Structure -->
+      <ul id="dropdown1" class="dropdown-content">
+        <li>
+          <a href="#"><i class="fa fa-user fa-fw"></i>기초정보</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-gear fa-fw"></i>설정</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-sign-out fa-fw"></i>로그아웃</a>
+        </li>
+      </ul>
+    </article>
+    <!--/. NAV TOP  -->
+    <article id="wrapper-under">
+      <div class="left-side">
+        <nav class="navbar-default navbar-side" role="navigation">
+          <div class="sidebar-collapse">
+            <ul class="nav" id="main-menu">
+              <li class="subsub">
+                <a href="chicken-weight.html" class="waves-effect"><i class="fas fa-check-circle"></i>체중관리<span class="fa arrow"></span></a>
+              </li>
+              <li class="subsub">
+                <a href="chicken-move.html" class="waves-effect"><i class="fas fa-check-circle"></i>계사이동<span class="fa arrow"></span></a>
+              </li>
+              <li class="subsub">
+                <a href="chicken-in.html" class="waves-effect"><i class="fas fa-check-circle"></i>입추관리<span class="fa arrow"></span></a>
+              </li>
+              <li class="subsub active">
+                <a href="chicken-sel_die.html" class="waves-effect waves-dark"><i class="fas fa-check-circle"></i>도태 / 폐사</a>
+              </li>
+              <li class="subsub">
+                <a href="chicken-out.html" class="waves-effect"><i class="fas fa-check-circle"></i>출하<span class="fa arrow"></span></a>
+              </li>
+              <li class="subsub">
+                <a href="chicken-return.html" class="waves-effect waves-dark"><i class="fas fa-check-circle"></i>반품<span class="fa arrow"></span></a>
+              </li>
+              <li class="subsub">
+                <a href="chicken-destroy.html" class="waves-effect waves-dark"><i class="fas fa-check-circle"></i>살처분</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- /. NAV SIDE  -->
+      <div id="page-wrapper">
+        <div id="page-inner">
+          <!-- /. ROW  -->
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 prog1 active">
+              <div class="row prog2 active">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                  <div class="top-card col-md-8">
+                    <div class="">
+                      <div class="inner-box">
+                        <form action="#">
+                          <div class="cardrow">
+                            <div class="inputleft">
+                              <div class="col-25">
+                                <label for="fname">관측일시</label>
+                              </div>
+                              <div class="col-75"><div class="form"><input type="text" class="datetime date-input" name="" value="" /><span><i class="far fa-calendar-alt"></i></span></div>
+                              </div>
+                            </div>
+                            <div class="inputright">
+                              <div class="col-25">
+                                <label for="fname">발생장소</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <select id="country" name="country">
+                                    <option value="australia">1동</option>
+                                    <option value="canada">2동</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cardrow">
+                            <div class="inputright">
+                              <div class="col-25">
+                                <label for="fname">상태사진</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input class="search-input" type="text" placeholder="" value="">
+                                  <div class="btn-group">
+                                    <input type="button" class="input-btn attach-btn" />
+                                    <i class="fas fa-paperclip"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bot-card col-md-12">
+                    <div class="">
+                      <div class="">
+                        <form action="#">
+                          <div class="tablerow">
+                            <table class="set-table w-100 plus_minus">
+                              <thead>
+                                <tr>
+                                  <th></th>
+                                  <th>구역</th>
+                                  <th>도태 / 폐사 구분</th>
+                                  <th>도태 / 폐사 사유</th>
+                                  <th>마리수 (암)</th>
+                                  <th>마리수 (수)</th>
+                                  <th>개선조치</th>
+                                  <th>결과</th>
+                                  <th><div class="row-btn row-add" onclick="rowAdd(this)"></div></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <select>
+                                      <option value="#">1-1</option>
+                                      <option value="#">1-2</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select>
+                                      <option value="#">도태</option>
+                                      <option value="#">폐사</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select>
+                                      <option value="">선택</option>
+                                      <option value="#">AI예방</option>
+                                      <option value="#">산란율저하</option>
+                                      <option value="#">질병예방</option>
+                                    </select>
+                                  </td>
+                                  <td><input type="number" placeholder="0" value="" /></td>
+                                  <td><input type="number" placeholder="0" value="" /></td>
+                                  <td>
+                                    <select>
+                                      <option value="">선택</option>
+                                      <option value="#">검사결과 대기중</option>
+                                      <option value="#">폐기처리</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select>
+                                      <option value="">선택</option>
+                                      <option value="#">격리</option>
+                                      <option value="#">매몰</option>
+                                    </select>
+                                  </td>
+                                  <td><div class="row-btn row-delete" onclick="rowDelete(this)"></div></td>
+                                </tr>
+                              </tbody>
+                              <tfoot>
+                                <tr>
+                                  <td>합계</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td class="tfoot-sum"><span>6</span></td>
+                                  <td class="tfoot-sum"><span>6</span></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                              </tfoot>
+                            </table>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-4 right-side">
+                <div class="row">
+                  <div class="col-xs-12">
+                      <div class="">
+                        <div class="inner-box">
+                          <form action="#">
+                            <div class="tabletop-btn">
+                              <button id="#" class="newbtn" onclick="return false" style="background-color: #223189; color: #fff;">신규등록</button>
+                              <button onclick="return false"><i class="fas fa-angle-double-left"></i></button>
+                              <button onclick="return false"><i class="fas fa-angle-left"></i></button>
+                              <button onclick="return false">1</button>
+                              <button onclick="return false">2</button>
+                              <button onclick="return false">3</button>
+                              <button onclick="return false"><i class="fas fa-angle-right"></i></button>
+                              <button onclick="return false"><i class="fas fa-angle-double-right"></i></button>
+                            </div>
+                            <div class="tablerow">
+                              <table>
+                                <thead>
+                                  <tr>
+                                    <th></th>
+                                    <th>관측일시</th>
+                                    <th>발생장소</th>
+                                    <th>구분</th>
+                                    <th>사유</th>
+                                    <th>마리수 암 / 수</th>
+                                    <th>개선조치</th>
+                                    <th>결과</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>
+                                      <span>2021-08-01 01:00:00</span>
+                                    </td>
+                                    <td>
+                                      <span>1동</span>
+                                    </td>
+                                    <td>
+                                      <span>도태</span>
+                                    </td>
+                                    <td>
+                                      <span>AI예방</span>
+                                    </td>
+                                    <td>
+                                      <span>10 / 1</span>
+                                    </td>
+                                    <td>
+                                      <span>방사지</span>
+                                    </td>
+                                    <td>
+                                      <span>대기중</span>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/.row-->
+          </div>
+        </div>
+        <!-- /. PAGE INNER  -->
+      </div>
+    </article>
+    <footer>
+      <div>
+        <div class="fbtn-group">
+          <button class="fpdf">PDF출력</button>
+          <button class="fexcel">엑셀 다운로드</button>
+          <button class="fexcel">엑셀 업로드</button>
+          <button class="finit">초기화</button>
+          <button class="fsave">저장</button>
+        </div>
+      </div>
+    </footer>
+    <!-- /. PAGE WRAPPER  -->
+  </div>
+  <!-- /. WRAPPER  -->
+  <!-- JS Scripts-->
+  
+  <!-- Bootstrap Js -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="materialize/js/materialize.min.js"></script>
+
+  <!-- Metis Menu Js -->
+  <script src="js/jquery.metisMenu.js"></script>
+
+  <!-- 달력 -->
+  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script> -->
+
+  <!-- Custom Js -->
+  <script src="js/custom-scripts.js"></script>
+  <script src="js/common.js"></script>
+</body>
+
+</html>

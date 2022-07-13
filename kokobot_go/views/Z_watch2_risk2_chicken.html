@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kokobot</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- Bootstrap Styles-->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+
+    <!-- jQuery Js -->
+    <script src="js/jquery-1.10.2.js"></script>
+
+    <!-- 달력 -->
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> -->
+    <script type="text/javascript" src="calendar/moment.js"></script>
+    <script type="text/javascript" src="calendar/moment-with-locales.js"></script>
+    <script type="text/javascript" src="calendar/daterangepicker.js"></script>
+    <script type="text/javascript" src="calendar/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="calendar/daterangepicker.css" />
+
+    <!-- 숫자키패드 -->
+    <link href="css/num_keypad.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/num_keypad.js"></script>
+
+    <!-- Custom Styles-->
+    <link href="css/custom-styles.css" rel="stylesheet" />
+    <link href="css/form.css" rel="stylesheet" />
+    <link href="css/table.css" rel="stylesheet" />
+    <link href="css/media.css" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <article id="wrapper-top">
+            <nav class="navbar navbar-default top-navbar" role="navigation">
+                <div class="nav_top">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle waves-effect waves-dark" data-toggle="collapse"
+                            data-target=".sidebar-collapse">
+                            <span class="sr-only"></span>
+                        </button>
+                        <a class="navbar-brand waves-effect waves-dark" href="index.html"><img src="img/logo.png" />
+                            <p><strong>KOKOBOT</strong></p>
+                            <br /><span>양계 농장 통합관리 시스템</span>
+                        </a>
+                        <div id="sideNav" href="">
+                            <i class="material-icons dp48">toc</i>
+                        </div>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown4"><i
+                                    class="fa fa-envelope fa-fw"></i> 문서보관함<i class="material-icons right"></i></a>
+                        </li>
+                        <li>
+                            <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown3"><i
+                                    class="fa fa-tasks fa-fw"></i> 하하하<i class="material-icons right"></i></a>
+                        </li>
+                        <li>
+                            <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown2"><i
+                                    class="fa fa-bell fa-fw"></i><span class="badge">10</span>알림<i
+                                    class="material-icons right"></i></a>
+                        </li>
+                        <li>
+                            <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown1"><i
+                                    class="fa fa-user fa-fw"></i>농장주<i class="material-icons right"></i></a>
+                        </li>
+                    </ul>
+                    <div id="search-bar">
+                        <div id="search-bar-bg">
+                            <button id="search-btn" class="search-bar-btn">
+                                <img src="img/search.png" />
+                            </button>
+                            <form action="#" method="post">
+                                <input id="search-word" type="search" placeholder="검색어를 입력해보세요" />
+                            </form>
+                            <button id="close-btn" class="search-bar-btn">
+                                <img src="img/close.png" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav_bot">
+                    <div id="under-navbar" class="" role="navigation">
+                        <ul>
+                            <li class="active">
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보1<span class="after_tri active"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보2<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보3<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보4<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보5<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보6<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보7<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보8<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보9<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보10<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보11<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보12<span class="after_tri"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="sub-navbar">
+                        <ul class="active">
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브1</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브2</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브3</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브4</a></li>
+                            <li><a href="#">서브4</a></li>
+                            <li><a href="#">서브4</a></li>
+                            <li><a href="#">서브4</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브5</a></li>
+                            <li><a href="#">서브5</a></li>
+                            <li><a href="#">서브5</a></li>
+                            <li><a href="#">서브5</a></li>
+                            <li><a href="#">서브5</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브6</a></li>
+                            <li><a href="#">서브6</a></li>
+                            <li><a href="#">서브6</a></li>
+                            <li><a href="#">서브6</a></li>
+                            <li><a href="#">서브6</a></li>
+                            <li><a href="#">서브6</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브7</a></li>
+                            <li><a href="#">서브7</a></li>
+                            <li><a href="#">서브7</a></li>
+                            <li><a href="#">서브7</a></li>
+                            <li><a href="#">서브7</a></li>
+                            <li><a href="#">서브7</a></li>
+                            <li><a href="#">서브7</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브10</a></li>
+                            <li><a href="#">서브10</a></li>
+                            <li><a href="#">서브10</a></li>
+                            <li><a href="#">서브10</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브11</a></li>
+                            <li><a href="#">서브11</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브12</a></li>
+                            <li><a href="#">서브12</a></li>
+                            <li><a href="#">서브12</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Dropdown Structure -->
+            <ul id="dropdown1" class="dropdown-content">
+                <li>
+                    <a href="#"><i class="fa fa-user fa-fw"></i>기초정보</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-gear fa-fw"></i>설정</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-sign-out fa-fw"></i>로그아웃</a>
+                </li>
+            </ul>
+        </article>
+        <!--/. NAV TOP  -->
+        <article id="wrapper-under">
+            <div class="left-side">
+                <nav class="navbar-default navbar-side" role="navigation">
+                    <div class="sidebar-collapse">
+                        <ul class="nav" id="main-menu">
+                            <li>
+                                <a href="#" class="waves-effect waves-dark"><i
+                                        class="fas fa-check-circle"></i>산란계</a>
+                                <ul class="nav nav-second-level">
+                                </ul>
+                            </li>
+                            <li class="active">
+                                <a href="#" class="waves-effect waves-dark"><i
+                                        class="fas fa-check-circle"></i>육계<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="#" class="prog1-active"><span></span>원･부재료 반입단계</a>
+                                        <ul class="nav nav-third-level"></ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class=""><span></span>사육단계</a>
+                                        <ul class="nav nav-third-level"></ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class=""><span></span>출하단계</a>
+                                        <ul class="nav nav-third-level"></ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!-- /. NAV SIDE  -->
+            <div id="page-wrapper">
+                <div id="page-inner">
+                    <!-- /. ROW  -->
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 prog1 active">
+                            <div class="row prog2 active ">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="top-card col-md-8">
+                                        <div class="">
+                                          <div class="inner-box">
+                                              
+                                            <form action="#">
+                                                <div class="cardrow">
+                                                    <div class="inputleft">
+                                                        <div class="col-25">
+                                                            <label for="fname">평가작성일</label>
+                                                        </div>
+                                                        <div class="col-75">
+                                                            <div class="form">
+                                                                <input type="text" class="date date-input" name="" value="" />
+                                                                <span><i class="far fa-calendar-alt"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    <div class="bot-card col-md-12">
+                                        <div class="">
+                                            <div class="">
+                                                <form action="#">
+                                                    <div class="tablerow">
+                                                        <table class="risk-table">
+                                                            <colgroup>
+                                                                <col style="width: 2%;">
+                                                                <col style="width: 10%;">
+                                                                <col style="width: 10%;">
+                                                                <col style="width: 2%;">
+                                                                <col style="width: 2%;">
+                                                                <col style="width: 2%;">
+                                                                <col style="width: 2%;">
+                                                                <col style="width: 2%;">
+                                                                <col style="width: 2%;">
+                                                                <col style="width: 2%;">
+                                                                <col style="width: 2%;">
+                                                                <col style="width: 2%;">
+                                                                <col style="width: 10%;">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr></tr>
+                                                                <tr>
+                                                                    <th rowspan="2">원･부재료</th>
+                                                                    <th rowspan="2">위해요소</th>
+                                                                    <th rowspan="2">발생원인</th>
+                                                                    <th colspan="3">가능성</th>
+                                                                    <th colspan="3">심각성</th>
+                                                                    <th colspan="3">위험도</th>
+                                                                    <th rowspan="2">위해예방을 위한 관리방법 &#40;농장 현장과 일치하는 관리방법 설정&#41;</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>낮음</th>
+                                                                    <th>보통</th>
+                                                                    <th>높음</th>
+                                                                    <th>낮음</th>
+                                                                    <th>보통</th>
+                                                                    <th>높음</th>
+                                                                    <th>경결함</th>
+                                                                    <th>중결함</th>
+                                                                    <th>불만족</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td rowspan="2"><div><input type="checkbox" name="" value="초생추" checked></div>초생추</td>
+                                                                    <td class="txt-left">B1: 살모넬라&#40;SE&#41; 감염</td>
+                                                                    <td>SE 감염된 초생추 반입</td>
+                                                                    <td><div><input type="radio" name="가능성1" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="가능성1" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="가능성1" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="심각성1" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="심각성1" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="심각성1" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="위험도1" value="경결함" checked></div></td>
+                                                                    <td><div><input type="radio" name="위험도1" value="중결함"></div></td>
+                                                                    <td><div><input type="radio" name="위험도1" value="불만족"></div></td>
+                                                                    <td>-HACCP 인증 또는 신뢰할 수 있는 종계장 및 부화장에서 입추
+                                                                        -입식 후 7일 이상 임상관찰 실시
+                                                                        -백신접종확인서, 종계 혈청검사 성적서 확인 
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="txt-left">B2: 전염성 질병 유입</td>
+                                                                    <td>난계대 질병 감염 초생추 반입</td>
+                                                                    <td><div><input type="radio" name="가능성2" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="가능성2" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="가능성2" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="심각성2" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="심각성2" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="심각성2" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="위험도2" value="경결함" checked></div></td>
+                                                                    <td><div><input type="radio" name="위험도2" value="중결함"></div></td>
+                                                                    <td><div><input type="radio" name="위험도2" value="불만족"></div></td>
+                                                                    <td>-도입처의 SE검사 성적서 확인 또는 자체적으로 검사기관에 검사 의뢰
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td rowspan="5"><div><input type="checkbox" name="" value="사료" checked></div>사료</td>
+                                                                    <td class="txt-left">B: 병원성 세균 및 곰팡이에 의한 오염</td>
+                                                                    <td>사료공장에서의 오염 가능</td>
+                                                                    <td><div><input type="radio" name="가능성3" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="가능성3" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="가능성3" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="심각성3" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="심각성3" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="심각성3" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="위험도3" value="경결함" checked></div></td>
+                                                                    <td><div><input type="radio" name="위험도3" value="중결함"></div></td>
+                                                                    <td><div><input type="radio" name="위험도3" value="불만족"></div></td>
+                                                                    <td>-승인된 공급자&#40;HACCP지정업체&#41;로 부터 사료구입
+                                                                        -사료 농장내 반입 시 관능검사 실시
+                                                                        -사료공장의 성적서&#40;살모넬라검사 등&#41; 확인 
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="txt-left">C1: 동물용의약품 잔류</td>
+                                                                    <td>사료공장에서의 오염 가능</td>
+                                                                    <td><div><input type="radio" name="가능성4" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="가능성4" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="가능성4" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="심각성4" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="심각성4" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="심각성4" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="위험도4" value="경결함" checked></div></td>
+                                                                    <td><div><input type="radio" name="위험도4" value="중결함"></div></td>
+                                                                    <td><div><input type="radio" name="위험도4" value="불만족"></div></td>
+                                                                    <td>-승인된 공급자&#40;HACCP지정업체&#41;로 부터 사료구입
+                                                                        -사료벌크차량의 약품투약기를 통한 오염가능성 검토 
+                                                                        -항생제 무첨가 사료와 항생제 첨가사료의 벌크빈 분리하여 사용
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="txt-left">C2: 곰팡이독소 &#40;아플라톡신, 오클라톡신&#41; 잔류</td>
+                                                                    <td>원료 및 배합사료 생산･보관과정에서 곰팡이 발생에 따른 독소 생성</td>
+                                                                    <td><div><input type="radio" name="가능성5" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="가능성5" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="가능성5" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="심각성5" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="심각성5" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="심각성5" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="위험도5" value="경결함" checked></div></td>
+                                                                    <td><div><input type="radio" name="위험도5" value="중결함"></div></td>
+                                                                    <td><div><input type="radio" name="위험도5" value="불만족"></div></td>
+                                                                    <td>-승인된 공급자&#40;HACCP지정업체&#41;로 부터 사료구입
+                                                                        -사료입고시 관능검사 철저&#40;파포여부 및 곰팡이 발생여부&#41;
+                                                                        -필요 시 사료공장의 제품검사성적서 확인
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="txt-left">C3: 잔류농약</td>
+                                                                    <td>사료원료 재배 및 보관&#40;운송&#41; 과정에서 살충제 성분의 농약 사용</td>
+                                                                    <td><div><input type="radio" name="가능성6" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="가능성6" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="가능성6" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="심각성6" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="심각성6" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="심각성6" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="위험도6" value="경결함" checked></div></td>
+                                                                    <td><div><input type="radio" name="위험도6" value="중결함"></div></td>
+                                                                    <td><div><input type="radio" name="위험도6" value="불만족"></div></td>
+                                                                    <td>-승인된 공급자&#40;HACCP지정업체&#41;로 부터 사료구입
+                                                                        -필요 시 사료공장의 제품검사성적서 확인
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="txt-left">P: 비닐, 쇠조각, 종이 등 사료내 이물질 혼입</td>
+                                                                    <td>사료공장에서의 오염 가능</td>
+                                                                    <td><div><input type="radio" name="가능성7" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="가능성7" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="가능성7" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="심각성7" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="심각성7" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="심각성7" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="위험도7" value="경결함" checked></div></td>
+                                                                    <td><div><input type="radio" name="위험도7" value="중결함"></div></td>
+                                                                    <td><div><input type="radio" name="위험도7" value="불만족"></div></td>
+                                                                    <td>-승인된 공급자&#40;HACCP지정업체&#41;로 부터 사료구입
+                                                                        -사료 농장내 반입 시 관능검사 실시
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><div><input type="checkbox" name="" value="동물용의약품/의약외품/농약 등" checked></div>동물용의약품/의약외품/농약 등</td>
+                                                                    <td class="txt-left">C: 약품효과 감소 및 부작용 유발</td>
+                                                                    <td>유효기간 확인 및 보관 관리 미흡</td>
+                                                                    <td><div><input type="radio" name="가능성8" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="가능성8" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="가능성8" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="심각성8" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="심각성8" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="심각성8" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="위험도8" value="경결함" checked></div></td>
+                                                                    <td><div><input type="radio" name="위험도8" value="중결함"></div></td>
+                                                                    <td><div><input type="radio" name="위험도8" value="불만족"></div></td>
+                                                                    <td>-HACCP 인증 또는 신뢰할 수 있는 종계장 및 부화장에서 입추
+                                                                        -입식 후 7일 이상 임상관찰 실시
+                                                                        -백신접종확인서, 종계 혈청검사 성적서 확인 
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td rowspan="2"><div><input type="checkbox" name="" value="동물용 음용수" checked></div>동물용 음용수</td>
+                                                                    <td class="txt-left">B: 병원성 세균오염 &#40;일반세균,대장균&#41;</td>
+                                                                    <td>수원 주변 오염 및 급수라인 오염</td>
+                                                                    <td><div><input type="radio" name="가능성9" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="가능성9" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="가능성9" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="심각성9" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="심각성9" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="심각성9" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="위험도9" value="경결함" checked></div></td>
+                                                                    <td><div><input type="radio" name="위험도9" value="중결함"></div></td>
+                                                                    <td><div><input type="radio" name="위험도9" value="불만족"></div></td>
+                                                                    <td>-지하수 사용 시 1회이상/3년 수질검사&#40;공인기관&#41; 실시 후 조치
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="txt-left">C: 음용수 기준을 초과한 중금속 등 함유</td>
+                                                                    <td>수원 주변 오염 및 급수라인 오염</td>
+                                                                    <td><div><input type="radio" name="가능성10" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="가능성10" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="가능성10" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="심각성10" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="심각성10" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="심각성10" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="위험도10" value="경결함" checked></div></td>
+                                                                    <td><div><input type="radio" name="위험도10" value="중결함"></div></td>
+                                                                    <td><div><input type="radio" name="위험도10" value="불만족"></div></td>
+                                                                    <td>-상수도 사용 시 마을 상수도 수질검사성적서 확인(혹은 자체 의뢰검사) 등 오염 여부 확인
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><div><input type="checkbox" name="" value="차량, 사람, 기자재" checked></div>차량, 사람, 기자재</td>
+                                                                    <td class="txt-left">B: 외부 전염성 질병유입</td>
+                                                                    <td>배송차량 및 외부인, 기자재, 유해생물을 통한 유입&#40;구제역 바이러스 등&#41;</td>
+                                                                    <td><div><input type="radio" name="가능성11" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="가능성11" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="가능성11" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="심각성11" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="심각성11" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="심각성11" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="위험도11" value="경결함" checked></div></td>
+                                                                    <td><div><input type="radio" name="위험도11" value="중결함"></div></td>
+                                                                    <td><div><input type="radio" name="위험도11" value="불만족"></div></td>
+                                                                    <td>-차단방역 관리절차서의 운송기사 및 직원준수사항 숙지 및 이행
+                                                                        -외부인 출입 시 출입기록부에 방문자 정보 및 소독실시여부 확인
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 prog1">
+                            <div class="row prog2 active ">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="top-card col-md-8">
+                                        <div class="">
+                                          <div class="inner-box">
+                                              
+                                            <form action="#">
+                                                <div class="cardrow">
+                                                    <div class="inputleft">
+                                                        <div class="col-25">
+                                                            <label for="fname">평가작성일</label>
+                                                        </div>
+                                                        <div class="col-75">
+                                                            <div class="form">
+                                                                <input type="text" class="date date-input" name="" value="" />
+                                                                <span><i class="far fa-calendar-alt"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    <div class="bot-card col-md-12">
+                                        <div class="">
+                                            <div class="">
+                                                <form action="#">
+                                                    <div class="tablerow">
+                                                        <table class="risk-table">
+                                                            <colgroup>
+                                                                <col style="width: 2%;">
+                                                                <col style="width: 10%;">
+                                                                <col style="width: 10%;">
+                                                                <col style="width: 2%;">
+                                                                <col style="width: 2%;">
+                                                                <col style="width: 2%;">
+                                                                <col style="width: 2%;">
+                                                                <col style="width: 2%;">
+                                                                <col style="width: 2%;">
+                                                                <col style="width: 2%;">
+                                                                <col style="width: 2%;">
+                                                                <col style="width: 2%;">
+                                                                <col style="width: 10%;">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr></tr>
+                                                                <tr>
+                                                                    <th rowspan="2">공정단계</th>
+                                                                    <th rowspan="2">위해요소</th>
+                                                                    <th rowspan="2">발생원인</th>
+                                                                    <th colspan="3">가능성</th>
+                                                                    <th colspan="3">심각성</th>
+                                                                    <th colspan="3">위험도</th>
+                                                                    <th rowspan="2">위해예방을 위한 관리방법 &#40;농장 현장과 일치하는 관리방법 설정&#41;</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>낮음</th>
+                                                                    <th>보통</th>
+                                                                    <th>높음</th>
+                                                                    <th>낮음</th>
+                                                                    <th>보통</th>
+                                                                    <th>높음</th>
+                                                                    <th>경결함</th>
+                                                                    <th>중결함</th>
+                                                                    <th>불만족</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td rowspan="4"><div><input type="checkbox" name="" value="입추" checked></div>입추</td>
+                                                                    <td class="txt-left">B1: 질병발생</td>
+                                                                    <td>차단방역 및 사양관리 미흡으로 인한 질병발생 가능</td>
+                                                                    <td><div><input type="radio" name="가능성1" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="가능성1" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="가능성1" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="심각성1" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="심각성1" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="심각성1" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="위험도1" value="경결함" checked></div></td>
+                                                                    <td><div><input type="radio" name="위험도1" value="중결함"></div></td>
+                                                                    <td><div><input type="radio" name="위험도1" value="불만족"></div></td>
+                                                                    <td>-입추 시 차단방역절차 준수
+                                                                        -백신프로그램에 의한 백신 접종
+                                                                        -사양관리 절차 준수/담당자 교육 철저
+                                                                        -입식 후 7일간 계군 임상관찰 철저
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="txt-left">B2: 살모넬라&#40;SE&#41; 감염</td>
+                                                                    <td>SE오염 초생추 반입으로 계군의 SE 감염</td>
+                                                                    <td><div><input type="radio" name="가능성2" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="가능성2" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="가능성2" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="심각성2" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="심각성2" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="심각성2" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="위험도2" value="경결함" checked></div></td>
+                                                                    <td><div><input type="radio" name="위험도2" value="중결함"></div></td>
+                                                                    <td><div><input type="radio" name="위험도2" value="불만족"></div></td>
+                                                                    <td>-도입처의 SE검사 성적서 확인 또는 자체적으로 검사기관에 검사 의뢰
+                                                                        -계군/시설환경에 대해 정기적인 SE검사
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="txt-left">C1: 동물용의약품 &#40;항생제 등&#41; 잔류</td>
+                                                                    <td>질병치료 시 휴약기간을 갖는 약품사용</td>
+                                                                    <td><div><input type="radio" name="가능성3" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="가능성3" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="가능성3" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="심각성3" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="심각성3" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="심각성3" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="위험도3" value="경결함" checked></div></td>
+                                                                    <td><div><input type="radio" name="위험도3" value="중결함"></div></td>
+                                                                    <td><div><input type="radio" name="위험도3" value="불만족"></div></td>
+                                                                    <td>-휴약기간 준수가 가능하도록 약품사용기록부에 처치내역 및 휴약기간 기록
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="txt-left">C2: 계사 주변에 농약성분 살충제 등 잔류</td>
+                                                                    <td>용법･용량 미준수, 사용 후 충분한 세척 미실시</td>
+                                                                    <td><div><input type="radio" name="가능성4" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="가능성4" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="가능성4" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="심각성4" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="심각성4" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="심각성4" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="위험도4" value="경결함" checked></div></td>
+                                                                    <td><div><input type="radio" name="위험도4" value="중결함"></div></td>
+                                                                    <td><div><input type="radio" name="위험도4" value="불만족"></div></td>
+                                                                    <td>-용법･용량, 세척 방법 및 횟수 준수여부 확인 (약품설명서 및 약품사용기록부 확인&#41;
+                                                                        -계사 내부 청소 상태 및 계분 등 완벽한 제거 여부 확인
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td rowspan="4"><div><input type="checkbox" name="" value="육성" checked></div>육성</td>
+                                                                    <td class="txt-left">B1: 질병발생</td>
+                                                                    <td>사양관리미흡으로 질병 발생 가능</td>
+                                                                    <td><div><input type="radio" name="가능성5" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="가능성5" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="가능성5" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="심각성5" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="심각성5" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="심각성5" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="위험도5" value="경결함" checked></div></td>
+                                                                    <td><div><input type="radio" name="위험도5" value="중결함"></div></td>
+                                                                    <td><div><input type="radio" name="위험도5" value="불만족"></div></td>
+                                                                    <td>-1일 1회 이상 주기적인 임상관찰 및 기록
+                                                                        -사양관리 철저 및 정기적인 질병 모니터링
+                                                                        -백신프로그램에 의한 백신 접종
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="txt-left">B2: 살모넬라&#40;SE&#41; 감염</td>
+                                                                    <td>환경관리 미흡으로 인한 SE 감염</td>
+                                                                    <td><div><input type="radio" name="가능성6" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="가능성6" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="가능성6" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="심각성6" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="심각성6" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="심각성6" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="위험도6" value="경결함" checked></div></td>
+                                                                    <td><div><input type="radio" name="위험도6" value="중결함"></div></td>
+                                                                    <td><div><input type="radio" name="위험도6" value="불만족"></div></td>
+                                                                    <td>-계군/시설환경에 대해 정기적인 SE검사
+                                                                        -계군 사육환경 관리 철저
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="txt-left">C1: 동물용의약품 &#40;항생제 등&#41; 잔류</td>
+                                                                    <td>질병치료 시 휴약기간을 갖는 약품사용</td>
+                                                                    <td><div><input type="radio" name="가능성7" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="가능성7" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="가능성7" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="심각성7" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="심각성7" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="심각성7" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="위험도7" value="경결함" checked></div></td>
+                                                                    <td><div><input type="radio" name="위험도7" value="중결함"></div></td>
+                                                                    <td><div><input type="radio" name="위험도7" value="불만족"></div></td>
+                                                                    <td>-휴약기간 준수가 가능하도록 약품사용기록부에 처치내역 및 휴약기간 기록
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="txt-left">C2: 계군에 동물용의약외품 &#40;농약성분 살충제 등&#41; 오염&#40;잔류&#41;</td>
+                                                                    <td>인접 계사에 사용한 살충제 계사 내 유입</td>
+                                                                    <td><div><input type="radio" name="가능성8" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="가능성8" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="가능성8" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="심각성8" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="심각성8" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="심각성8" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="위험도8" value="경결함" checked></div></td>
+                                                                    <td><div><input type="radio" name="위험도8" value="중결함"></div></td>
+                                                                    <td><div><input type="radio" name="위험도8" value="불만족"></div></td>
+                                                                    <td>-가축 사육 중 살충제 살포 금지
+                                                                        -인접 계사 살충제 사용 시 농약성분이 유입되어 닭, 사료, 음수 등이 오염되지 않도록 관리
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 prog1">
+                            <div class="row prog2 active ">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="top-card col-md-8">
+                                        <div class="">
+                                          <div class="inner-box">
+                                              
+                                            <form action="#">
+                                                <div class="cardrow">
+                                                    <div class="inputleft">
+                                                        <div class="col-25">
+                                                            <label for="fname">평가작성일</label>
+                                                        </div>
+                                                        <div class="col-75">
+                                                            <div class="form">
+                                                                <input type="text" class="date date-input" name="" value="" />
+                                                                <span><i class="far fa-calendar-alt"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    <div class="bot-card col-md-12">
+                                        <div class="">
+                                            <div class="">
+                                                <form action="#">
+                                                    <div class="tablerow">
+                                                        <table class="risk-table">
+                                                            <colgroup>
+                                                                <col style="width: 2%;">
+                                                                <col style="width: 10%;">
+                                                                <col style="width: 10%;">
+                                                                <col style="width: 2%;">
+                                                                <col style="width: 2%;">
+                                                                <col style="width: 2%;">
+                                                                <col style="width: 2%;">
+                                                                <col style="width: 2%;">
+                                                                <col style="width: 2%;">
+                                                                <col style="width: 2%;">
+                                                                <col style="width: 2%;">
+                                                                <col style="width: 2%;">
+                                                                <col style="width: 10%;">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr></tr>
+                                                                <tr>
+                                                                    <th rowspan="2">공정단계</th>
+                                                                    <th rowspan="2">위해요소</th>
+                                                                    <th rowspan="2">발생원인</th>
+                                                                    <th colspan="3">가능성</th>
+                                                                    <th colspan="3">심각성</th>
+                                                                    <th colspan="3">위험도</th>
+                                                                    <th rowspan="2">위해예방을 위한 관리방법 &#40;농장 현장과 일치하는 관리방법 설정&#41;</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>낮음</th>
+                                                                    <th>보통</th>
+                                                                    <th>높음</th>
+                                                                    <th>낮음</th>
+                                                                    <th>보통</th>
+                                                                    <th>높음</th>
+                                                                    <th>경결함</th>
+                                                                    <th>중결함</th>
+                                                                    <th>불만족</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td rowspan="4"><div><input type="checkbox" name="" value="출하" checked></div>출하</td>
+                                                                    <td class="txt-left">B1: 병원성 미생물 오염</td>
+                                                                    <td>출하관리 미흡</td>
+                                                                    <td><div><input type="radio" name="가능성1" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="가능성1" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="가능성1" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="심각성1" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="심각성1" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="심각성1" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="위험도1" value="경결함" checked></div></td>
+                                                                    <td><div><input type="radio" name="위험도1" value="중결함"></div></td>
+                                                                    <td><div><input type="radio" name="위험도1" value="불만족"></div></td>
+                                                                    <td>-출하관리 절차 준수
+                                                                        -출하차량의 세척 및 소독 철저 
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="txt-left">B2: 살모넬라&#40;SE&#41; 감염</td>
+                                                                    <td>SE 오염된 계군의 출하</td>
+                                                                    <td><div><input type="radio" name="가능성2" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="가능성2" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="가능성2" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="심각성2" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="심각성2" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="심각성2" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="위험도2" value="경결함" checked></div></td>
+                                                                    <td><div><input type="radio" name="위험도2" value="중결함"></div></td>
+                                                                    <td><div><input type="radio" name="위험도2" value="불만족"></div></td>
+                                                                    <td>-반입 초생추에 대한 SE 모니터링 철저
+                                                                        -계군/시설환경에 대한 정기적인 SE검사
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="txt-left">C1: 동물용의약품 &#40;항생제 등&#41;잔류</td>
+                                                                    <td>휴약기간 미준수 계군 출하</td>
+                                                                    <td><div><input type="radio" name="가능성3" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="가능성3" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="가능성3" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="심각성3" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="심각성3" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="심각성3" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="위험도3" value="경결함" checked></div></td>
+                                                                    <td><div><input type="radio" name="위험도3" value="중결함"></div></td>
+                                                                    <td><div><input type="radio" name="위험도3" value="불만족"></div></td>
+                                                                    <td>-사양관리일지 및 약품사용기록부의 동물용의약품&#40;항생제 등&#41;사용기록 확인
+                                                                        -휴약기간 준수여부 확인 후 출하
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="txt-left">C2: 동물용의약외품 &#40;농약성분 살충제 &#41; 잔류</td>
+                                                                    <td>인접 계사에 사용한 살충제로 농약성분 등 오염</td>
+                                                                    <td><div><input type="radio" name="가능성4" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="가능성4" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="가능성4" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="심각성4" value="낮음" checked></div></td>
+                                                                    <td><div><input type="radio" name="심각성4" value="보통"></div></td>
+                                                                    <td><div><input type="radio" name="심각성4" value="높음"></div></td>
+                                                                    <td><div><input type="radio" name="위험도4" value="경결함" checked></div></td>
+                                                                    <td><div><input type="radio" name="위험도4" value="중결함"></div></td>
+                                                                    <td><div><input type="radio" name="위험도4" value="불만족"></div></td>
+                                                                    <td>-출하 예정 계군의 인접 계사에 살충제 등 사용 금지
+                                                                        -사양관리일지 등의 기록 확인을 통해 의약외품 잔류 가능성 확인
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer>
+                        <div class="fbtn-group">
+                            <button class="fpdf">PDF출력</button>
+                            <button class="fexcel">엑셀 다운로드</button>
+                            <button class="fexcel">엑셀 업로드</button>
+                            <button class="finit">초기화</button>
+                            <button class="fsave">저장</button>
+                        </div>
+                    </footer>
+                </div>
+                <!-- /. PAGE INNER  -->
+            </div>
+        </article>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+
+    <!-- Bootstrap Js -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="materialize/js/materialize.min.js"></script>
+
+    <!-- Metis Menu Js -->
+    <script src="js/jquery.metisMenu.js"></script>
+
+    <!-- Custom Js -->
+    <script src="js/custom-scripts.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

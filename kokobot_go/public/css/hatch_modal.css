@@ -1,0 +1,79 @@
+/* 백그라운드 컬러 */
+.modal-backdrop{
+    background-color: #00000075;
+}
+/* 1번 부화실 */
+.modal_Container {
+    display: flex;
+}
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+}
+.modal-header > .middle_title {
+    margin-top: 1rem;
+}
+.modal-header button {
+    width: 25px;
+    height: 25px;
+    border: none;
+    background: transparent;
+}
+.modal-header button i {
+    font-size: 2rem;
+}
+.modal_hatchBox_right {
+    width: 50%;
+}
+.modal_right {
+    width: 100%;
+    padding: 23px 20px;
+}
+.modal_right img {
+    width: 60px;
+    margin-left: 10px;
+}
+.modal_hatchBox_left .gear {
+    position: absolute;
+    margin-left: 96px;
+    margin-top: 10px;
+}
+.modal_left {
+    padding-top: 20px;
+}
+.modal_left p {
+    margin: 2px;
+}
+.modal_hatchBox_right p {
+    text-align: center;
+    font-weight: bold;
+}
+.modal-body {
+    display: flex;
+    justify-content: space-around;
+}
+.modal-all > .modal-body:not(:last-child){
+    padding-bottom: 0;
+}
+.modal-body .col-lg-4{
+    width: 31%;
+}
+.modal-body .col-lg-4:not(:last-child){
+    margin-right: 1%;
+}
+.hatch_value {
+    font-weight: bold;
+}
+.hatch_data.red {
+    color: #ff0000;
+    font-weight: bold;
+}
+.modal-footer {
+    text-align: center;
+    padding: 10px;
+}
+.pagination {
+    margin: 10px 0;
+}

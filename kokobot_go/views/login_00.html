@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kokobot</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- Bootstrap Styles-->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+    <!-- jQuery Js -->
+    <script src="js/jquery-1.10.2.js"></script>
+
+    <!-- 달력 -->
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> -->
+    <script type="text/javascript" src="calendar/moment.js"></script>
+    <script type="text/javascript" src="calendar/moment-with-locales.js"></script>
+    <script type="text/javascript" src="calendar/daterangepicker.js"></script>
+    <script type="text/javascript" src="calendar/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="calendar/daterangepicker.css" />
+
+    <!-- 숫자키패드 -->
+    <link href="css/num_keypad.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/num_keypad.js"></script>
+
+    <!-- Custom Styles-->
+    <link href="css/custom-styles.css" rel="stylesheet" />
+    <link href="css/form.css" rel="stylesheet" />
+    <link href="css/table.css" rel="stylesheet" />
+    <link href="css/media.css" rel="stylesheet" />
+    <link href="css/login_00.css" rel="stylesheet" />
+    <link href="css/popup.css" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <article id="wrapper-top">
+            <nav class="navbar navbar-default top-navbar" role="navigation">
+                <%- include ('top-navbar.html') %>
+            </nav>
+            <!-- Dropdown Structure -->
+            <ul id="dropdown1" class="dropdown-content">
+                <li>
+                    <a href="#"><i class="fa fa-user fa-fw"></i>기초정보</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-gear fa-fw"></i>설정</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-sign-out fa-fw"></i>로그아웃</a>
+                </li>
+            </ul>
+        </article>
+
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+                <!-- /. ROW  -->
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 prog1 active">
+                        <div class="row prog2 active">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="top-card col-md-8">
+                                    <div class="">
+                                        <div class="content">
+                                            <div class="login_wrap">
+                                                <ul class="menu_wrap" role="tablist">
+                                                    <li class="menu_item" role="presentation">
+                                                        <a href="#none" id="loinid" class="menu_id on" role="tab"
+                                                            aria-selected="true">
+                                                            <span class="menu_text"><span class="text">농장주</span></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu_item" role="presentation">
+                                                        <a href="#none" id="ones" class="menu_ones" role="tab"
+                                                            aria-selected="false">
+                                                            <span class="menu_text"><span
+                                                                    class="text">농장직원</span></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <form id="frmNIDLogin" name="frmNIDLogin" target="_top"
+                                                    autocomplete="off" action="" method="POST">
+                                                    <input type="hidden" id="localechange" name="localechange"
+                                                        value="/">
+                                                    <input type="hidden" name="dynamicKey" id="dynamicKey"
+                                                        value="18smNQ0aG4PEHkRvN_60tv18bzFNspsRPen97zJIUJTnupCI21g2SjuMhEfj0JBsvGVZsi8EpRyFM6ZZ-9R09lM1LOm_5MmCGddCPDa7IFc">
+                                                    <input type="hidden" name="encpw" id="encpw" value="">
+                                                    <input type="hidden" name="enctp" id="enctp" value="1">
+                                                    <input type="hidden" name="svctype" id="svctype" value="1">
+                                                    <input type="hidden" name="smart_LEVEL" id="smart_LEVEL" value="1">
+                                                    <input type="hidden" name="bvsd" id="bvsd" value="">
+                                                    <input type="hidden" name="encnm" id="encnm" value="">
+                                                    <input type="hidden" name="locale" id="locale" value="ko_KR">
+                                                    <input type="hidden" name="url" id="url" value="">
+                                                    <ul class="panel_wrap">
+                                                        <li class="panel_item" style="display: block;">
+                                                            <div class="panel_inner" role="tabpanel"
+                                                                aria-controls="loinid">
+                                                                <div class="id_pw_wrap" id="main_line">
+                                                                    <div class="input_row" id="id_line">
+                                                                        <span class="icon_id">
+                                                                            <span class="blind">아이디</span>
+                                                                        </span>
+                                                                        <input type="text" id="id" name="id"
+                                                                            placeholder="아이디" title="아이디"
+                                                                            class="input_text" maxlength="41" value="">
+                                                                        <span role="button" class="btn_delete"
+                                                                            id="id_clear" style="display: none;">
+                                                                            <span class="icon_delete">
+                                                                                <span class="blind">삭제</span>
+                                                                            </span>
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="input_row" id="pw_line">
+                                                                        <span class="icon_pw">
+                                                                            <span class="blind">비밀번호</span>
+                                                                        </span>
+                                                                        <input type="password" id="pw" name="pw"
+                                                                            placeholder="비밀번호" title="비밀번호"
+                                                                            class="input_text" maxlength="16">
+                                                                        <span role="button" class="btn_delete"
+                                                                            id="pw_clear" style="display: none;">
+                                                                            <span class="icon_delete">
+                                                                                <span class="blind">삭제</span>
+                                                                            </span>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="login_keep_wrap" id="login_keep_wrap">
+                                                                    <div class="keep_check">
+                                                                        <input type="checkbox" id="Scustom01">
+                                                                        <label for="Scustom01"></label>
+                                                                        <p>로그인상태유지</p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="login_error_wrap" id="err_capslock"
+                                                                    style="display: none;">
+                                                                    <div class="error_message">
+                                                                        <strong>CapsLock</strong>이 켜져 있습니다.
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="login_error_wrap" id="err_empty_id"
+                                                                    style="display: none;">
+                                                                    <div class="error_message">
+                                                                        <strong>아이디</strong>를 입력해 주세요.
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="login_error_wrap" id="err_empty_pw"
+                                                                    style="display: none;">
+                                                                    <div class="error_message">
+                                                                        <strong>비밀번호</strong>를 입력해 주세요.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="login_error_wrap" id="err_common"
+                                                                    style="display:none;">
+                                                                    <div class="error_message" style="width:90%">
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="btn_login_wrap">
+                                                                    <button type="submit" class="btn_login" id="">
+                                                                        <span class="btn_text">로그인</span>
+                                                                    </button>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel_inner" role="tabpanel"
+                                                                aria-controls="ones" style="display:none;">
+                                                                <div class="id_pw_wrap" id="main_line">
+                                                                    <div class="input_row" id="id_line">
+                                                                        <span class="icon_id">
+                                                                            <span class="blind">아이디</span>
+                                                                        </span>
+                                                                        <input type="text" id="id" name="id"
+                                                                            placeholder="아이디" title="아이디"
+                                                                            class="input_text" maxlength="41" value="">
+                                                                        <span role="button" class="btn_delete"
+                                                                            id="id_clear" style="display: none;">
+                                                                            <span class="icon_delete">
+                                                                                <span class="blind">삭제</span>
+                                                                            </span>
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="input_row" id="pw_line">
+                                                                        <span class="icon_pw">
+                                                                            <span class="blind">비밀번호</span>
+                                                                        </span>
+                                                                        <input type="password" id="pw" name="pw"
+                                                                            placeholder="비밀번호" title="비밀번호"
+                                                                            class="input_text" maxlength="16">
+                                                                        <span role="button" class="btn_delete"
+                                                                            id="pw_clear" style="display: none;">
+                                                                            <span class="icon_delete">
+                                                                                <span class="blind">삭제</span>
+                                                                            </span>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="login_keep_wrap" id="login_keep_wrap">
+                                                                    <div class="keep_check">
+                                                                        <input type="checkbox" id="Scustom01">
+                                                                        <label for="Scustom01"></label>
+                                                                        <p>로그인상태유지</p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="login_error_wrap" id="err_capslock"
+                                                                    style="display: none;">
+                                                                    <div class="error_message">
+                                                                        <strong>CapsLock</strong>이 켜져 있습니다.
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="login_error_wrap" id="err_empty_id"
+                                                                    style="display: none;">
+                                                                    <div class="error_message">
+                                                                        <strong>아이디</strong>를 입력해 주세요.
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="login_error_wrap" id="err_empty_pw"
+                                                                    style="display: none;">
+                                                                    <div class="error_message">
+                                                                        <strong>비밀번호</strong>를 입력해 주세요.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="login_error_wrap" id="err_common"
+                                                                    style="display:none;">
+                                                                    <div class="error_message" style="width:90%">
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="btn_login_wrap">
+                                                                    <button type="submit" class="btn_login" id="">
+                                                                        <span class="btn_text">로그인</span>
+                                                                    </button>
+
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </form>
+                                            </div>
+                                            <ul class="find_wrap" id="find_wrap">
+                                                <li><a target="_blank" href="#" class="find_text">비밀번호 찾기</a></li>
+                                                <li><a target="_blank" href="#" class="find_text">아이디 찾기</a></li>
+                                                <li><a target="_blank" href="#" class="find_text">회원가입</a>
+                                                </li>
+                                            </ul>
+                                            <!--배너-->
+                                            <div id="gladbanner" class="banner_wrap" style="display: none;">
+                                                &nbsp;
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/.row-->
+            </div>
+        </div>
+        <!-- /. PAGE INNER  -->
+    </div>
+    </article>
+
+    </div>
+    </div>
+    </div>
+    <!-- /.popup -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+
+    <!-- Bootstrap Js -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="materialize/js/materialize.min.js"></script>
+
+    <!-- Metis Menu Js -->
+    <script src="js/jquery.metisMenu.js"></script>
+    <script src="js/mj_js.js"></script>
+    <!-- Custom Js -->
+    <script src="js/custom-scripts.js"></script>
+    <script src="js/common.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"
+        integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        function fnSave() {
+            axios.post('http://localhost:3030/basicFarmDao', {
+                    farmName: $('#farmName').val(),
+                    ceoName: $('#ceoName').val(),
+                    comRegNum: $('#comRegNum').val()
+                })
+                .then(res => {
+                    alert('성공');
+                    console.log(res);
+                })
+                .catch(err => {
+                    console.log(err);
+                })
+        }
+
+        axios.get('http://localhost:3030/basicFarmList')
+            .then(res => {
+                console.log(res);
+                console.log(res.data.data.rows[0].farm_name);
+                // $('#farm-name').html(res.data.data.rows[0].farm_name);
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    </script>
+</body>
+
+</html>

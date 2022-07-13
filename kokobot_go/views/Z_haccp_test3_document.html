@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kokobot</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- Bootstrap Styles-->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+
+    <!-- jQuery Js -->
+    <script src="js/jquery-1.10.2.js"></script>
+
+    <!-- 달력 -->
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> -->
+    <script type="text/javascript" src="calendar/moment.js"></script>
+    <script type="text/javascript" src="calendar/moment-with-locales.js"></script>
+    <script type="text/javascript" src="calendar/daterangepicker.js"></script>
+    <script type="text/javascript" src="calendar/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="calendar/daterangepicker.css" />
+
+    <!-- 숫자키패드 -->
+    <link href="css/num_keypad.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/num_keypad.js"></script>
+
+    <!-- Custom Styles-->
+    <link href="css/custom-styles.css" rel="stylesheet" />
+    <link href="css/form.css" rel="stylesheet" />
+    <link href="css/table.css" rel="stylesheet" />
+    <link href="css/media.css" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <article id="wrapper-top">
+            <nav class="navbar navbar-default top-navbar" role="navigation">
+                <div class="nav_top">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle waves-effect waves-dark" data-toggle="collapse"
+                            data-target=".sidebar-collapse">
+                            <span class="sr-only"></span>
+                        </button>
+                        <a class="navbar-brand waves-effect waves-dark" href="index.html"><img src="img/logo.png" />
+                            <p><strong>KOKOBOT</strong></p>
+                            <br /><span>양계 농장 통합관리 시스템</span>
+                        </a>
+                        <div id="sideNav" href="">
+                            <i class="material-icons dp48">toc</i>
+                        </div>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown4"><i
+                                    class="fa fa-envelope fa-fw"></i> 문서보관함<i class="material-icons right"></i></a>
+                        </li>
+                        <li>
+                            <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown3"><i
+                                    class="fa fa-tasks fa-fw"></i> 하하하<i class="material-icons right"></i></a>
+                        </li>
+                        <li>
+                            <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown2"><i
+                                    class="fa fa-bell fa-fw"></i><span class="badge">10</span>알림<i
+                                    class="material-icons right"></i></a>
+                        </li>
+                        <li>
+                            <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown1"><i
+                                    class="fa fa-user fa-fw"></i>농장주<i class="material-icons right"></i></a>
+                        </li>
+                    </ul>
+                    <div id="search-bar">
+                        <div id="search-bar-bg">
+                            <button id="search-btn" class="search-bar-btn">
+                                <img src="img/search.png" />
+                            </button>
+                            <form action="#" method="post">
+                                <input id="search-word" type="search" placeholder="검색어를 입력해보세요" />
+                            </form>
+                            <button id="close-btn" class="search-bar-btn">
+                                <img src="img/close.png" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav_bot">
+                    <div id="under-navbar" class="" role="navigation">
+                        <ul>
+                            <li class="active">
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보1<span class="after_tri active"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보2<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보3<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보4<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보5<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보6<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보7<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보8<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보9<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보10<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보11<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보12<span class="after_tri"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="sub-navbar">
+                        <ul class="active">
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브1</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브2</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브3</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브4</a></li>
+                            <li><a href="#">서브4</a></li>
+                            <li><a href="#">서브4</a></li>
+                            <li><a href="#">서브4</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브5</a></li>
+                            <li><a href="#">서브5</a></li>
+                            <li><a href="#">서브5</a></li>
+                            <li><a href="#">서브5</a></li>
+                            <li><a href="#">서브5</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브6</a></li>
+                            <li><a href="#">서브6</a></li>
+                            <li><a href="#">서브6</a></li>
+                            <li><a href="#">서브6</a></li>
+                            <li><a href="#">서브6</a></li>
+                            <li><a href="#">서브6</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브7</a></li>
+                            <li><a href="#">서브7</a></li>
+                            <li><a href="#">서브7</a></li>
+                            <li><a href="#">서브7</a></li>
+                            <li><a href="#">서브7</a></li>
+                            <li><a href="#">서브7</a></li>
+                            <li><a href="#">서브7</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브10</a></li>
+                            <li><a href="#">서브10</a></li>
+                            <li><a href="#">서브10</a></li>
+                            <li><a href="#">서브10</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브11</a></li>
+                            <li><a href="#">서브11</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브12</a></li>
+                            <li><a href="#">서브12</a></li>
+                            <li><a href="#">서브12</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Dropdown Structure -->
+            <ul id="dropdown1" class="dropdown-content">
+                <li>
+                    <a href="#"><i class="fa fa-user fa-fw"></i>기초정보</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-gear fa-fw"></i>설정</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-sign-out fa-fw"></i>로그아웃</a>
+                </li>
+            </ul>
+        </article>
+        <!--/. NAV TOP  -->
+        <article id="wrapper-under">
+            <div class="left-side">
+                <nav class="navbar-default navbar-side" role="navigation">
+                    <div class="sidebar-collapse">
+                        <ul class="nav" id="main-menu">
+                            <li>
+                                <a href="#" class="waves-effect waves-dark"><i class="fas fa-check-circle"></i>자체평가<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="#" class="prog1-active"><span></span>산란계</a>
+                                        <ul class="nav nav-third-level"></ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class=""><span></span>육계</a>
+                                        <ul class="nav nav-third-level"></ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect waves-dark"><i class="fas fa-check-circle"></i>인증평가</a>
+                                <ul class="nav nav-second-level">
+                                </ul>
+                            </li>
+                            <li class="active">
+                                <a href="#" class="waves-effect waves-dark"><i class="fas fa-check-circle"></i>외부평가 문서관리<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="#" class="prog1-active"><span></span>산란계</a>
+                                        <ul class="nav nav-third-level"></ul>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span></span>육계</a>
+                                        <ul class="nav nav-third-level"></ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect waves-dark"><i class="fas fa-check-circle"></i>사후관리평가</a>
+                                <ul class="nav nav-second-level">
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!-- /. NAV SIDE  -->
+            <div id="page-wrapper">
+                <div id="page-inner">
+                    <!-- /. ROW  -->
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 prog1 active">
+                            <div class="row prog2 active ">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="bot-card col-md-12">
+                                        <div class="">
+                                            <div class="">
+                                                <form action="#">
+                                                    <div class="tablerow">
+                                                        <table class="haccp-test-table">
+                                                            <colgroup>
+                                                                <col style="width: 5%;">
+                                                                <col style="width: 15%;">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr></tr>
+                                                                <tr>
+                                                                    <th>항목</th>
+                                                                    <th>내용</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td><b>축산업&#40;가축사육업･종축업&#41; 등록&#40;허가&#41;증</b></td>
+                                                                    <td> • 농장명, 대표자, 소재지 및 가축사육시설 확인할 수 있는 등록&#40;허가&#41;증</td>                                                        
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><b>교육수료증</b></td>
+                                                                    <td> • 농업인&#40;대표자&#41; 4시간이상 축산물HACCP교육 수료여부 확인</td>                                                        
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><b>수질검사서</b></td>
+                                                                    <td>  • &#40;동물용음용수&#41; 지하수 사용하는 경우
+                                                                         - 생활용수기준 전 항목에 대하여 3년 1회 이상
+                                                                       • &#40;달걀 세척용수&#41; 지하수 사용하는 경우
+                                                                        - 먹는물 수질기준 전 항목에 대하여 연 1회 이상</td>                                                        
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><b>살모넬라검사성적서</b></td>
+                                                                    <td> • 매 입추 시 계군에 대한 살모넬라&#40;SE&#41; 검사
+                                                                         • 분변/시설에 대한 SE검사&#40;2회 이상/1년&#41;
+                                                                         • 식용란에 대한 SE 검사&#40;2회 이상/1년&#41;</td>                                                        
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><b>잔류물질검사성적서</b></td>
+                                                                    <td> • 식용란에 대한 잔류물질 검사&#40;2회 이상/1년&#41;</td>                                                        
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><b>분뇨처리계약서</b></td>
+                                                                    <td> • 분뇨수거업체의 처리계약서
+                                                                         • 분뇨처리업체의 허가증 또는 신고필증 사본보관</td>                                                        
+                                                                </tr>                                                                                                                                                         
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 prog1">
+                            <div class="row prog2 active ">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="bot-card col-md-12">
+                                        <div class="">
+                                            <div class="">
+                                                <form action="#">
+                                                    <div class="tablerow">
+                                                        <table class="haccp-test-table">
+                                                            <colgroup>
+                                                                <col style="width: 5%;">
+                                                                <col style="width: 15%;">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr></tr>
+                                                                <tr>
+                                                                    <th>항목</th>
+                                                                    <th>내용</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td><b>축산업&#40;가축사육업･종축업&#41; 등록&#40;허가&#41;증</b></td>
+                                                                    <td> • 농장명, 대표자, 소재지 및 가축사육시설 확인할 수 있는 등록&#40;허가&#41;증</td>                                                        
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><b>교육수료증&#40;원본&#41;</b></td>
+                                                                    <td> • 농업인&#40;대표자&#41; 4시간이상 축산물HACCP교육 수료여부 확인</td>                                                        
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><b>수질검사서&#40;원본&#41;</b></td>
+                                                                    <td>  •상수도&#40;수돗물&#41; 사용하는 경우
+                                                                        -상수도 요금 납입 영수증 또는 마을상수도 검사성적서 보관
+                                                                        •지하수 사용하는 경우
+                                                                        -생활용수기준 20개 항목&#40;1회/3년&#41;</td>                                                        
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><b>살모넬라검사성적서</b></td>
+                                                                    <td> •분변/시설에 대한 살모넬라 검사&#40;2회/1년&#41;
+                                                                        -검사기관의 직인&#40;서명&#41; 필요</td>                                                        
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><b>분뇨처리계약서</b></td>
+                                                                    <td> •분뇨수거업체의 처리계약서
+                                                                        •분뇨처리업체의 허가증 또는 신고필증 사본보관</td>                                                        
+                                                                </tr>                                                                                                                                                       
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer>
+                        <div class="fbtn-group">
+                            <button class="fpdf">PDF출력</button>
+                            <button class="fexcel">엑셀 다운로드</button>
+                            <button class="fexcel">엑셀 업로드</button>
+                            <button class="finit">초기화</button>
+                            <button class="fsave">저장</button>
+                        </div>
+                    </footer>
+                </div>
+                <!-- /. PAGE INNER  -->
+            </div>
+        </article>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+
+    <!-- Bootstrap Js -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="materialize/js/materialize.min.js"></script>
+
+    <!-- Metis Menu Js -->
+    <script src="js/jquery.metisMenu.js"></script>
+
+    <!-- Custom Js -->
+    <script src="js/custom-scripts.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

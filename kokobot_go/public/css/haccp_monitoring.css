@@ -1,0 +1,263 @@
+/* 서브 헤더 아이콘 */
+.middle_title::before {
+    content: '';
+    width: 27px;
+    height: 27px;
+    background-image: url(/icon/haccpIcon.png);
+    position: absolute;
+    background-size: 25px;
+    background-repeat: no-repeat;
+}
+li.middle_title p {
+    margin-left: 35px;
+}
+/* 상단 금일 반입예정  */
+.customerCon.col-lg-12.Boxcustom {
+    margin-bottom: 20px;
+}
+ul.customerBox {
+    margin: 0;
+    padding: 0.5rem 0rem;
+}
+.customerarea {
+    display: flex;
+    justify-content: space-around;
+}
+li.customeritem .profile h4 {
+    font-weight: bold;
+}
+/* 상단 콘텐츠 01. 도넛 & 테이블 */
+.haccpConBox {
+    margin-bottom: 20px;
+}
+.haccpdoughnut {
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.haccpdoughnut canvas {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.haccpCon01Area {
+    display: flex;
+}
+.haccpTable {
+    width: 80%;
+    margin-top: 35px;
+}
+.haccpTable table {
+    width: 60%;
+}
+.haccpTable table td {
+    border-right: 1px solid #fff;
+}
+.haccpTable table:first-child {
+    width: 35%;
+}
+.haccpTable table thead {
+    background: #0A3977;
+    color: white;
+}
+.haccpTable table tbody tr {
+    background: white !important;
+    color: #333;
+}
+.haccpSection .middle_caption select {
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+}
+/* 프로그래스바 */
+.progressCon {
+    margin-left: 1%;
+    height: 400px;
+}
+.progress {
+    height: 23px;
+}
+.progressBox {
+    margin-top: 12px;
+}
+.progressCon h3{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+.progressConTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.iconProgress {
+    background: #c5dcfa;
+    border-radius: 19px;
+    width: 35px;
+    height: 35px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.iconProgress img{
+    width: 28px;
+    height: 28px;
+    margin: 3px;
+}
+.eggRating h3{
+    font-weight: bold;
+    text-align: left;
+}
+.eggRating {
+    margin-top: 8%;
+}
+.progress-bar {
+    background-color: #1672EC;
+}
+/* 모니터링 상단 */
+.monitorTop {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 0;
+}
+.monitorTop div {
+    display: flex;
+    align-items: center;
+}
+.monitorText h3 {
+    margin:0px;
+    font-size: 20px;
+    color: white;
+}
+.monitorText {
+    background: #1672EC;
+    padding: 1rem 1.2rem 1rem 2.5rem;
+}
+.monitorText::after {
+    border-bottom: 21px solid transparent;
+    border-top: 21px solid transparent;
+    border-left: 30px solid #1672EC;
+    border-right: 21px solid transparent;
+    position: absolute;
+    margin-left: 8%;
+    content: '';
+}
+.monitorColor {
+    margin-right: 15px;
+}
+.monitorColor .colorItem div{
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    background-color: #C5F2C7;
+    margin-right: 6px;
+}
+.monitorColor .colorItem span {
+    font-weight: bold;
+    vertical-align: middle;
+}
+.monitorColor li:first-child div{ 
+    background-color: #FBE5C9;
+}
+.monitorColor li:last-child  div {
+    background-color: #FCD0CF;
+}
+.colorItem div {
+    float: left;
+}
+.colorItem {
+    margin-right: 12px;
+}
+.monitorItem {
+    margin-bottom: 20px;
+}
+.monitorItem.col-lg-3.Boxcustom h4 {
+    position: absolute;
+    z-index: 1;
+    font-weight: bold;
+    margin-top: 19px;
+}
+.monitorItem.col-lg-3.Boxcustom .gray {
+    color: #676767;
+}
+.monitorItem.col-lg-3:not(:last-child){
+    margin-right: 1%;
+}
+.monitor_left {
+    width: 30%;
+}
+.monitorArea:first-child > .monitor_item {
+    background-color: #FFF3F3;
+}
+.monitor_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.monitor_card .monitor_icon {
+    margin: 0 auto;
+    width: 50px;
+}
+.monitor_card .monitor_icon img {
+    width: 50px;
+}
+.monitor_tag {
+    background: #F5D222;
+    border-radius: 5px; 
+    width: 60%;
+    margin:0 auto;  
+    margin-top: 7px;
+}
+.monitor_tag p {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+.monitor_txt {
+    width: 100%;
+}
+.monitor_txt div > p{
+    margin: 0;
+    font-size: 1.8rem;
+}
+.monitor_one {
+    margin-bottom: 5px;
+}
+.monitor_txt .bold{
+    color: #606266;
+    font-weight: bold;
+}
+.monitor_card .right_top {
+    background: #F2F2F2;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    padding: 0.5rem;
+}
+.monitor_card .right_top p {
+    color: #606266;
+    font-weight: bold;
+    margin: 0;
+}
+.monitorCon.two .monitorText, .monitorCon.three .monitorText{
+    width: 150px;
+}
+.monitorCon.two .monitorText::after, .monitorCon.three .monitorText::after {
+    margin-left: 7.3%;
+}
+#gaugeChart01,#gaugeChart02,#gaugeChart03,#gaugeChart04,#gaugeChart05,#gaugeChart06,#gaugeChart07,#gaugeChart08,#gaugeChart09,#gaugeChart10  {
+    height: 200px;
+}
+/* 미디어태그 */
+@media (min-width: 1200px){
+    .progressCon { 
+        width: 24%;
+    }
+    .monitorItem.col-lg-3 {
+        width: 24.222222%;
+        height: 200px;
+    }
+ 
+}

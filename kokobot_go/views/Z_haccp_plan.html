@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kokobot</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- Bootstrap Styles-->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+
+    <!-- jQuery Js -->
+    <script src="js/jquery-1.10.2.js"></script>
+
+    <!-- 달력 -->
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> -->
+    <script type="text/javascript" src="calendar/moment.js"></script>
+    <script type="text/javascript" src="calendar/moment-with-locales.js"></script>
+    <script type="text/javascript" src="calendar/daterangepicker.js"></script>
+    <script type="text/javascript" src="calendar/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="calendar/daterangepicker.css" />
+
+    <!-- 숫자키패드 -->
+    <link href="css/num_keypad.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/num_keypad.js"></script>
+
+    <!-- Custom Styles-->
+    <link href="css/custom-styles.css" rel="stylesheet" />
+    <link href="css/form.css" rel="stylesheet" />
+    <link href="css/table.css" rel="stylesheet" />
+    <link href="css/media.css" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <article id="wrapper-top">
+            <nav class="navbar navbar-default top-navbar" role="navigation">
+                <div class="nav_top">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle waves-effect waves-dark" data-toggle="collapse"
+                            data-target=".sidebar-collapse">
+                            <span class="sr-only"></span>
+                        </button>
+                        <a class="navbar-brand waves-effect waves-dark" href="index.html"><img src="img/logo.png" />
+                            <p><strong>KOKOBOT</strong></p>
+                            <br /><span>양계 농장 통합관리 시스템</span>
+                        </a>
+                        <div id="sideNav" href="">
+                            <i class="material-icons dp48">toc</i>
+                        </div>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown4"><i
+                                    class="fa fa-envelope fa-fw"></i> 문서보관함<i class="material-icons right"></i></a>
+                        </li>
+                        <li>
+                            <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown3"><i
+                                    class="fa fa-tasks fa-fw"></i> 하하하<i class="material-icons right"></i></a>
+                        </li>
+                        <li>
+                            <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown2"><i
+                                    class="fa fa-bell fa-fw"></i><span class="badge">10</span>알림<i
+                                    class="material-icons right"></i></a>
+                        </li>
+                        <li>
+                            <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown1"><i
+                                    class="fa fa-user fa-fw"></i>농장주<i class="material-icons right"></i></a>
+                        </li>
+                    </ul>
+                    <div id="search-bar">
+                        <div id="search-bar-bg">
+                            <button id="search-btn" class="search-bar-btn">
+                                <img src="img/search.png" />
+                            </button>
+                            <form action="#" method="post">
+                                <input id="search-word" type="search" placeholder="검색어를 입력해보세요" />
+                            </form>
+                            <button id="close-btn" class="search-bar-btn">
+                                <img src="img/close.png" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav_bot">
+                    <div id="under-navbar" class="" role="navigation">
+                        <ul>
+                            <li class="active">
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보1<span class="after_tri active"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보2<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보3<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보4<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보5<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보6<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보7<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보8<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보9<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보10<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보11<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보12<span class="after_tri"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="sub-navbar">
+                        <ul class="active">
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브1</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브2</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브3</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브4</a></li>
+                            <li><a href="#">서브4</a></li>
+                            <li><a href="#">서브4</a></li>
+                            <li><a href="#">서브4</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브5</a></li>
+                            <li><a href="#">서브5</a></li>
+                            <li><a href="#">서브5</a></li>
+                            <li><a href="#">서브5</a></li>
+                            <li><a href="#">서브5</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브6</a></li>
+                            <li><a href="#">서브6</a></li>
+                            <li><a href="#">서브6</a></li>
+                            <li><a href="#">서브6</a></li>
+                            <li><a href="#">서브6</a></li>
+                            <li><a href="#">서브6</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브7</a></li>
+                            <li><a href="#">서브7</a></li>
+                            <li><a href="#">서브7</a></li>
+                            <li><a href="#">서브7</a></li>
+                            <li><a href="#">서브7</a></li>
+                            <li><a href="#">서브7</a></li>
+                            <li><a href="#">서브7</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브10</a></li>
+                            <li><a href="#">서브10</a></li>
+                            <li><a href="#">서브10</a></li>
+                            <li><a href="#">서브10</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브11</a></li>
+                            <li><a href="#">서브11</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브12</a></li>
+                            <li><a href="#">서브12</a></li>
+                            <li><a href="#">서브12</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Dropdown Structure -->
+            <ul id="dropdown1" class="dropdown-content">
+                <li>
+                    <a href="#"><i class="fa fa-user fa-fw"></i>기초정보</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-gear fa-fw"></i>설정</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-sign-out fa-fw"></i>로그아웃</a>
+                </li>
+            </ul>
+        </article>
+        <!--/. NAV TOP  -->
+        <article id="wrapper-under">
+            <div class="left-side">
+                <nav class="navbar-default navbar-side" role="navigation">
+                    <div class="sidebar-collapse">
+                        <ul class="nav" id="main-menu">
+                            <li class="active">
+                                <a href="#" class="waves-effect waves-dark"><i class="fas fa-check-circle"></i>관리계획<span
+                                        class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="#" class="prog1-active"><span></span>CCP-1B 입추 &#40;살모넬라&#41;</a>
+                                        <ul class="nav nav-third-level"></ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class=""><span></span>CCP-2C 집란 &#40;동물의약품&#41;</a>
+                                        <ul class="nav nav-third-level"></ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class=""><span></span>CCP-3C 출하 &#40;노계&#41;</a>
+                                        <ul class="nav nav-third-level"></ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!-- /. NAV SIDE  -->
+            <div id="page-wrapper">
+                <div id="page-inner">
+                    <!-- /. ROW  -->
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 prog1 active">
+                            <div class="row prog2 active ">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="top-card col-md-8">
+                                        <div class="">
+                                            <div class="search-box">
+                                                <form action="#">
+                                                    <div class="cardrow">
+                                                        <div class="inputleft">
+                                                            <div class="col-25">
+                                                                <label for="fname"
+                                                                    style="position: static; transform: none; margin-top: 13px;">연도별
+                                                                    조회</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <select name="" id="">
+                                                                        <option value="">2022년</option>
+                                                                        <option value="">2021년</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="search-box-btn">
+                                                        <button><i class="fa fa-search"></i> 조회</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bot-card col-md-8">
+                                        <div class="">
+                                            <div class="">
+                                                <form action="#">
+                                                    <div class="tablerow">
+                                                        <table class="haccp-table">
+                                                            <colgroup>
+                                                                <col style="width: 15%;">
+                                                                <col style="width: 15%;">
+                                                                <col style="width: 35%;">
+                                                                <col style="width: 35%;">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th colspan="4">관리기준서</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>구분</th>
+                                                                    <th colspan="3">내용</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>CCP 번호</td>
+                                                                    <td colspan="3">CCP-1B</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>위해요소</td>
+                                                                    <td colspan="3">SE 감염된 초생추&#40;중추&#41;의 반입</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>중요관리점</td>
+                                                                    <td colspan="3">입추</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>한계기준</td>
+                                                                    <td colspan="3">반입 초생추&#40;중추&#41;의 SE 불검출</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td rowspan="4">감시방법</td>
+                                                                    <td class="haccp-table-bg">무엇을</td>
+                                                                    <td colspan="2">반입되는 초생추/중추의 SE 감염 여부</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>어떻게</td>
+                                                                    <td colspan="2">해당 초생추&#40;중추&#41;에 대한 도입처의 SE검사성적서
+                                                                        확인
+                                                                        혹은 공인된 검사기관에 SE 검사 의뢰한 후 모니터링 일지 작성</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>언 제</td>
+                                                                    <td colspan="2">매 입추 시</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>누 가</td>
+                                                                    <td colspan="2">HACCP 팀장</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>개선조치</td>
+                                                                    <td colspan="3">- SE 감염 확인 시 구입처에 통보
+                                                                        - SE 감소 프로그램 운영 및 재검사로 음성 여부 확인
+                                                                        - 원인분석 및 예방관리&#40;필요시 수의사 자문&#41;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td rowspan="4">검증방법</td>
+                                                                    <td class="haccp-table-bg">무엇을</td>
+                                                                    <td>계군/사육시설에 대한 SE 정기검사</td>
+                                                                    <td>모니터링기록 확인</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>어떻게</td>
+                                                                    <td>- 정기적으로 산란계군 및 시설/환경에 대한 SE 검사</td>
+                                                                    <td>- 도입처 또는 자체 SE 검사성적서 확인
+                                                                        - 모니터링 기록부 승인</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>언 제</td>
+                                                                    <td>반기 1회</td>
+                                                                    <td>매 입추 시</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>누 가</td>
+                                                                    <td>대표자</td>
+                                                                    <td>대표자</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>기록</td>
+                                                                    <td colspan="3">- 산란계사육일지
+                                                                        - 도입처/자체 SE검사성적서
+                                                                        - 계군 및 시설환경 SE검사성적서</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bot-card col-md-4">
+                                        <div class="">
+                                            <div class="">
+                                                <form action="#">
+                                                    <div class="tablerow">
+                                                        <table class="haccp-table">
+                                                            <colgroup>
+                                                                <col style="width: 15%;">
+                                                                <col style="width: 15%;">
+                                                                <col style="width: 25%;">
+                                                                <col style="width: 45%;">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th colspan="4">한계기준 설정근거</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>위해요소</th>
+                                                                    <th>중요관리점</th>
+                                                                    <th>한계기준</th>
+                                                                    <th>설정 근거</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>SE 감염된</td>
+                                                                    <td>입추</td>
+                                                                    <td>반입 초생추 &#40;중추&#41;의 SE 불검출</td>
+                                                                    <td>- SE에 오염 계군 반입 시 달걀 및 다른 계군에 SE 오염&#40;전파&#41;
+                                                                        가능성이 높음</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 prog1">
+                            <div class="row prog2 active ">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="top-card col-md-8">
+                                        <div class="">
+                                            <div class="search-box">
+                                                <form action="#">
+                                                    <div class="cardrow">
+                                                        <div class="inputleft">
+                                                            <div class="col-25">
+                                                                <label for="fname"
+                                                                    style="position: static; transform: none; margin-top: 13px;">연도별
+                                                                    조회</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <select name="" id="">
+                                                                        <option value="">2022년</option>
+                                                                        <option value="">2021년</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="search-box-btn">
+                                                        <button><i class="fa fa-search"></i> 조회</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bot-card col-md-8">
+                                        <div class="">
+                                            <div class="">
+                                                <form action="#">
+                                                    <div class="tablerow">
+                                                        <table class="haccp-table">
+                                                            <colgroup>
+                                                                <col style="width: 15%;">
+                                                                <col style="width: 10%;">
+                                                                <col style="width: 20%;">
+                                                                <col style="width: 20%;">
+                                                                <col style="width: 20%;">
+                                                                <col style="width: 20%;">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th colspan="6">관리기준서</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>구분</th>
+                                                                    <th colspan="5">내용</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>CCP 번호</td>
+                                                                    <td colspan="5">CCP-2C</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>위해요소</td>
+                                                                    <td colspan="5">달걀에 동물용의약품&#40;항생제 등&#41; 잔류</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>중요관리점</td>
+                                                                    <td colspan="5">집란</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>한계기준</td>
+                                                                    <td colspan="5">동물용의약품 약제별 휴약기간 준수</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td rowspan="4">감시방법</td>
+                                                                    <td class="haccp-table-bg">무엇을</td>
+                                                                    <td colspan="4">산란계군의 동물용의약품&#40;항생제 등&#41; 휴약기간 준수
+                                                                        여부확인</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>어떻게</td>
+                                                                    <td colspan="4">사양관리일지, 약품사용기록부 등을 통해 최종 동물용의약품 휴약기간
+                                                                        준수 확인 후, 모니터링 일지 작성</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>언 제</td>
+                                                                    <td colspan="4">매 집란 시</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>누 가</td>
+                                                                    <td colspan="4">HACCP 팀장</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>개선조치</td>
+                                                                    <td colspan="4">-휴약기간 미 준수 계군에서 생산된 달걀 표시 / 폐기처분
+                                                                        -동물용의약품&#40;항생제 등&#41; 휴약기간 준수 후 출하
+                                                                        -원인분석 및 예방관&#40;필요시 수의사 자문&#41;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td rowspan="4">검증방법</td>
+                                                                    <td class="haccp-table-bg">무엇을</td>
+                                                                    <td>한계기준 &#40;휴약기간&#41;확인</td>
+                                                                    <td>한계기준 &#40;휴약기간&#41;확인</td>
+                                                                    <td>잔류물질 검사</td>
+                                                                    <td>모니터링기록 확인</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>어떻게</td>
+                                                                    <td>약품설명서 확인</td>
+                                                                    <td>현장재고파악 및 사용량 검증</td>
+                                                                    <td>공인된 기관의 잔류물질 검사</td>
+                                                                    <td>사양관리일지, 약품사용기록부, 집란일지 확인</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>언 제</td>
+                                                                    <td>분기 1회,
+                                                                        신규약품 입고 시</td>
+                                                                    <td>
+                                                                        <div><input type="checkbox" name="" value="매 파스" checked><label for="haccp-plan-checkbox">매 파스</label></div>
+                                                                        <div><input type="checkbox" name="" value="분기 1회"><label for="haccp-plan-checkbox">분기 1회</label></div>
+                                                                        <div><label for="haccp-plan-text">기타</label><input type="text" name="" value=""></div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div><input type="checkbox" name="" value="반기 1회" checked><label for="haccp-plan-checkbox">반기 1회</label></div>
+                                                                        <div><input type="checkbox" name="" value="분기 1회"><label for="haccp-plan-checkbox">분기 1회</label></div>
+                                                                        <div><input type="checkbox" name="" value="매 파스"><label for="haccp-plan-checkbox">기타 매 파스</label></div>
+                                                                    <td>매 파스</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>누 가</td>
+                                                                    <td>대표자</td>
+                                                                    <td>대표자</td>
+                                                                    <td>대표자</td>
+                                                                    <td>대표자</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>기록</td>
+                                                                    <td colspan="3">- 산란계사육일지
+                                                                        - 집란일지 &#40;CCP모니터링일지&#41;
+                                                                        - 약품사용기록부
+                                                                        - 약품재고기록부</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bot-card col-md-4">
+                                        <div class="">
+                                            <div class="">
+                                                <form action="#">
+                                                    <div class="tablerow">
+                                                        <table class="haccp-table">
+                                                            <colgroup>
+                                                                <col style="width: 15%;">
+                                                                <col style="width: 15%;">
+                                                                <col style="width: 25%;">
+                                                                <col style="width: 45%;">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th colspan="4">한계기준 설정근거</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>위해요소</th>
+                                                                    <th>중요관리점</th>
+                                                                    <th>한계기준</th>
+                                                                    <th>설정 근거</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>동물용의약품 &#40;항생제 등&#41; 잔류</td>
+                                                                    <td style="text-align: center;">집란</td>
+                                                                    <td>동물용의약품 약제별 휴약기간 준수</td>
+                                                                    <td>-「식품의 기준 및 규격」 [별표 5] 식품 중 동물용의약품의 잔류허용기준
+                                                                        -잔류 예방을 위한 동물용의약품의 약제별 휴약기간이 정해져 있음</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 prog1">
+                            <div class="row prog2 active ">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="top-card col-md-8">
+                                        <div class="">
+                                            <div class="search-box">
+                                                <form action="#">
+                                                    <div class="cardrow">
+                                                        <div class="inputleft">
+                                                            <div class="col-25">
+                                                                <label for="fname" style="position: static; transform: none; margin-top: 13px;">연도별 조회</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <select name="" id="">
+                                                                        <option value="">2022년</option>
+                                                                        <option value="">2021년</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="search-box-btn">
+                                                        <button><i class="fa fa-search"></i> 조회</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bot-card col-md-8">
+                                        <div class="">
+                                            <div class="">
+                                                <form action="#">
+                                                    <div class="tablerow">
+                                                        <table class="haccp-table">
+                                                            <colgroup>
+                                                                <col style="width: 15%;">
+                                                                <col style="width: 15%;">
+                                                                <col style="width: 25%;">
+                                                                <col style="width: 25%;">
+                                                                <col style="width: 25%;">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th colspan="5">관리기준서</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>구분</th>
+                                                                    <th colspan="4">내용</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>CCP 번호</td>
+                                                                    <td colspan="3">CCP-3C</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>위해요소</td>
+                                                                    <td colspan="3">동물용의약품&#40;항생제 등&#41; 잔류</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>중요관리점</td>
+                                                                    <td colspan="3">출하</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>한계기준</td>
+                                                                    <td colspan="3">동물용의약품 약제별 휴약기간 준수</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td rowspan="4">감시방법</td>
+                                                                    <td class="haccp-table-bg">무엇을</td>
+                                                                    <td colspan="2">출하계군의 동물용의약품&#40;항생제 등&#41; 휴약기간 준수 여부확인</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>어떻게</td>
+                                                                    <td colspan="2">약품사용기록부 등을 통해 최종 동물용의약품 휴약기간 만료일 확인 후 출하일지 작성</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>언 제</td>
+                                                                    <td colspan="2">매 출하 직전</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>누 가</td>
+                                                                    <td colspan="2">HACCP 팀장</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>개선조치</td>
+                                                                    <td colspan="3">- 휴약기간 미 준수 시 출하정지
+                                                                        - 동물용의약품&#40;항생제 등&#41; 휴약기간 준수 후 출하
+                                                                        - 원인분석 및 예방관리&#40;필요시 수의사 자문&#41;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td rowspan="4">검증방법</td>
+                                                                    <td class="haccp-table-bg">무엇을</td>
+                                                                    <td>한계기준&#40;휴약기간&#41;확인</td>
+                                                                    <td>약품재고조사</td>
+                                                                    <td>모니터링기록 확인</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>어떻게</td>
+                                                                    <td>약품설명서 확인</td>
+                                                                    <td>현장재고파악 및 사용량 검증</td>
+                                                                    <td>출하일지&#40;CCP모니터링&#41;, 약품사용기록부 일치여부 확인</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>언 제</td>
+                                                                    <td>분기 1회, 신규약품 입고 시</td>
+                                                                    <td>
+                                                                        <div><input type="checkbox" name="" value="매 파스" checked><label for="haccp-plan-checkbox">매 파스</label></div>
+                                                                        <div><input type="checkbox" name="" value="분기 1회"><label for="haccp-plan-checkbox">분기 1회</label></div>
+                                                                        <div><label for="haccp-plan-text">기타</label><input type="text" name="" value=""></div>
+                                                                    </td>
+                                                                    <td>분기 1회</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>누 가</td>
+                                                                    <td>대표자</td>
+                                                                    <td>대표자</td>
+                                                                    <td>대표자</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>기록</td>
+                                                                    <td colspan="3">- 산란계사육일지
+                                                                        - 출하일지&#40;CCP모니터링일지&#41;
+                                                                        - 약품사용기록부
+                                                                        - 약품재고기록부</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bot-card col-md-4">
+                                        <div class="">
+                                            <div class="">
+                                                <form action="#">
+                                                    <div class="tablerow">
+                                                        <table class="haccp-table">
+                                                            <colgroup>
+                                                                <col style="width: 15%;">
+                                                                <col style="width: 15%;">
+                                                                <col style="width: 25%;">
+                                                                <col style="width: 45%;">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th colspan="4">한계기준 설정근거</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>위해요소</th>
+                                                                    <th>중요관리점</th>
+                                                                    <th>한계기준</th>
+                                                                    <th>설정 근거</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>동물용의약품&#40;항생제 등&#41; 잔류</td>
+                                                                    <td style="text-align: center;">출하</td>
+                                                                    <td>동물용의약품 약제별 휴약기간 준수</td>
+                                                                    <td>-「식품의 기준 및 규격」 [별표 5] 식품 중 동물용의약품의 잔류허용기준
+                                                                        -잔류 예방을 위한 동물용의약품의 약제별 휴약기간이 정해져 있음</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer>
+                        <div class="fbtn-group">
+                            <button class="fpdf">PDF출력</button>
+                            <button class="fexcel">엑셀 다운로드</button>
+                            <button class="fexcel">엑셀 업로드</button>
+                            <button class="finit">초기화</button>
+                            <button class="fsave">저장</button>
+                        </div>
+                    </footer>
+                </div>
+                <!-- /. PAGE INNER  -->
+            </div>
+        </article>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+
+    <!-- Bootstrap Js -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="materialize/js/materialize.min.js"></script>
+
+    <!-- Metis Menu Js -->
+    <script src="js/jquery.metisMenu.js"></script>
+
+    <!-- Custom Js -->
+    <script src="js/custom-scripts.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

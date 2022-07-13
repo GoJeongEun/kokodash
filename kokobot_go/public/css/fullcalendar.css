@@ -1,0 +1,92 @@
+.middle_title::before {
+    content: '';
+    width: 27px;
+    height: 27px;
+    background-image: url(/icon/calendar.png);
+    position: absolute;
+    background-size: 25px;
+    background-repeat: no-repeat;
+}
+li.middle_title p {
+    margin-left: 35px;
+    margin-top: 4px;
+}
+.page-header {
+    background-color: #fff;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 28px rgb(0 0 0 / 8%);
+    box-shadow: 0 0 28px rgb(0 0 0 / 8%);
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+}
+.page-header h4 {
+    font-weight: 700;
+    padding-bottom: 5px;
+}
+.page-header .breadcrumb {
+    padding: 0;
+    margin: 0;
+}
+.breadcrumb-item.active {
+    color: #1672EC;
+    font-weight: 600;
+}
+nav {
+    box-shadow: none;
+}
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    background: transparent;
+    box-shadow: none;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+    font-family: "FontAwesome";
+    content: "\f105";
+}
+.card-box{
+    background-color: #fff;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 28px rgb(0 0 0 / 8%);
+    box-shadow: 0 0 28px rgb(0 0 0 / 8%);
+}
+.pd-20 {
+    padding: 20px;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #1672EC;
+    border-color: #1672EC;
+}
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #223189;
+    border-color: #1a276e;
+}
+.btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #1f7ecf;
+    border-color: #1f7ecf;
+}
+.btn-primary[disabled] {
+    background-color: #223189;
+    border-color: #1a276e;
+}
+th.fc-day-header {
+    padding: 11px 7px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.fc-basic-view .fc-day-number {
+    padding: 8px !important;
+}
+.table-bordered>thead>tr>th {
+    border-bottom-width: 1px;
+}
+.table-bordered>thead>tr>td {
+    border-bottom-width: 1px;
+}
+table.table-bordered th {
+    background: aliceblue;
+}

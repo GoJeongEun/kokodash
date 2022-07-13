@@ -1,0 +1,321 @@
+
+
+.topDongbox {
+    background: white;
+    height: 80px;
+    padding: 0rem 1rem;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+ul.topDong {
+    display: flex;
+    margin: 0;
+    justify-content: flex-start;
+    padding: 1rem 1.5rem;
+    flex-wrap: nowrap;
+    height: 80px;
+    width: 100%;
+    overflow: overlay;
+}
+.topDong li {
+    display: flex;
+    justify-content: center;
+    padding: 0rem 2.5rem 0rem 2.5rem;
+}
+.topDongicon {
+    width: 40px;
+    height: 40px;
+    background: #EBF2FF;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.topDong .topDongItem:ntha-child(2) > .topDongicon {
+    background: #FCE3BF;
+}
+.topDong .topDongItem:nth-child(3) > .topDongicon {
+    background: #EBFFED;
+}
+.topDong .topDongItem:nth-child(4) > .topDongicon {
+    background: #F4EBFF;
+}
+
+/*  topDong after dong number*/
+.topDong .topDongItem:first-child .topDongT p:first-child{
+    color: #1672EC;
+    font-weight: bolder;
+} 
+.topDong .topDongItem:first-child .topDongicon::after {
+    content: '1동';
+    font-size: 1.3rem;
+    margin-left: 9px;
+    font-weight: bold;
+}
+.topDong .topDongItem:nth-child(2) .topDongicon::after {
+    content: '2동';
+    font-size: 1.3rem;
+    margin-left: 9px;
+    font-weight: bold;
+}
+.topDong .topDongItem:nth-child(3) .topDongicon::after {
+    content: '3동';
+    font-size: 1.3rem;
+    margin-left: 9px;
+    font-weight: bold;
+}
+.topDong .topDongItem:nth-child(4) .topDongicon::after {
+    content: '4동';
+    font-size: 1.3rem;
+    margin-left: 9px;
+    font-weight: bold;
+}
+.topDong .topDongItem:nth-child(5) .topDongicon::after {
+    content: '5동';
+    font-size: 1.3rem;
+    margin-left: 9px;
+    font-weight: bold;
+}
+.topDong .topDongItem:nth-child(6) .topDongicon::after {
+    content: '6동';
+    font-size: 1.3rem;
+    margin-left: 9px;
+    font-weight: bold;
+}
+
+.topDongicon img {
+    /* padding: 0.25rem; */
+    margin: 0.25rem;
+    width: 35px;
+    height: 35px;
+}
+.topDongT {
+    width: 120px;
+}
+.topDongT p {
+    margin: 0;
+    font-family: Manrope;
+    font-style: normal; 
+}
+li.topDongItem::after {
+    width: 2px;
+    height: 45px;
+    content: "";
+    background: #EAEAEA;
+    margin-left: 30px;
+}
+ .font-B {
+    color: black;
+    font-weight: 600;
+}
+
+.font-g {
+    color: #606266;
+    font-weight: 600;
+}
+.topDong::-webkit-scrollbar {
+    /* width: 1vw; */
+    width: 10px;
+    height: 10px;
+}
+.topDong::-webkit-scrollbar-thumb {
+
+    background-color: #1672ecbd;
+    border-radius: 100px;
+
+}
+.topDong::-webkit-scrollbar-track {
+    background: #EAEAEA;
+    border-radius: 100px;
+}
+.topDongItem:last-child::after{
+    background: transparent;
+}
+
+/* 이벤트카드슬라이더 */
+.eventSlide {
+    background: white;
+    width: 60%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    height: 80px;
+}
+li.eventItem {
+    padding: 1.8rem 4rem;
+    height: 80px;
+}
+li.eventItem div {
+    float: left;
+}
+.eventIcon {
+    width: 45px;
+    height: 45px;
+    background: #EBF2FF;
+    border-radius: 5px;
+    margin-right: 1.5rem;
+}
+.eventIcon img {
+    /* width: 25px; */
+    margin-left: 0.25rem;
+    padding: 0.25rem;
+    margin-top: 0.25rem;
+}
+.eventT p{
+    margin: 0;
+}
+.eventT .font-B {
+    color: black;
+    font-weight: 600;
+}
+.eventT .font-g {
+    color: #606266;
+    font-weight: 600;
+}
+.eventT .font-g::after {
+    width: 8px;
+    height: 8px;
+    content: "";
+    position: absolute;
+    background: #1672EC;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+.chartBox ,.chartBox2  {
+    margin-top: 25px;
+    background: white;
+
+}
+.chartBox2  {
+    width: 64.5%;
+    max-height: 350px;
+}
+.chartBox {
+    margin-right: 2%;
+}
+.chartBox .chart {
+    margin-right: 1.5%;
+    height: 350px;
+}  
+#myChart,#myLineChart {
+   max-height: 350px; 
+}
+/* newCalendar */
+.newCalendar {
+    margin-top: 25px;
+    width: 60%;
+}
+.newCalendarTwo {
+    margin-top: 25px;
+    width: 60%;
+}
+.newCalendarT {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+.newCalendarT span {
+    vertical-align: bottom;
+}
+.newCalendarT span:last-child {
+    float: right;
+    cursor: pointer;
+}
+.CalendarTable table tbody .day {
+    width: 2.2em;
+    height: 2.2em;
+    line-height: 2.2em;
+    border-radius: 50%;
+    display: inline-block;   
+    text-align: center;
+}
+.CalendarTable table thead td{
+    text-align: center;
+}
+.CalendarTable table {
+    border-bottom: 1px solid #ddd;
+}
+.TableTopTitle {
+    margin: 0.8rem 0;
+}
+.StitleL p{
+    margin: 0;
+    margin-bottom: 1px;
+}
+.StitleL .font-g {
+    font-size: 1.2rem;
+    position: absolute;
+    margin-top: -27px;
+    margin-left: 21px;
+}
+.ScheduleT div {
+    float: left;
+}
+.ScheduleC {
+    position: absolute;
+    right: 20px;
+}
+input#Sucstom {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+li.ScheduleItem .ScheduleT {
+    float: left;
+}
+.ScheduleT {
+    width: 100%;
+}
+input#Scustom01 {
+    display: none;
+}
+input#Scustom02 {
+    display: none;
+}
+label[for="Scustom01"] {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #1672ec;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+}
+label[for="Scustom02"] {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #2AB930;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+}
+input[id="Scustom01"]:checked ~ label[for="Scustom01"]::after {
+    content:'✔';
+    font-size: 8px;
+    width: 11px;
+    height: 13px;
+    text-align: center;
+    color: white;
+    position: absolute;
+    left: 0;
+    top:-2px;
+    background: #1672ec;
+}
+input[id="Scustom02"]:checked + label[for="Scustom02"]::after{
+    content:'✔';
+    font-size: 9px;
+    width: 11px;
+    height: 13px;
+    text-align: center;
+    color: white;
+    position: absolute;
+    left: 0;
+    top:-2px;
+    background: #2AB930;
+}
+#inputcustom01 { 
+   position: absolute;
+   margin-top: -27px;
+   margin-left: 21px;
+}

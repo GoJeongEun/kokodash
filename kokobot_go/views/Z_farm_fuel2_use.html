@@ -1,0 +1,919 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>연료사용</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!-- Bootstrap Styles-->
+  <link href="css/bootstrap.css" rel="stylesheet" />
+  <!-- FontAwesome Styles-->
+  <link href="css/font-awesome.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+
+  <!-- jQuery Js -->
+  <script src="js/jquery-1.10.2.js"></script>
+  
+  <!-- 달력 -->
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> -->
+  <script type="text/javascript" src="calendar/moment.js"></script>
+  <script type="text/javascript" src="calendar/moment-with-locales.js"></script>
+  <script type="text/javascript" src="calendar/daterangepicker.js"></script>
+  <script type="text/javascript" src="calendar/moment.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="calendar/daterangepicker.css" />
+  
+  <!-- Custom Styles-->
+  <link href="css/custom-styles.css" rel="stylesheet" />
+  <link href="css/form.css" rel="stylesheet" />
+  <link href="css/table.css" rel="stylesheet" />
+  <link href="css/popup.css" rel="stylesheet" />
+  <link href="css/media.css" rel="stylesheet" />
+  <!-- Google Fonts-->
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div id="wrapper">
+    <article id="wrapper-top">
+      <nav class="navbar navbar-default top-navbar" role="navigation">
+        <div class="nav_top">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle waves-effect waves-dark" data-toggle="collapse" data-target=".sidebar-collapse">
+              <span class="sr-only"></span>
+            </button>
+            <a class="navbar-brand waves-effect waves-dark" href="index.html"><img src="img/logo.png" />
+              <p><strong>KOKOBOT</strong></p>
+              <br /><span>양계 농장 통합관리 시스템</span>
+            </a>
+            <div id="sideNav" href="">
+              <i class="material-icons dp48">toc</i>
+            </div>
+          </div>
+          <ul class="nav navbar-top-links navbar-right">
+            <li>
+              <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown4"><i
+                  class="fa fa-envelope fa-fw"></i> 문서보관함<i class="material-icons right"></i></a>
+            </li>
+            <li>
+              <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown3"><i
+                  class="fa fa-tasks fa-fw"></i> 하하하<i class="material-icons right"></i></a>
+            </li>
+            <li>
+              <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown2"><i
+                  class="fa fa-bell fa-fw"></i><span class="badge">10</span>알림<i class="material-icons right"></i></a>
+            </li>
+            <li>
+              <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown1"><i
+                  class="fa fa-user fa-fw"></i>농장주<i class="material-icons right"></i></a>
+            </li>
+          </ul>
+          <div id="search-bar">
+            <div id="search-bar-bg">
+              <button id="search-btn" class="search-bar-btn">
+                <img src="img/search.png" />
+              </button>
+              <form action="#" method="post">
+                <input id="search-word" type="search" placeholder="검색어를 입력해보세요" />
+              </form>
+              <button id="close-btn" class="search-bar-btn">
+                <img src="img/close.png" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="nav_bot">
+          <div id="under-navbar" class="" role="navigation">
+            <ul>
+              <li class="active">
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보1<span class="after_tri active"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보2<span class="after_tri"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보3<span class="after_tri"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보4<span class="after_tri"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보5<span class="after_tri"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보6<span class="after_tri"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보7<span class="after_tri"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보8<span class="after_tri"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보9<span class="after_tri"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보10<span class="after_tri"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보11<span class="after_tri"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보12<span class="after_tri"></span>
+              </li>
+            </ul>
+          </div>
+          <div id="sub-navbar">
+            <ul class="active">
+              <li><a class="sub-active" href="#">서브1</a></li>
+              <li><a href="#">서브1</a></li>
+              <li><a href="#">서브1</a></li>
+              <li><a href="#">서브1</a></li>
+              <li><a href="#">서브1</a></li>
+              <li><a href="#">서브1</a></li>
+              <li><a href="#">서브1</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브2</a></li>
+              <li><a href="#">서브2</a></li>
+              <li><a href="#">서브2</a></li>
+              <li><a href="#">서브2</a></li>
+              <li><a href="#">서브2</a></li>
+              <li><a href="#">서브2</a></li>
+              <li><a href="#">서브2</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브3</a></li>
+              <li><a href="#">서브3</a></li>
+              <li><a href="#">서브3</a></li>
+              <li><a href="#">서브3</a></li>
+              <li><a href="#">서브3</a></li>
+              <li><a href="#">서브3</a></li>
+              <li><a href="#">서브3</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브4</a></li>
+              <li><a href="#">서브4</a></li>
+              <li><a href="#">서브4</a></li>
+              <li><a href="#">서브4</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브5</a></li>
+              <li><a href="#">서브5</a></li>
+              <li><a href="#">서브5</a></li>
+              <li><a href="#">서브5</a></li>
+              <li><a href="#">서브5</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브6</a></li>
+              <li><a href="#">서브6</a></li>
+              <li><a href="#">서브6</a></li>
+              <li><a href="#">서브6</a></li>
+              <li><a href="#">서브6</a></li>
+              <li><a href="#">서브6</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브7</a></li>
+              <li><a href="#">서브7</a></li>
+              <li><a href="#">서브7</a></li>
+              <li><a href="#">서브7</a></li>
+              <li><a href="#">서브7</a></li>
+              <li><a href="#">서브7</a></li>
+              <li><a href="#">서브7</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브8</a></li>
+              <li><a href="#">서브8</a></li>
+              <li><a href="#">서브8</a></li>
+              <li><a href="#">서브8</a></li>
+              <li><a href="#">서브8</a></li>
+              <li><a href="#">서브8</a></li>
+              <li><a href="#">서브8</a></li>
+              <li><a href="#">서브8</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브9</a></li>
+              <li><a href="#">서브9</a></li>
+              <li><a href="#">서브9</a></li>
+              <li><a href="#">서브9</a></li>
+              <li><a href="#">서브9</a></li>
+              <li><a href="#">서브9</a></li>
+              <li><a href="#">서브9</a></li>
+              <li><a href="#">서브9</a></li>
+              <li><a href="#">서브9</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브10</a></li>
+              <li><a href="#">서브10</a></li>
+              <li><a href="#">서브10</a></li>
+              <li><a href="#">서브10</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브11</a></li>
+              <li><a href="#">서브11</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브12</a></li>
+              <li><a href="#">서브12</a></li>
+              <li><a href="#">서브12</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Dropdown Structure -->
+      <ul id="dropdown1" class="dropdown-content">
+        <li>
+          <a href="#"><i class="fa fa-user fa-fw"></i>기초정보</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-gear fa-fw"></i>설정</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-sign-out fa-fw"></i>로그아웃</a>
+        </li>
+      </ul>
+    </article>
+    <!--/. NAV TOP  -->
+    <article id="wrapper-under">
+      <div class="left-side">
+        <nav class="navbar-default navbar-side" role="navigation">
+          <div class="sidebar-collapse">
+            <ul class="nav" id="main-menu">
+              <li class="subsub">
+                <a href="fuel-in.html" class="waves-effect"><i class="fas fa-check-circle"></i>연료입고<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                  <li>
+                    <a href="#" class="prog1-active">
+                      <span></span>연료입고<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level collapse in" aria-expanded="true">
+                      <li class="prog2-active">
+                        <a href="#">1. 거래정보</a><button>수정</button>
+                      </li>
+                      <li>
+                        <a href="#">2. 입고정보</a><button>수정</button>
+                      </li>
+                      <li>
+                        <a href="#">3. 차량정보</a><button>수정</button>
+                      </li>
+                      <li>
+                        <a href="#">4. 임상관찰</a><button>수정</button>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="subsub active">
+                <a href="fuel-use.html" class="waves-effect"><i class="fas fa-check-circle"></i>연료 사용<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                  <li>
+                    <a href="#" class="prog1-active">
+                      <span></span>검침기<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level collapse in" aria-expanded="true">
+                      <li class="prog2-active">
+                        <a href="#">1. 사용정보</a><button>수정</button>
+                      </li>
+                      <li>
+                        <a href="#">2. 임상관찰</a><button>수정</button>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span></span>사용량<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level">
+                      <li class="prog2-active">
+                        <a href="#">1. 사용정보</a><button>수정</button>
+                      </li>
+                      <li>
+                        <a href="#">2. 임상관찰</a><button>수정</button>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="subsub">
+                <a href="fuel-return.html" class="waves-effect waves-dark"><i class="fas fa-check-circle"></i>연료반품<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                  <li>
+                    <a href="#" class="prog1-active">
+                      <span></span>구매반품<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level collapse in" aria-expanded="true">
+                      <li class="prog2-active">
+                        <a href="#">1. 거래정보</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">2. 반품정보</a><button>수정</button>
+                      </li>
+                      <li>
+                        <a href="#">3. 차량정보</a><button>수정</button>
+                      </li>
+                      <li>
+                        <a href="#">4. 임상관찰</a><button>수정</button>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="">
+                      <span></span>판매회수<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level">
+                      <li class="prog2-active">
+                        <a href="#">1. 거래정보</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">2. 반품정보</a><button>수정</button>
+                      </li>
+                      <li>
+                        <a href="#">3. 차량정보</a><button>수정</button>
+                      </li>
+                      <li>
+                        <a href="#">4. 임상관찰</a><button>수정</button>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- /. NAV SIDE  -->
+      <div id="page-wrapper">
+        <div id="page-inner">
+          <!-- /. ROW  -->
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 prog1 active">
+              <div class="row prog2 active">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                  <div class="top-card col-md-8">
+                    <div class="">
+                      <div class="inner-box">
+                        <form action="#">
+                          <div class="cardrow">
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">검침일자</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input type="text" class="date date-input" name="" value="" /><span><i class="far fa-calendar-alt"></i></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">검침시각</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input type="text" class="time date-input" name="" value="" /><span><i class="far fa-clock"></i></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cardrow">
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">검침기관리자</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <select name="" id="">
+                                    <option value="">관리자</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bot-card col-md-12">
+                    <div class="">
+                      <div class="">
+                        <form action="#">
+                          <div class="tabletop-btn">
+                            <button id="newbtn-certify-account" class="newbtn" onclick="return false" style="background-color: #223189; color: #fff;">신규등록</button>
+                            <!-- <button onclick="return false"><i class="fas fa-angle-double-left"></i></button> -->
+                          </div>
+                          <div class="tablerow">
+                            <table class="set-table w-100">
+                              <thead>
+                                <tr>
+                                  <th></th>
+                                  <th>검침기</th>
+                                  <th>전일검침량</th>
+                                  <th>당일검침량</th>
+                                  <th>사용량</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td><input type="text" placeholder="" value="1동 연료탱크"></td>
+                                  <td><input type="number" placeholder="측정값"></td>
+                                  <td><input type="number" placeholder="측정값"></td>
+                                  <td><input type="number" placeholder="계산값"></td>
+                                </tr>
+                                <tr>
+                                  <td>2</td>
+                                  <td><input type="text" placeholder="" value="2동 연료탱크"></td>
+                                  <td><input type="number" placeholder="측정값"></td>
+                                  <td><input type="number" placeholder="측정값"></td>
+                                  <td><input type="number" placeholder="계산값"></td>
+                                </tr>
+                                <tr>
+                                  <td>~</td>
+                                  <td><input type="text" placeholder="" value="n동 연료탱크"></td>
+                                  <td><input type="number" placeholder="측정값"></td>
+                                  <td><input type="number" placeholder="측정값"></td>
+                                  <td><input type="number" placeholder="계산값"></td>
+                                </tr>
+                                <tr>
+                                  <td>~~</td>
+                                  <td><input type="text" placeholder="" value="도시가스 검침기"></td>
+                                  <td><input type="number" placeholder="측정값"></td>
+                                  <td><input type="number" placeholder="측정값"></td>
+                                  <td><input type="number" placeholder="계산값"></td>
+                                </tr>
+                              </tbody>
+                              <tfoot>
+                                <tr>
+                                  <td>합계</td>
+                                  <td></td>
+                                  <td class="tfoot-sum"><span>0</span></td>
+                                  <td class="tfoot-sum"><span>0</span></td>
+                                  <td class="tfoot-sum"><span>0</span></td>
+                                </tr>
+                              </tfoot>
+                            </table>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row prog2">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                  <div class="bot-card col-md-8">
+                    <div class="">
+                      <div class="">
+                        <form action="#">
+                          <div class="tablerow">
+                            <table class="set-table w-100">
+                              <thead>
+                                <tr>
+                                  <th></th>
+                                  <th>검침기</th>
+                                  <th>전일검침량</th>
+                                  <th>당일검침량</th>
+                                  <th>사용량</th>
+                                  <th>임상관찰</th>
+                                  <th>임상관찰조치</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td><input type="text" placeholder="" value="1동 연료탱크"></td>
+                                  <td><input type="number" placeholder="측정값"></td>
+                                  <td><input type="number" placeholder="측정값"></td>
+                                  <td style="width: auto;"><input type="number" placeholder="계산값"></td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="">이상없음</option>
+                                      <option value="">이상있음</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="">조치없음</option>
+                                      <option value="">조치있음</option>
+                                    </select>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>2</td>
+                                  <td><input type="text" placeholder="" value="2동 연료탱크"></td>
+                                  <td><input type="number" placeholder="측정값"></td>
+                                  <td><input type="number" placeholder="측정값"></td>
+                                  <td style="width: auto;"><input type="number" placeholder="계산값"></td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="">이상없음</option>
+                                      <option value="">이상있음</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="">조치없음</option>
+                                      <option value="">조치있음</option>
+                                    </select>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>~</td>
+                                  <td><input type="text" placeholder="" value="n동 연료탱크"></td>
+                                  <td><input type="number" placeholder="측정값"></td>
+                                  <td><input type="number" placeholder="측정값"></td>
+                                  <td style="width: auto;"><input type="number" placeholder="계산값"></td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="">이상없음</option>
+                                      <option value="">이상있음</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="">조치없음</option>
+                                      <option value="">조치있음</option>
+                                    </select>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>~~</td>
+                                  <td><input type="text" placeholder="" value="도시가스 검침기"></td>
+                                  <td><input type="number" placeholder="측정값"></td>
+                                  <td><input type="number" placeholder="측정값"></td>
+                                  <td style="width: auto;"><input type="number" placeholder="계산값"></td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="">이상없음</option>
+                                      <option value="">이상있음</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="">조치없음</option>
+                                      <option value="">조치있음</option>
+                                    </select>
+                                  </td>
+                                </tr>
+                              </tbody>
+                              <tfoot>
+                                <tr>
+                                  <td>합계</td>
+                                  <td></td>
+                                  <td class="tfoot-sum"><span>0</span></td>
+                                  <td class="tfoot-sum"><span>0</span></td>
+                                  <td class="tfoot-sum"><span>0</span></td>
+                                  <td class="tfoot-sum"><span></span></td>
+                                  <td class="tfoot-sum"><span></span></td>
+                                </tr>
+                              </tfoot>
+                            </table>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-4 right-side">
+                <div class="row">
+                  <div class="col-xs-12">
+                      <div class="">
+                        <div class="inner-box">
+                          <form action="#">
+                            <div class="tabletop-btn">
+                            <button id="newbtn-certify-account" class="newbtn" onclick="return false" style="background-color: #223189; color: #fff;">신규등록</button>
+                            <button onclick="return false"><i class="fas fa-angle-double-left"></i></button>
+                            <button onclick="return false"><i class="fas fa-angle-left"></i></button>
+                            <button onclick="return false">1</button>
+                            <button onclick="return false">2</button>
+                            <button onclick="return false">3</button>
+                            <button onclick="return false"><i class="fas fa-angle-right"></i></button>
+                            <button onclick="return false"><i class="fas fa-angle-double-right"></i></button>
+                            </div>
+                            <div class="tablerow">
+                              <table>
+                                <thead>
+                                  <tr>
+                                    <th></th>
+                                    <th>검침일자</th>
+                                    <th>검침시각</th>
+                                    <th>전일검침량 합계</th>
+                                    <th>당일검침량 합계</th>
+                                    <th>사용량 합계</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>
+                                      <span>2021-08-01</span>
+                                    </td>
+                                    <td>
+                                      <span>01:00:00</span>
+                                    </td>
+                                    <td>
+                                      <span>100</span>
+                                    </td>
+                                    <td>
+                                      <span>200</span>
+                                    </td>
+                                    <td>
+                                      <span>100</span>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 prog1 ">
+              <div class="row prog2 active">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                  <div class="top-card col-md-8">
+                    <div class="">
+                      <div class="inner-box">
+                        <form action="#">
+                          <div class="cardrow">
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">사용일시</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input type="text" class="datetime date-input" name="" value="" /><span><i class="far fa-calendar-alt"></i></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bot-card col-md-12">
+                    <div class="">
+                      <div class="">
+                        <form action="#">
+                          <div class="tabletop-btn">
+                            <button id="newbtn-certify-account" class="newbtn" onclick="return false" style="background-color: #223189; color: #fff;">신규등록</button>
+                            <!-- <button onclick="return false"><i class="fas fa-angle-double-left"></i></button> -->
+                          </div>
+                          <div class="tablerow">
+                            <table class="set-table w-100 plus_minus">
+                              <thead>
+                                <tr>
+                                  <th></th>
+                                  <th>연료종류</th>
+                                  <th>저장장소</th>
+                                  <th>사용장소</th>
+                                  <th>사용목적</th>
+                                  <th>사용량 L</th>
+                                  <th><div class="row-btn row-add" onclick="rowAdd(this)"></div></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <select>
+                                      <option value="">선택</option>
+                                      <option value="">경유</option>
+                                      <option value="">등유</option>
+                                      <option value="">휘발유</option>
+                                      <option value="">기타</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select>
+                                      <option value="">선택</option>
+                                      <option value="">경유탱크1</option>
+                                      <option value="">경유탱크2</option>
+                                      <option value="">등유탱크1</option>
+                                      <option value="">등유탱크2</option>
+                                      <option value="">휘발유탱크1</option>
+                                      <option value="">휘발유탱크2</option>
+                                      <option value="">기타</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select>
+                                      <option value="">선택</option>
+                                      <option value="">사용장소1</option>
+                                      <option value="">사용장소2</option>
+                                      <option value="">기타</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select>
+                                      <option value="">선택</option>
+                                      <option value="">사용목적1</option>
+                                      <option value="">사용목적2</option>
+                                      <option value="">기타</option>
+                                    </select>
+                                  </td>
+                                  <td><input type="number" placeholder=""></td>
+                                  <td><div class="row-btn row-delete" onclick="rowDelete(this)"></div></td>
+                                </tr>
+                              </tbody>
+                              <tfoot>
+                                <tr>
+                                  <td>합계</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td class="tfoot-sum"><span>합계</span></td>
+                                  <td></td>
+                                </tr>
+                              </tfoot>
+                            </table>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row prog2 ">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                  <!-- 임상관찰 테이블 -->
+                  <div class="bot-card col-md-8">
+                    <div class="">
+                      <div class="">
+                        <form action="#">
+                          <div class="tablerow">
+                            <table class="set-table w-100">
+                              <thead>
+                                <tr>
+                                  <th></th>
+                                  <th>연료종류</th>
+                                  <th>저장장소</th>
+                                  <th>사용장소</th>
+                                  <th>사용목적</th>
+                                  <th>사용량 L</th>
+                                  <th>임상관찰</th>
+                                  <th>임상관찰조치</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <select>
+                                      <option value="">선택</option>
+                                      <option value="">경유</option>
+                                      <option value="">등유</option>
+                                      <option value="">휘발유</option>
+                                      <option value="">기타</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select>
+                                      <option value="">선택</option>
+                                      <option value="">경유탱크1</option>
+                                      <option value="">경유탱크2</option>
+                                      <option value="">등유탱크1</option>
+                                      <option value="">등유탱크2</option>
+                                      <option value="">휘발유탱크1</option>
+                                      <option value="">휘발유탱크2</option>
+                                      <option value="">기타</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select>
+                                      <option value="">선택</option>
+                                      <option value="">사용장소1</option>
+                                      <option value="">사용장소2</option>
+                                      <option value="">기타</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select>
+                                      <option value="">선택</option>
+                                      <option value="">사용목적1</option>
+                                      <option value="">사용목적2</option>
+                                      <option value="">기타</option>
+                                    </select>
+                                  </td>
+                                  <td><input type="number" placeholder=""></td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="">이상없음</option>
+                                      <option value="">이상있음</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="">조치없음</option>
+                                      <option value="">조치있음</option>
+                                    </select>
+                                  </td>
+                                </tr>
+                              </tbody>
+                              <tfoot>
+                                <tr>
+                                  <td>합계</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td class="tfoot-sum"><span>0</span></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                              </tfoot>
+                            </table>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-4 right-side">
+                <div class="row">
+                  <div class="col-xs-12">
+                      <div class="">
+                        <div class="inner-box">
+                          <form action="#">
+                            <div class="tabletop-btn">
+                            <button id="newbtn-certify-account" class="newbtn" onclick="return false" style="background-color: #223189; color: #fff;">신규등록</button>
+                            <button onclick="return false"><i class="fas fa-angle-double-left"></i></button>
+                            <button onclick="return false"><i class="fas fa-angle-left"></i></button>
+                            <button onclick="return false">1</button>
+                            <button onclick="return false">2</button>
+                            <button onclick="return false">3</button>
+                            <button onclick="return false"><i class="fas fa-angle-right"></i></button>
+                            <button onclick="return false"><i class="fas fa-angle-double-right"></i></button>
+                            </div>
+                            <div class="tablerow">
+                              <table>
+                                <thead>
+                                  <tr>
+                                    <th></th>
+                                    <th>사용일시</th>
+                                    <th>연료종류</th>
+                                    <th>연료종류</th>
+                                    <th>사용량 합계 L</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>
+                                      <span>2021-08-01 01:00:00</span>
+                                    </td>
+                                    <td>
+                                      <span>3종류</span>
+                                    </td>
+                                    <td>
+                                      <span>휘발유</span>
+                                    </td>
+                                    <td>
+                                      <span>100</span>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/.row-->
+          </div>
+        </div>
+        <!-- /. PAGE INNER  -->
+      </div>
+    </article>
+    <footer>
+      <div>
+        <div class="fbtn-group">
+          <button class="fpdf">PDF출력</button>
+          <button class="fexcel">엑셀 다운로드</button>
+          <button class="fexcel">엑셀 업로드</button>
+          <button class="finit">초기화</button>
+          <button class="fsave">저장</button>
+        </div>
+      </div>
+    </footer>
+    <!-- /. PAGE WRAPPER  -->
+  </div>
+  <!-- /. WRAPPER  -->
+  <!-- JS Scripts-->
+  
+  <!-- Bootstrap Js -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="materialize/js/materialize.min.js"></script>
+
+  <!-- Metis Menu Js -->
+  <script src="js/jquery.metisMenu.js"></script>
+
+  <!-- Custom Js -->
+  <script src="js/custom-scripts.js"></script>
+  <script src="js/common.js"></script>
+</body>
+
+</html>

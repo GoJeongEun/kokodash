@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>kokobot</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!-- Bootstrap Styles-->
+  <link href="css/bootstrap.css" rel="stylesheet" />
+  <!-- FontAwesome Styles-->
+  <link href="css/font-awesome.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+
+  <!-- jQuery Js -->
+  <script src="js/jquery-1.10.2.js"></script>
+
+  <!-- 달력 -->
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> -->
+  <script type="text/javascript" src="calendar/moment.js"></script>
+  <script type="text/javascript" src="calendar/moment-with-locales.js"></script>
+  <script type="text/javascript" src="calendar/daterangepicker.js"></script>
+  <script type="text/javascript" src="calendar/moment.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="calendar/daterangepicker.css" />
+
+  <!-- 숫자키패드 -->
+  <link href="css/num_keypad.css" rel="stylesheet" />
+  <script type="text/javascript" src="js/num_keypad.js"></script>
+
+  <!-- Custom Styles-->
+  <link href="css/custom-styles.css" rel="stylesheet" />
+  <link href="css/form.css" rel="stylesheet" />
+  <link href="css/table.css" rel="stylesheet" />
+  <link href="css/media.css" rel="stylesheet" />
+  <!-- Google Fonts-->
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="wrapper">
+    <article id="wrapper-top">
+      <nav class="navbar navbar-default top-navbar" role="navigation">
+        <%- include ('top-navbar.html') %>
+      </nav>
+      <!-- Dropdown Structure -->
+      <ul id="dropdown1" class="dropdown-content">
+        <li>
+          <a href="farm_test1_apply.html"><i class="fa fa-user fa-fw"></i>기초정보</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-gear fa-fw"></i>설정</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-sign-out fa-fw"></i>로그아웃</a>
+        </li>
+      </ul>
+    </article>
+    <!--/. NAV TOP  -->
+    <article id="wrapper-under">
+      <div class="left-side">
+        <nav class="navbar-default navbar-side" role="navigation">
+          <div class="sidebar-collapse">
+            <ul class="nav" id="main-menu">
+              <li class="">
+                <a href="Z_farm_test1_apply" class="waves-effect"><i class="fas fa-check-circle"></i>검사신청</a>
+              </li>
+              <li class="">
+                <a href="Z_farm_test2_search" class="waves-effect"><i class="fas fa-check-circle"></i>검사신청 조회</a>
+              </li>
+              <li class="active">
+                <a href="Z_farm_test3_result" class="waves-effect"><i class="fas fa-check-circle"></i>검사완료 보고</a>
+              </li>              
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- /. NAV SIDE  -->
+      <div id="page-wrapper">
+        <div id="page-inner">
+          <!-- /. ROW  -->
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 prog1 active">
+              <div class="row prog2 active">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                  <div class="top-card col-md-8">
+                    <div class="card-panel">
+                      <div class="inner-box">
+                        <div class="inner-search-box">
+                          <form action="#">
+                            <div class="cardrow">
+                              <div class="inputleft">
+                                <div class="col-25">
+                                  <label for="fname">검사신청조회</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <input class="search-input" type="text" placeholder="검사신청 내역을 먼저 조회하세요" value="">
+                                    <div class="btn-group"><input type="button" class="input-btn" /><i
+                                        class="fa fa-search"></i></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="inputright">
+                                <div class="col-25">
+                                  <label for="fname">검사신청일</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <input disabled type="text" class="date date-input" name="" value="" />
+                                    <span><i class="far fa-calendar-alt"></i></span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="cardrow">
+                              <div class="inputleft">
+                                <div class="col-25">
+                                  <label for="fname">검사종류</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <input disabled class="" type="text" placeholder="" value="">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="inputright">
+                                <div class="col-25">
+                                  <label for="fname">의뢰기관&#40;검사자&#41;</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <input disabled class="" type="text" placeholder="" value="">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="cardrow">
+                              <div class="inputleft">
+                                <div class="col-25">
+                                  <label for="fname">부가세</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <input disabled class="" type="text" placeholder="" value="">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="inputright">
+                                <div class="col-25">
+                                  <label for="fname">검사비용</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <input disabled class="search-input" type="number" placeholder="넘버" value="">
+                                    <span>원</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="cardrow">
+                              <div class="inputleft">
+                                <div class="col-25">
+                                  <label for="fname">선지급</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <input disabled class="search-input" type="number" placeholder="" value="">
+                                    <span>원</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="inputright">
+                                <div class="col-25">
+                                  <label for="fname">잔금</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <input disabled class="num-input" type="number" placeholder="넘버" value="">
+                                    <span>원</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div>
+                          <form>
+                            <div class="cardrow">
+                              <div class="inputleft">
+                                <div class="col-25">
+                                  <label for="fname">검사완료일</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <input type="text" class="date date-input" name="" value="" />
+                                    <span><i class="far fa-calendar-alt"></i></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="inputright">
+                                <div class="col-25">
+                                  <label for="fname">성적서업로드</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <input class="search-input" type="text" placeholder="" value="">
+                                    <div class="btn-group">
+                                      <input type="button" class="input-btn attach-btn" />
+                                      <i class="fas fa-paperclip"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="cardrow">
+                                <div class="inputleft">
+                                  <div class="col-25">
+                                    <label for="fname">추가지급금</label>
+                                  </div>
+                                  <div class="col-75">
+                                    <div class="form">
+                                      <input class="search-input" type="number" placeholder="" value="">
+                                      <span>원</span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="inputright">
+                                  <div class="col-25">
+                                    <label for="fname">잔금</label>
+                                  </div>
+                                  <div class="col-75">
+                                    <div class="form">
+                                      <input class="search-input" type="number" placeholder="" value="">
+                                      <span>원</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="cardrow">
+                                <div class="inputleft">
+                                  <div class="col-25">
+                                    <label for="fname">결과</label>
+                                  </div>
+                                  <div class="col-75">
+                                    <div class="form">
+                                      <input type="text" placeholder="">
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="inputright">
+                                  <div class="col-25">
+                                    <label for="fname">조치내역</label>
+                                  </div>
+                                  <div class="col-75">
+                                    <div class="form">
+                                      <input type="text" placeholder="">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--/.row-->
+              <div class="col-xs-12 col-sm-12 col-md-4 right-side">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="card-panel">
+                      <div class="inner-box">
+                        <form action="#">
+                          <div class="tabletop-btn">
+                            <input type="button" value="팝업버튼"></input>
+                            <input type="button" value="1"></input>
+                            <input type="button" value="1"></input>
+                            <input type="button" value="1"></input>
+                            <input type="button" value="1"></input>
+                            <input type="button" value="1"></input>
+                            <input type="button" value="1"></input>
+                            <input type="button" value="1"></input>
+                          </div>
+                          <div class="tablerow">
+                            <table>
+                              <thead>
+                                <tr>
+                                  <th>0</th>
+                                  <th>등록일자</th>
+                                  <th>입고시각</th>
+                                  <th>제품명</th>
+                                  <th>제품명</th>
+                                  <th>제품명</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <span>2021-08-01</span>
+                                  </td>
+                                  <td>
+                                    <span>01:00:00</span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <span>2021-08-01</span>
+                                  </td>
+                                  <td>
+                                    <span>01:00:00</span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <span>2021-08-01</span>
+                                  </td>
+                                  <td>
+                                    <span>01:00:00</span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <span>2021-08-01</span>
+                                  </td>
+                                  <td>
+                                    <span>01:00:00</span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <span>2021-08-01</span>
+                                  </td>
+                                  <td>
+                                    <span>01:00:00</span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <span>2021-08-01</span>
+                                  </td>
+                                  <td>
+                                    <span>01:00:00</span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <span>2021-08-01</span>
+                                  </td>
+                                  <td>
+                                    <span>01:00:00</span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--/.row-->
+            </div>
+            <footer>
+              <div class="fbtn-group">
+                <button class="fpdf">PDF출력</button>
+                <button class="fexcel">엑셀 다운로드</button>
+                <button class="fexcel">엑셀 업로드</button>
+                <button class="finit">초기화</button>
+                <button class="fsave">저장</button>
+              </div>
+            </footer>
+          </div>
+          <footer>
+            <div class="fbtn-group">
+              <button class="fpdf">PDF출력</button>
+              <button class="fexcel">엑셀 다운로드</button>
+              <button class="fexcel">엑셀 업로드</button>
+              <button class="finit">초기화</button>
+              <button class="fsave">저장</button>
+            </div>
+          </footer>
+        </div>
+        <!-- /. PAGE INNER  -->
+      </div>
+    </article>
+    <!-- /. PAGE WRAPPER  -->
+  </div>
+  <!-- /. WRAPPER  -->
+  <!-- JS Scripts-->
+
+  <!-- Bootstrap Js -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="materialize/js/materialize.min.js"></script>
+
+  <!-- Metis Menu Js -->
+  <script src="js/jquery.metisMenu.js"></script>
+  <script src="js/mj_js.js"></script>
+  <!-- Custom Js -->
+  <script src="js/custom-scripts.js"></script>
+  <script src="js/common.js"></script>
+</body>
+
+</html>

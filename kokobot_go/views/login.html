@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kokobot</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- Bootstrap Styles-->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+    <!-- jQuery Js -->
+    <script src="js/jquery-1.10.2.js"></script>
+
+    <!-- 달력 -->
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> -->
+    <script type="text/javascript" src="calendar/moment.js"></script>
+    <script type="text/javascript" src="calendar/moment-with-locales.js"></script>
+    <script type="text/javascript" src="calendar/daterangepicker.js"></script>
+    <script type="text/javascript" src="calendar/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="calendar/daterangepicker.css" />
+
+    <!-- 숫자키패드 -->
+    <link href="css/num_keypad.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/num_keypad.js"></script>
+
+    <!-- Custom Styles-->
+    <link href="css/custom-styles.css" rel="stylesheet" />
+    <link href="css/form.css" rel="stylesheet" />
+    <link href="css/table.css" rel="stylesheet" />
+    <link href="css/media.css" rel="stylesheet" />
+    <link href="css/login.css" rel="stylesheet" />
+    <link href="css/popup.css" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <article id="wrapper-top">
+            <nav class="navbar navbar-default top-navbar" role="navigation">
+                <%- include ('top-navbar.html') %>
+            </nav>
+            <!-- Dropdown Structure -->
+            <ul id="dropdown1" class="dropdown-content">
+                <li>
+                    <a href="#"><i class="fa fa-user fa-fw"></i>기초정보</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-gear fa-fw"></i>설정</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-sign-out fa-fw"></i>로그아웃</a>
+                </li>
+            </ul>
+        </article>
+
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+                <!-- /. ROW  -->
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 prog1 active">
+                        <div class="row prog2 active">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="top-card col-md-8">
+                                    <div class="">
+                                        <div class="content">
+                                            <div class="login_wrap">
+                                                <ul class="menu_wrap" role="tablist">
+                                                    <li class="menu_item" role="presentation">
+                                                        <a href="#none" id="loinid" class="menu_id on" role="tab" 
+                                                            aria-selected="true" >
+                                                            <span class="menu_text"><span class="text">농장주</span></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu_item" role="presentation">
+                                                        <a href="#none" id="ones" class="menu_ones" role="tab"
+                                                            aria-selected="false" >
+                                                            <span class="menu_text"><span
+                                                                    class="text">농장직원</span></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <form id="frmNIDLogin" name="frmNIDLogin" target="_top"
+                                                    autocomplete="off" action=""
+                                                    method="POST">
+                                                    <input type="hidden" id="localechange" name="localechange" value="/">
+                                                    <input type="hidden" name="dynamicKey" id="dynamicKey"
+                                                        value="18smNQ0aG4PEHkRvN_60tv18bzFNspsRPen97zJIUJTnupCI21g2SjuMhEfj0JBsvGVZsi8EpRyFM6ZZ-9R09lM1LOm_5MmCGddCPDa7IFc">
+                                                    <input type="hidden" name="encpw" id="encpw" value="">
+                                                    <input type="hidden" name="enctp" id="enctp" value="1">
+                                                    <input type="hidden" name="svctype" id="svctype" value="1">
+                                                    <input type="hidden" name="smart_LEVEL" id="smart_LEVEL" value="1">
+                                                    <input type="hidden" name="bvsd" id="bvsd" value="">
+                                                    <input type="hidden" name="encnm" id="encnm" value="">
+                                                    <input type="hidden" name="locale" id="locale" value="ko_KR">
+                                                    <input type="hidden" name="url" id="url"
+                                                        value="">
+                                                    <ul class="panel_wrap">
+                                                        <li class="panel_item" style="display: block;">
+                                                            <div class="panel_inner" role="tabpanel"
+                                                                 aria-controls="loinid">
+                                                                <div class="id_pw_wrap" id="main_line">
+                                                                    <div class="input_row" id="id_line">
+                                                                            <span class="icon_id">
+                                                                                <span class="blind">아이디</span>
+                                                                            </span>
+                                                                        <input type="text" id="id" name="id"
+                                                                            placeholder="아이디" title="아이디"
+                                                                            class="input_text" maxlength="41" value="">
+                                                                        <span role="button" class="btn_delete"
+                                                                            id="id_clear" style="display: none;">
+                                                                            <span class="icon_delete">
+                                                                                <span class="blind">삭제</span>
+                                                                            </span>
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="input_row" id="pw_line">
+                                                                            <span class="icon_pw">
+                                                                                <span class="blind">비밀번호</span>
+                                                                            </span>
+                                                                        <input type="password" id="pw" name="pw"
+                                                                            placeholder="비밀번호" title="비밀번호"
+                                                                            class="input_text" maxlength="16">
+                                                                        <span role="button" class="btn_delete"
+                                                                            id="pw_clear" style="display: none;">
+                                                                            <span class="icon_delete">
+                                                                                <span class="blind">삭제</span>
+                                                                            </span>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="login_keep_wrap" id="login_keep_wrap">
+                                                                    <div class="keep_check">
+                                                                        <input type="checkbox" id="Scustom01">
+                                                                        <label for="Scustom01"></label>
+                                                                        <p>로그인상태유지</p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="login_error_wrap" id="err_capslock"
+                                                                    style="display: none;">
+                                                                    <div class="error_message">
+                                                                        <strong>CapsLock</strong>이 켜져 있습니다.
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="login_error_wrap" id="err_empty_id"
+                                                                    style="display: none;">
+                                                                    <div class="error_message">
+                                                                        <strong>아이디</strong>를 입력해 주세요.
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="login_error_wrap" id="err_empty_pw"
+                                                                    style="display: none;">
+                                                                    <div class="error_message">
+                                                                        <strong>비밀번호</strong>를 입력해 주세요.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="login_error_wrap" id="err_common"
+                                                                    style="display:none;">
+                                                                    <div class="error_message" style="width:90%">
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="btn_login_wrap">
+                                                                    <button type="submit" class="btn_login"
+                                                                        id="">
+                                                                        <span class="btn_text">로그인</span>
+                                                                    </button>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel_inner" role="tabpanel"
+                                                                 aria-controls="ones" style="display:none;">
+                                                                <div class="id_pw_wrap" id="main_line">
+                                                                    <div class="input_row" id="id_line">
+                                                                            <span class="icon_id">
+                                                                                <span class="blind">아이디</span>
+                                                                            </span>
+                                                                        <input type="text" id="id" name="id"
+                                                                            placeholder="아이디" title="아이디"
+                                                                            class="input_text" maxlength="41" value="">
+                                                                        <span role="button" class="btn_delete"
+                                                                            id="id_clear" style="display: none;">
+                                                                            <span class="icon_delete">
+                                                                                <span class="blind">삭제</span>
+                                                                            </span>
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="input_row" id="pw_line">
+                                                                            <span class="icon_pw">
+                                                                                <span class="blind">비밀번호</span>
+                                                                            </span>
+                                                                        <input type="password" id="pw" name="pw"
+                                                                            placeholder="비밀번호" title="비밀번호"
+                                                                            class="input_text" maxlength="16">
+                                                                        <span role="button" class="btn_delete"
+                                                                            id="pw_clear" style="display: none;">
+                                                                            <span class="icon_delete">
+                                                                                <span class="blind">삭제</span>
+                                                                            </span>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="login_keep_wrap" id="login_keep_wrap">
+                                                                    <div class="keep_check">
+                                                                        <input type="checkbox" id="Scustom01">
+                                                                        <label for="Scustom01"></label>
+                                                                        <p>로그인상태유지</p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="login_error_wrap" id="err_capslock"
+                                                                    style="display: none;">
+                                                                    <div class="error_message">
+                                                                        <strong>CapsLock</strong>이 켜져 있습니다.
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="login_error_wrap" id="err_empty_id"
+                                                                    style="display: none;">
+                                                                    <div class="error_message">
+                                                                        <strong>아이디</strong>를 입력해 주세요.
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="login_error_wrap" id="err_empty_pw"
+                                                                    style="display: none;">
+                                                                    <div class="error_message">
+                                                                        <strong>비밀번호</strong>를 입력해 주세요.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="login_error_wrap" id="err_common"
+                                                                    style="display:none;">
+                                                                    <div class="error_message" style="width:90%">
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="btn_login_wrap">
+                                                                    <button type="submit" class="btn_login"
+                                                                        id="">
+                                                                        <span class="btn_text">로그인</span>
+                                                                    </button>
+
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </form>
+                                            </div>
+                                            <ul class="find_wrap" id="find_wrap">
+                                                <li><a target="_blank" href="#" class="find_text">비밀번호 찾기</a></li>
+                                                <li><a target="_blank" href="#" class="find_text">아이디 찾기</a></li>
+                                                <li><a target="_blank" href="#" class="find_text">회원가입</a>
+                                                </li>
+                                            </ul>
+                                            <!--배너-->
+                                            <div id="gladbanner" class="banner_wrap" style="display: none;">
+                                                &nbsp;
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/.row-->
+            </div>
+        </div>
+        <!-- /. PAGE INNER  -->
+    </div>
+    </article>
+    <div class="popup-bg">
+        <div id="newbtn-system-pop" class="popup-window">
+            <div class="popup-header">
+                <div class="popup-title">신규 시설등록</div>
+                <button class="popup-close-btn"><i class="far fa-window-close"></i></button>
+            </div>
+            <div class="popup-cont">
+                <div class="top-card col-md-12">
+                    <div class="">
+                        <div class="inner-box">
+                            <form action="#">
+                                <div class="cardrow">
+                                    <div class="inputleft">
+                                        <div class="col-25">
+                                            <label for="fname">시설명</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <div class="form">
+                                                <input type="text" name="" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="inputright">
+                                        <div class="col-25">
+                                            <label for="fname">보유 수량</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <div class="form">
+                                                <input type="number" name="" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cardrow">
+                                    <div class="">
+                                        <div class="col-125">
+                                            <label for="fname">비고</label>
+                                        </div>
+                                        <div class="col-175">
+                                            <div class="form">
+                                                <input type="text" name="" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <button class="pop-apply-btn">적용</button>
+            </div>
+        </div>
+        <div id="newbtn-injeung-pop" class="popup-window">
+            <div class="popup-header">
+                <div class="popup-title">신규 인증등록</div>
+                <button class="popup-close-btn"><i class="far fa-window-close"></i></button>
+            </div>
+            <div class="popup-cont">
+                <div class="top-card col-md-12">
+                    <div class="">
+                        <div class="inner-box">
+                            <form action="#">
+                                <div class="cardrow">
+                                    <div class="inputleft">
+                                        <div class="col-25">
+                                            <label for="fname">분류</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <div class="form">
+                                                <select id="test" name="">
+                                                    <option value="">선택</option>
+                                                    <option value="">2</option>
+                                                    <option value="">3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="inputright">
+                                        <div class="col-25">
+                                            <label for="fname">인증 일자</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <div class="form">
+                                                <input type="text" class="date date-input" name="" value="" />
+                                                <span><i class="far fa-calendar-alt"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cardrow">
+                                    <div class="inputleft">
+                                        <div class="col-25">
+                                            <label for="fname">인증코드</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <div class="form">
+                                                <input type="text" name="" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="inputright">
+                                        <div class="col-25">
+                                            <label for="fname">인증 기관</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <div class="form">
+                                                <select id="test" name="">
+                                                    <option value="">선택</option>
+                                                    <option value="">2</option>
+                                                    <option value="">3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="injeung-egg" class="cardrow">
+                                    <!--id="injeung-egg" 식용란 허가 일경우에만 해당 -->
+                                    <div class="inputleft">
+                                        <div class="col-25">
+                                            <label for="fname">허가장소</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <div class="form">
+                                                <input type="text" name="" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="injeung-egg" class="cardrow">
+                                    <!--id="injeung-egg" 식용란 허가 일경우에만 해당 -->
+                                    <div class="">
+                                        <div class="col-125">
+                                            <label for="fname">허가주소</label>
+                                        </div>
+                                        <div class="col-175">
+                                            <div class="form half">
+                                                <input class="search-input" type="text" placeholder="검색" value="">
+                                                <div class="btn-group">
+                                                    <input type="button" class="input-btn search-btn" />
+                                                    <i class="fa fa-search"></i>
+                                                </div>
+                                            </div>
+                                            <div class="form half">
+                                                <input class="input" type="text" placeholder="상세주소" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <button class="pop-apply-btn">적용</button>
+            </div>
+        </div>
+        <div id="newbtn-car-pop" class="popup-window">
+            <div class="popup-header">
+                <div class="popup-title">신규 차량등록</div>
+                <button class="popup-close-btn"><i class="far fa-window-close"></i></button>
+            </div>
+            <div class="popup-cont">
+                <div class="top-card col-md-12">
+                    <div class="">
+                        <div class="inner-box">
+                            <form action="#">
+                                <div class="cardrow">
+                                    <div class="inputleft">
+                                        <div class="col-25">
+                                            <label for="fname">차량명</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <div class="form">
+                                                <input type="text" name="" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="inputright">
+                                        <div class="col-25">
+                                            <label for="fname">차량소유주 이름</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <div class="form">
+                                                <input type="text" name="" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cardrow">
+                                    <div class="inputleft">
+                                        <div class="col-25">
+                                            <label for="fname">차량 번호</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <div class="form">
+                                                <input type="text" name="" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="inputright">
+                                        <div class="col-25">
+                                            <label for="fname">차량구분</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <div class="form">
+                                                <select id="test" name="">
+                                                    <option value="">선택</option>
+                                                    <option value="">test</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cardrow">
+                                    <div class="inputleft">
+                                        <div class="col-25">
+                                            <label for="fname">GPS장착</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <div class="form">
+                                                <select id="test" name="">
+                                                    <option value="">장착</option>
+                                                    <option value="">미장착</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="inputright">
+                                        <div class="col-25">
+                                            <label for="fname">축산차량등록</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <div class="form">
+                                                <select id="test" name="">
+                                                    <option value="">등록</option>
+                                                    <option value="">미등록</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cardrow">
+                                    <div class="inputleft">
+                                        <div class="col-25">
+                                            <label for="fname">축산차량번호</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <div class="form">
+                                                <input type="text" name="" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <button class="pop-apply-btn">적용</button>
+            </div>
+        </div>
+        <div id="newbtn-worker-pop" class="popup-window">
+            <div class="popup-header">
+                <div class="popup-title">신규 직원등록</div>
+                <button class="popup-close-btn"><i class="far fa-window-close"></i></button>
+            </div>
+            <div class="popup-cont">
+                <div class="top-card col-md-12">
+                    <div class="">
+                        <div class="inner-box">
+                            <h4>직원기초정보</h4>
+                            <form action="#">
+                                <div class="set-box">
+                                    <div class="cardrow">
+                                        <div class="inputleft">
+                                            <div class="col-25">
+                                                <label for="fname">이름</label>
+                                            </div>
+                                            <div class="col-75">
+                                                <div class="form">
+                                                    <input type="text" name="" value="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inputright">
+                                            <div class="col-25">
+                                                <label for="fname">주민번호<br>&#40;외국인번호&#41;</label>
+                                            </div>
+                                            <div class="col-75">
+                                                <div class="form">
+                                                    <input type="text" name="" value="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cardrow">
+                                        <div class="inputleft">
+                                            <div class="col-25">
+                                                <label for="fname">성별</label>
+                                            </div>
+                                            <div class="col-75">
+                                                <div class="form">
+                                                    <fieldset class="radio-bg radio-tab">
+                                                        <div class="radio-group float-left" style="margin-right: 5px;">
+                                                            <input type="radio" name="radio_01" value="남자" id="radio_03"
+                                                                class="float-left" checked />
+                                                            <label class="float-left" for="radio_03">남자</label>
+                                                        </div>
+                                                        <div class="radio-group float-left">
+                                                            <input type="radio" name="radio_01" value="여자" id="radio_04"
+                                                                class="float-left" />
+                                                            <label class="float-left" for="radio_04">여자</label>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inputright">
+                                            <div class="col-25">
+                                                <label for="fname">직원구분</label>
+                                            </div>
+                                            <div class="col-75">
+                                                <div class="form">
+                                                    <select id="test" name="">
+                                                        <option value="">선택</option>
+                                                        <option value="">2</option>
+                                                        <option value="">3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cardrow">
+                                        <div class="inputleft">
+                                            <div class="col-25">
+                                                <label for="fname">직책</label>
+                                            </div>
+                                            <div class="col-75">
+                                                <div class="form">
+                                                    <select id="test" name="">
+                                                        <option value="">선택</option>
+                                                        <option value="">2</option>
+                                                        <option value="">3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inputright">
+                                            <div class="col-25">
+                                                <label for="fname">담당업무</label>
+                                            </div>
+                                            <div class="col-75">
+                                                <div class="form">
+                                                    <select id="test" name="">
+                                                        <option value="">선택</option>
+                                                        <option value="">2</option>
+                                                        <option value="">3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cardrow">
+                                        <div class="inputleft">
+                                            <div class="col-25">
+                                                <label for="fname">연락처</label>
+                                            </div>
+                                            <div class="col-75">
+                                                <div class="form">
+                                                    <input type="text" name="" value="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inputright">
+                                            <div class="col-25">
+                                                <label for="fname">이메일</label>
+                                            </div>
+                                            <div class="col-75">
+                                                <div class="form">
+                                                    <input type="text" name="" value="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cardrow">
+                                        <div class="inputleft">
+                                            <div class="col-25">
+                                                <label for="fname">차량번호</label>
+                                            </div>
+                                            <div class="col-75">
+                                                <div class="form">
+                                                    <input type="text" name="" value="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inputright">
+                                            <div class="col-25">
+                                                <label for="fname">입사일</label>
+                                            </div>
+                                            <div class="col-75">
+                                                <div class="form">
+                                                    <input type="text" class="date date-input" name="" value="" />
+                                                    <span><i class="far fa-calendar-alt"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4>급여지급 계좌</h4>
+                                <div class="set-box">
+                                    <div class="cardrow">
+                                        <div class="inputleft">
+                                            <div class="col-25">
+                                                <label for="fname">은행</label>
+                                            </div>
+                                            <div class="col-75">
+                                                <div class="form">
+                                                    <select id="country" name="country">
+                                                        <option>선택</option>
+                                                        <option value="">카카오뱅크</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inputright">
+                                            <div class="col-25">
+                                                <label for="fname">계좌번호</label>
+                                            </div>
+                                            <div class="col-75">
+                                                <div class="form">
+                                                    <input class="" type="text" placeholder="" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4>근로계약조건</h4>
+                                <div class="set-box">
+                                    <div class="cardrow">
+                                        <div class="inputleft">
+                                            <div class="col-25">
+                                                <label for="fname">근로계약기간</label>
+                                            </div>
+                                            <div class="col-75">
+                                                <div class="form">
+                                                    <input type="text" class="daterange date-input" name="" value="" />
+                                                    <span><i class="far fa-calendar-alt"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inputright">
+                                            <div class="col-25">
+                                                <label for="fname">근무시간</label>
+                                            </div>
+                                            <div class="col-75">
+                                                <div class="form">
+                                                    <input type="text" class="timerange date-input" name="" value="" />
+                                                    <span><i class="far fa-calendar-alt"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cardrow">
+                                        <div class="inputleft">
+                                            <div class="col-25">
+                                                <label for="fname">휴게시간</label>
+                                            </div>
+                                            <div class="col-75">
+                                                <div class="form">
+                                                    <input type="text" class="timerange date-input" name="" value="" />
+                                                    <span><i class="far fa-calendar-alt"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inputright">
+                                            <div class="col-25">
+                                                <label for="fname">급여조건</label>
+                                            </div>
+                                            <div class="col-75">
+                                                <div class="form">
+                                                    <input type="number" class="num-input" placeholder="숫자"
+                                                        value=""><span>원</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cardrow">
+                                        <div class="inputleft">
+                                            <div class="col-25">
+                                                <label for="fname">휴일</label>
+                                            </div>
+                                            <div class="col-75">
+                                                <div class="form">
+                                                    <select id="" name="">
+                                                        <option value="">선택</option>
+                                                        <option value="">없음</option>
+                                                        <option value="">법정공휴일</option>
+                                                        <option value="">공휴일</option>
+                                                        <option value="">토,일</option>
+                                                        <option value="">별도협의</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inputright">
+                                            <div class="col-25">
+                                                <label for="fname">근무지</label>
+                                            </div>
+                                            <div class="col-75">
+                                                <div class="form">
+                                                    <input type="text" placeholder="" value="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cardrow">
+                                        <div class="inputleft">
+                                            <div class="col-25">
+                                                <label for="fname">근무형태</label>
+                                            </div>
+                                            <div class="col-75">
+                                                <div class="form">
+                                                    <select id="" name="">
+                                                        <option value="">선택</option>
+                                                        <option value="">정규직</option>
+                                                        <option value="">계약직</option>
+                                                        <option value="">임시직</option>
+                                                        <option value="">일용직</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inputright">
+                                            <div class="col-25">
+                                                <label for="fname">급여지급일</label>
+                                            </div>
+                                            <div class="col-75">
+                                                <div class="form half">
+                                                    <select id="" name="">
+                                                        <option value="">매월</option>
+                                                        <option value="">매주</option>
+                                                        <option value="">매일</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form half">
+                                                    <select id="" name="">
+                                                        <option value="">1</option>
+                                                        <option value="">2</option>
+                                                        <option value="">3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cardrow">
+                                        <div class="inputleft">
+                                            <div class="col-25">
+                                                <label for="fname">기타급여</label>
+                                            </div>
+                                            <div class="col-75">
+                                                <div class="form">
+                                                    <input type="number" class="num-input" placeholder="숫자"
+                                                        value=""><span>원</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inputright">
+                                            <div class="col-25">
+                                                <label for="fname">상여금</label>
+                                            </div>
+                                            <div class="col-75">
+                                                <div class="form">
+                                                    <input type="number" class="num-input" placeholder="숫자"
+                                                        value=""><span>원</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cardrow">
+                                        <div class="inputleft">
+                                            <div class="col-25">
+                                                <label for="fname"
+                                                    style="position: static; transform: none; margin-top: 13px;">근무일</label>
+                                            </div>
+                                            <div class="col-75">
+                                                <div class="form">
+                                                    <div class="chk-box">
+                                                        <div class="chk-group">
+                                                            <input type="checkbox" id="chk20" class="" />
+                                                            <label for="chk20">월</label>
+                                                        </div>
+                                                        <div class="chk-group">
+                                                            <input type="checkbox" id="chk21" class="" />
+                                                            <label for="chk21">화</label>
+                                                        </div>
+                                                        <div class="chk-group">
+                                                            <input type="checkbox" id="chk22" class="" />
+                                                            <label for="chk22">수</label>
+                                                        </div>
+                                                        <div class="chk-group">
+                                                            <input type="checkbox" id="chk23" class="" />
+                                                            <label for="chk23">목</label>
+                                                        </div>
+                                                        <div class="chk-group">
+                                                            <input type="checkbox" id="chk24" class="" />
+                                                            <label for="chk24">금</label>
+                                                        </div>
+                                                        <div class="chk-group">
+                                                            <input type="checkbox" id="chk25" class="" />
+                                                            <label for="chk25">토</label>
+                                                        </div>
+                                                        <div class="chk-group">
+                                                            <input type="checkbox" id="chk26" class="" />
+                                                            <label for="chk26">일</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inputright">
+                                            <div class="col-25">
+                                                <label for="fname">4대보험적용 여부</label>
+                                            </div>
+                                            <div class="col-75">
+                                                <div class="form">
+                                                    <div class="chk-box txt-small">
+                                                        <div class="chk-group">
+                                                            <input type="checkbox" id="chk6" class="" />
+                                                            <label for="chk6">국민연금</label>
+                                                        </div>
+                                                        <div class="chk-group">
+                                                            <input type="checkbox" id="chk7" class="" />
+                                                            <label for="chk7">건강보험</label>
+                                                        </div>
+                                                        <div class="chk-group">
+                                                            <input type="checkbox" id="chk8" class="" />
+                                                            <label for="chk8">고용보험</label>
+                                                        </div>
+                                                        <div class="chk-group">
+                                                            <input type="checkbox" id="chk9" class="" />
+                                                            <label for="chk9">산재보험</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4>임금조건</h4>
+                                <div class="set-box">
+                                    <div class="cardrow">
+                                        <div class="inputleft">
+                                            <div class="col-25">
+                                                <label for="fname">기본급</label>
+                                            </div>
+                                            <div class="col-75">
+                                                <div class="form">
+                                                    <input type="number" class="num-input" placeholder="숫자"
+                                                        value=""><span>원</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inputright">
+                                            <div class="col-25">
+                                                <label for="fname">수당명</label>
+                                            </div>
+                                            <div class="col-75">
+                                                <div class="form">
+                                                    <select id="" name="">
+                                                        <option value="">선택</option>
+                                                        <option value="">정규직</option>
+                                                        <option value="">계약직</option>
+                                                        <option value="">임시직</option>
+                                                        <option value="">일용직</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cardrow">
+                                        <div class="inputleft">
+                                            <div class="col-25">
+                                                <label for="fname">지급기준</label>
+                                            </div>
+                                            <div class="col-75">
+                                                <div class="form">
+                                                    <select id="" name="">
+                                                        <option value="">선택</option>
+                                                        <option value="">정규직</option>
+                                                        <option value="">계약직</option>
+                                                        <option value="">임시직</option>
+                                                        <option value="">일용직</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inputright">
+                                            <div class="col-25">
+                                                <label for="fname">금액</label>
+                                            </div>
+                                            <div class="col-75">
+                                                <div class="form">
+                                                    <input type="number" class="num-input" placeholder="숫자"
+                                                        value=""><span>원</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cardrow">
+                                        <div class="inputleft">
+                                            <div class="col-25">
+                                                <label for="fname">지급방식</label>
+                                            </div>
+                                            <div class="col-75">
+                                                <div class="form">
+                                                    <select id="" name="">
+                                                        <option value="">선택</option>
+                                                        <option value="">test</option>
+                                                        <option value="">test</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <button class="pop-apply-btn">적용</button>
+            </div>
+        </div>
+    </div>
+    <!-- /.popup -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+
+    <!-- Bootstrap Js -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="materialize/js/materialize.min.js"></script>
+
+    <!-- Metis Menu Js -->
+    <script src="js/jquery.metisMenu.js"></script>
+    <script src="js/mj_js.js"></script>
+    <!-- Custom Js -->
+    <script src="js/custom-scripts.js"></script>
+    <script src="js/common.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"
+        integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        function fnSave() {
+            axios.post('http://localhost:3030/basicFarmDao', {
+                    farmName: $('#farmName').val(),
+                    ceoName: $('#ceoName').val(),
+                    comRegNum: $('#comRegNum').val()
+                })
+                .then(res => {
+                    alert('성공');
+                    console.log(res);
+                })
+                .catch(err => {
+                    console.log(err);
+                })
+        }
+
+        axios.get('http://localhost:3030/basicFarmList')
+            .then(res => {
+                console.log(res);
+                console.log(res.data.data.rows[0].farm_name);
+                // $('#farm-name').html(res.data.data.rows[0].farm_name);
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    </script>
+</body>
+
+</html>

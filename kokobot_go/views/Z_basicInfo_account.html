@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>kokobot</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!-- Bootstrap Styles-->
+  <link href="css/bootstrap.css" rel="stylesheet" />
+  <!-- FontAwesome Styles-->
+  <link href="css/font-awesome.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+  <!-- jQuery Js -->
+  <script src="js/jquery-1.10.2.js"></script>
+
+  <!-- 달력 -->
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> -->
+  <script type="text/javascript" src="calendar/moment.js"></script>
+  <script type="text/javascript" src="calendar/moment-with-locales.js"></script>
+  <script type="text/javascript" src="calendar/daterangepicker.js"></script>
+  <script type="text/javascript" src="calendar/moment.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="calendar/daterangepicker.css" />
+
+  <!-- 숫자키패드 -->
+  <link href="css/num_keypad.css" rel="stylesheet" />
+  <script type="text/javascript" src="js/num_keypad.js"></script>
+
+  <!-- Custom Styles-->
+  <link href="css/custom-styles.css" rel="stylesheet" />
+  <link href="css/form.css" rel="stylesheet" />
+  <link href="css/table.css" rel="stylesheet" />
+  <link href="css/popup.css" rel="stylesheet" />
+  <link href="css/media.css" rel="stylesheet" />
+  <!-- Google Fonts-->
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="wrapper">
+    <article id="wrapper-top">
+      <nav class="navbar navbar-default top-navbar" role="navigation">
+        <%- include ('top-navbar.html') %>
+      </nav>
+      <!-- Dropdown Structure -->
+      <ul id="dropdown1" class="dropdown-content">
+        <li>
+          <a href="#"><i class="fa fa-user fa-fw"></i>기초정보</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-gear fa-fw"></i>설정</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-sign-out fa-fw"></i>로그아웃</a>
+        </li>
+      </ul>
+    </article>
+    <!--/. NAV TOP  -->
+    <article id="wrapper-under">
+      <div class="left-side">
+        <nav class="navbar-default navbar-side" role="navigation">
+          <div class="sidebar-collapse">
+            <ul class="nav" id="main-menu">
+              <li class="subsub">
+                <a href="Z_basicInfo_user" class="waves-effect"><i class="fas fa-check-circle"></i>사용자 기초정보</a>
+              </li>
+              <li class="subsub active">
+                <a href="Z_basicInfo_account" class="waves-effect"><i class="fas fa-check-circle"></i>거래처정보<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                  <li>
+                    <a href="#" class="prog1-active">
+                      <span></span>등록거래처현황</a>
+                    <ul class="nav nav-third-level">
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="">
+                      <span></span>거래처 기초정보등록<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level">
+                      <li class="prog2-active">
+                        <a href="#">1. 기초정보 등록</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">2. 인증정보 등록</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">3. 담당자정보 등록</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">4. 차량정보 등록</a><button>수정</button>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="">
+                      <span></span>거래처 추가정보등록<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level">
+                      <li class="prog2-active">
+                        <a href="#">인증정보 추가등록</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">담당자정보 추가등록</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">차량정보 추가등록</a><button>수정</button>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="subsub">
+                <a href="Z_basicInfo_price" class="waves-effect"><i class="fas fa-check-circle"></i>단가 기초정보<span class="fa arrow"></span></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- /. NAV SIDE  -->
+      <div id="page-wrapper">
+        <div id="page-inner">
+          <!-- /. ROW  -->
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 prog1 active">
+              <div class="row prog2 active">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                  <div class="top-card col-md-8">
+                    <div class="">
+                      <div class="search-box">
+                        <form action="#">
+                          <div class="cardrow">
+                            <div class="">
+                              <div class="col-125">
+                                <label for="fname">거래처명</label>
+                              </div>
+                              <div class="col-175">
+                                <div class="form">
+                                  <input class="" type="text" placeholder="" value="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="search-box-btn">
+                            <button><i class="fa fa-search"></i> 조회</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bot-card col-md-12">
+                    <div class="">
+                      <div class="">
+                        <form action="#">
+                          <div class="tabletop-btn">
+                            <button id="newbtn-basic-account" class="jumppage" onclick="return false" style="background-color: #223189; color: #fff;">신규등록</button>
+                            <button onclick="return false"><i class="fas fa-angle-double-left"></i></button>
+                            <button onclick="return false"><i class="fas fa-angle-left"></i></button>
+                            <button onclick="return false">1</button>
+                            <button onclick="return false">2</button>
+                            <button onclick="return false">3</button>
+                            <button onclick="return false"><i class="fas fa-angle-right"></i></button>
+                            <button onclick="return false"><i class="fas fa-angle-double-right"></i></button>
+                          </div>
+                          <div class="tablerow">
+                            <table class="basic_info_table set-table w-100">
+                              <colgroup>
+                                  <col style="width: 5%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 10%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 5%;">
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th>등록일자</th>
+                                  <th>거래처명</th>
+                                  <th>거래처구분</th>
+                                  <th>대표자 성명</th>
+                                  <th>인증정보</th>
+                                  <th>담당자정보</th>
+                                  <th>차량정보</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td><input type="text" class="date" placeholder="" value=""></td>
+                                  <td><input type="text" placeholder="" value="거래처1"></td>
+                                  <td><input type="text" placeholder="" value="산란종계, 육용종계"></td>
+                                  <td><input type="text" placeholder="" value="거래처1 대표자"></td>
+                                  <td><input type="text" placeholder="" value="0 건 등록" style="text-align: right;"></td>
+                                  <td><input type="text" placeholder="" value="0 건 등록" style="text-align: right;"></td>
+                                  <td><input type="text" placeholder="" value="0 건 등록" style="text-align: right;"></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--/.row-->
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 prog1">
+              <div class="row prog2 active">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                  <div class="top-card col-md-8">
+                    <div class="">
+                      <div class="inner-box">
+                        <form action="">
+                          <h4>거래처정보</h4>
+                          <div class="set-box">
+                            <div class="cardrow">
+                              <div class="inputbox">
+                                <div class="col-25">
+                                  <label for="fname">등록일자</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <input type="text" class="date" placeholder="" value="" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="cardrow">
+                              <div class="inputbox">
+                                <div class="col-25">
+                                  <label for="fname">거래처명</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <input type="text" class="" placeholder="" value="" />
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="inputbox">
+                                <div class="col-25">
+                                  <label for="fname">거래처구분</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <input class="search-input" type="text" placeholder="" value="" disabled>
+                                    <div class="btn-group">
+                                      <div class="chk-popup-btn">
+                                        <input type="button" class="input-btn" />
+                                        <i class="far fa-check-square"></i>
+                                      </div>
+                                      <div class="chk-popup">
+                                        <div class="chk-popup-cont">
+                                          <div class="form">
+                                            <div class="chk-box">
+                                              <div class="chk-group">
+                                                <input type="checkbox" id="chkp00" class="" />
+                                                <label for="chkp00">종계농장</label>
+                                              </div>
+                                              <div class="chk-group">
+                                                <input type="checkbox" id="chkp01" class="" />
+                                                <label for="chkp01">산란종계</label>
+                                              </div>
+                                              <div class="chk-group">
+                                                <input type="checkbox" id="chkp02" class="" />
+                                                <label for="chkp02">육용종계</label>
+                                              </div>
+                                              <div class="chk-group">
+                                                <input type="checkbox" id="chkp03" class="" />
+                                                <label for="chkp03">부화농장</label>
+                                              </div>
+                                              <div class="chk-group">
+                                                <input type="checkbox" id="chkp04" class="" />
+                                                <label for="chkp04">육추농장</label>
+                                              </div>
+                                              <div class="chk-group">
+                                                <input type="checkbox" id="chkp05" class="" />
+                                                <label for="chkp05">중추농장</label>
+                                              </div>
+                                              <div class="chk-group">
+                                                <input type="checkbox" id="chkp06" class="" />
+                                                <label for="chkp06">사료</label>
+                                              </div>
+                                              <div class="chk-group">
+                                                <input type="checkbox" id="chkp07" class="" />
+                                                <label for="chkp07">의약품</label>
+                                              </div>
+                                              <div class="chk-group">
+                                                <input type="checkbox" id="chkp08" class="" />
+                                                <label for="chkp08">소독약품</label>
+                                              </div>
+                                              <div class="chk-group">
+                                                <input type="checkbox" id="chkp09" class="" />
+                                                <label for="chkp09">계란판</label>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="chk-popup-footer">
+                                          <button onclick="return false">적용</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="cardrow">
+                              <div class="inputbox">
+                                <div class="col-25">
+                                  <label for="fname">대표자 성명</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <input type="text" class="" placeholder="" value="" />
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="inputbox">
+                                <div class="col-25">
+                                  <label for="fname">대표자 생년월일</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <input type="text" class="" placeholder="" value="" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="cardrow">
+                              <div class="inputbox">
+                                <div class="col-25">
+                                  <label for="fname">사업자등록번호</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <input type="text" class="" placeholder="" value="" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="cardrow">
+                              <div class="inputbox">
+                                <div class="col-25">
+                                  <label for="fname">업종</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <select id="country" name="country">
+                                      <option>선택</option>
+                                      <option value="australia">?</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="inputbox">
+                                <div class="col-25">
+                                  <label for="fname">업태</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <select id="country" name="country">
+                                      <option>선택</option>
+                                      <option value="australia">?</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="cardrow">
+                              <div class="inputbox">
+                                <div class="col-25">
+                                  <label for="fname">업체유형</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <select id="country" name="country">
+                                      <option>선택</option>
+                                      <option value="australia">?</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="inputbox">
+                                <div class="col-25">
+                                  <label for="fname">인허가번호</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <input type="text" class="" placeholder="" value="" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="cardrow">
+                              <div class="inputbox">
+                                <div class="col-25">
+                                  <label for="fname">거래농장 (협회,부화장) 식별번호</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <input type="text" class="" placeholder="" value="" />
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="inputbox">
+                                <div class="col-25">
+                                  <label for="fname">계란식별번호</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <input type="text" class="" placeholder="" value="" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <h4>주소정보</h4>
+                          <div class="set-box">
+                            <div class="cardrow">
+                              <div class="inputbox">
+                                <div class="col-25">
+                                  <label for="fname">우편번호</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <input class="search-input" type="text" placeholder="" value="">
+                                    <div class="btn-group"><input type="button" class="input-btn search-btn" /><i class="fa fa-search"></i></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="cardrow">
+                              <div class="inputbox">
+                                <div class="col-25">
+                                  <label for="fname">주소</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <input type="text" class="" placeholder="" value="" />
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="inputbox">
+                                <div class="col-25">
+                                  <label for="fname">상세주소</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <input type="text" class="" placeholder="" value="" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="cardrow">
+                              <div class="inputbox">
+                                <div class="col-25">
+                                  <label for="fname">법정동코드</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <input type="text" class="" placeholder="" value="" />
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="inputbox">
+                                <div class="col-25">
+                                  <label for="fname">GPS좌표 X / Y</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form half"><input type="number" class="num-input" placeholder="" value=""><span>X</span></div>
+                                  <div class="form half"><input type="number" class="num-input" placeholder="" value=""><span>Y</span></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <h4>연락처정보</h4>
+                          <div class="set-box">
+                            <div class="cardrow">
+                              <div class="inputbox">
+                                <div class="col-25">
+                                  <label for="fname">전화번호</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <input type="text" class="" placeholder="" value="" />
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="inputbox">
+                                <div class="col-25">
+                                  <label for="fname">휴대폰번호</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <input type="text" class="" placeholder="" value="" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="cardrow">
+                              <div class="inputbox">
+                                <div class="col-25">
+                                  <label for="fname">팩스번호</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <input type="text" class="" placeholder="" value="" />
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="inputbox">
+                                <div class="col-25">
+                                  <label for="fname">이메일주소</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <input type="text" class="" placeholder="" value="" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <h4>계좌정보</h4>
+                          <div class="set-box">
+                            <div class="cardrow">
+                              <div class="inputbox">
+                                <div class="col-25">
+                                  <label for="fname">거래은행</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <select id="country" name="country">
+                                      <option>선택</option>
+                                      <option value="australia">농협</option>
+                                      <option value="australia">국민은행</option>
+                                      <option value="australia">우리은행</option>
+                                      <option value="australia">신한은행</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="cardrow">
+                              <div class="inputbox">
+                                <div class="col-25">
+                                  <label for="fname">계좌번호</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <input type="text" class="" placeholder="" value="" />
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="inputbox">
+                                <div class="col-25">
+                                  <label for="fname">예금주</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <input type="text" class="" placeholder="" value="" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="cardrow">
+                              <div class="inputbox">
+                                <div class="col-25">
+                                  <label for="fname">기초거래금액</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <select id="country" name="country">
+                                      <option>선택</option>
+                                      <option value="australia">미수금</option>
+                                      <option value="australia">미지급금</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="inputbox">
+                                <div class="col-25">
+                                  <label for="fname">금액</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <input type="number" class="num-input" placeholder="" value=""><span>원</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row prog2">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                  <div class="bot-card col-md-12">
+                    <div class="">
+                      <div class="">
+                        <form action="#">
+                          <div class="tabletop-btn">
+                            <button id="newbtn-certify-account" class="newbtn" onclick="return false" style="background-color: #223189; color: #fff;">신규등록</button>
+                            <button onclick="return false"><i class="fas fa-angle-double-left"></i></button>
+                            <button onclick="return false"><i class="fas fa-angle-left"></i></button>
+                            <button onclick="return false">1</button>
+                            <button onclick="return false">2</button>
+                            <button onclick="return false">3</button>
+                            <button onclick="return false"><i class="fas fa-angle-right"></i></button>
+                            <button onclick="return false"><i class="fas fa-angle-double-right"></i></button>
+                          </div>
+                          <div class="tablerow">
+                            <table class="basic_info_table set-table w-100">
+                              <colgroup>
+                                  <col style="width: 2%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 15%;">
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th>NO</th>
+                                  <th>분류</th>
+                                  <th>인증일자(허가일자)</th>
+                                  <th>인증번호(허가번호)</th>
+                                  <th>인증기관(허가기관)</th>
+                                  <th>허가장소</th>
+                                  <th>허가주소</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td><input type="number" placeholder=""></td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="식용란선별포장">식용란선별포장</option>
+                                      <option value="HACCP">HACCP</option>
+                                      <option value="동물복지">동물복지</option>
+                                      <option value="유기축산">유기축산</option>
+                                      <option value="친환경">친환경</option>
+                                      <option value="무항생제">무항생제</option>
+                                    </select>
+                                  </td>
+                                  <td><input type="text" class="date" placeholder=""></td>
+                                  <td><input type="text" placeholder=""></td>
+                                  <td><input type="text" placeholder=""></td>
+                                  <td><input type="text" placeholder=""></td>
+                                  <td><input type="text" placeholder=""></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row prog2">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                  <div class="bot-card col-md-12">
+                    <div class="">
+                      <div class="">
+                        <form action="#">
+                          <div class="tabletop-btn">
+                            <button id="newbtn-incharge" class="newbtn" onclick="return false" style="background-color: #223189; color: #fff;">신규등록</button>
+                            <button onclick="return false"><i class="fas fa-angle-double-left"></i></button>
+                            <button onclick="return false"><i class="fas fa-angle-left"></i></button>
+                            <button onclick="return false">1</button>
+                            <button onclick="return false">2</button>
+                            <button onclick="return false">3</button>
+                            <button onclick="return false"><i class="fas fa-angle-right"></i></button>
+                            <button onclick="return false"><i class="fas fa-angle-double-right"></i></button>
+                          </div>
+                          <div class="tablerow">
+                            <table class="basic_info_table set-table w-100">
+                              <colgroup>
+                                  <col style="width: 2%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 5%;">
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th>NO</th>
+                                  <th>담당자명</th>
+                                  <th>휴대폰번호</th>
+                                  <th>직책</th>
+                                  <th>담당업무</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td><input type="number" placeholder=""></td>
+                                  <td><input type="text" placeholder=""></td>
+                                  <td><input type="text" placeholder=""></td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="냉장">회장</option>
+                                      <option value="냉장">사장</option>
+                                      <option value="냉장">부장</option>
+                                      <option value="냉장">차장</option>
+                                      <option value="냉장">과장</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="장착">?</option>
+                                      <option value="미장착">??</option>
+                                    </select>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row prog2">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                  <div class="bot-card col-md-12">
+                    <div class="">
+                      <div class="">
+                        <form action="#">
+                          <div class="tabletop-btn">
+                            <button id="newbtn-car-account" class="newbtn" onclick="return false" style="background-color: #223189; color: #fff;">신규등록</button>
+                            <button onclick="return false"><i class="fas fa-angle-double-left"></i></button>
+                            <button onclick="return false"><i class="fas fa-angle-left"></i></button>
+                            <button onclick="return false">1</button>
+                            <button onclick="return false">2</button>
+                            <button onclick="return false">3</button>
+                            <button onclick="return false"><i class="fas fa-angle-right"></i></button>
+                            <button onclick="return false"><i class="fas fa-angle-double-right"></i></button>
+                          </div>
+                          <div class="tablerow">
+                            <table class="basic_info_table set-table w-100">
+                              <colgroup>
+                                  <col style="width: 2%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 5%;">
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th>NO</th>
+                                  <th>차량명</th>
+                                  <th>차량번호</th>
+                                  <th>차량구분</th>
+                                  <th>GPS장착</th>
+                                  <th>축산차량등록</th>
+                                  <th>축산차량번호</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td><input type="number" placeholder=""></td>
+                                  <td><input type="text" placeholder=""></td>
+                                  <td><input type="text" placeholder=""></td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="냉장">냉장</option>
+                                      <option value="냉동">냉동</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="장착">장착</option>
+                                      <option value="미장착">미장착</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="등록">등록</option>
+                                      <option value="미등록">미등록</option>
+                                    </select>
+                                  </td>
+                                  <td><input type="text" placeholder=""></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 prog1">
+              <div class="row prog2 active">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                  <div class="top-card col-md-8">
+                    <div class="">
+                      <div class="search-box">
+                        <form action="#">
+                          <div class="cardrow">
+                            <div class="">
+                              <div class="col-125">
+                                <label for="fname">거래처명</label>
+                              </div>
+                              <div class="col-175">
+                                <div class="form">
+                                  <input class="" type="text" placeholder="" value="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cardrow">
+                            <div class="">
+                              <div class="col-125">
+                                <label for="fname" style="position: static; transform: none; margin-top: 13px;">거래처구분</label>
+                              </div>
+                              <div class="col-175">
+                                <div class="form">
+                                  <div class="chk-box">
+                                    <div class="chk-group">
+                                      <input type="checkbox" id="filter_c0" class="" />
+                                      <label for="filter_c0">종계농장</label>
+                                    </div>
+                                    <div class="chk-group">
+                                      <input type="checkbox" id="filter_c1" class="" />
+                                      <label for="filter_c1">산란종계</label>
+                                    </div>
+                                    <div class="chk-group">
+                                      <input type="checkbox" id="filter_c2" class="" />
+                                      <label for="filter_c2">육용종계</label>
+                                    </div>
+                                    <div class="chk-group">
+                                      <input type="checkbox" id="filter_c3" class="" />
+                                      <label for="filter_c3">부화농장</label>
+                                    </div>
+                                    <div class="chk-group">
+                                      <input type="checkbox" id="filter_c4" class="" />
+                                      <label for="filter_c4">육추농장</label>
+                                    </div>
+                                    <div class="chk-group">
+                                      <input type="checkbox" id="filter_c5" class="" />
+                                      <label for="filter_c5">중추농장</label>
+                                    </div>
+                                    <div class="chk-group">
+                                      <input type="checkbox" id="filter_c6" class="" />
+                                      <label for="filter_c6">사료</label>
+                                    </div>
+                                    <div class="chk-group">
+                                      <input type="checkbox" id="filter_c7" class="" />
+                                      <label for="filter_c7">의약품</label>
+                                    </div>
+                                    <div class="chk-group">
+                                      <input type="checkbox" id="filter_c8" class="" />
+                                      <label for="filter_c8">소독약품</label>
+                                    </div>
+                                    <div class="chk-group">
+                                      <input type="checkbox" id="filter_c9" class="" />
+                                      <label for="filter_c9">계란판</label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="search-box-btn">
+                            <button><i class="fa fa-search"></i> 조회</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bot-card col-md-12">
+                    <div class="">
+                      <div class="">
+                        <form action="#">
+                          <div class="tabletop-btn">
+                            <button id="newbtn-certify-account" class="newbtn" onclick="return false" style="background-color: #223189; color: #fff;">신규등록</button>
+                            <button onclick="return false"><i class="fas fa-angle-double-left"></i></button>
+                            <button onclick="return false"><i class="fas fa-angle-left"></i></button>
+                            <button onclick="return false">1</button>
+                            <button onclick="return false">2</button>
+                            <button onclick="return false">3</button>
+                            <button onclick="return false"><i class="fas fa-angle-right"></i></button>
+                            <button onclick="return false"><i class="fas fa-angle-double-right"></i></button>
+                          </div>
+                          <div class="tablerow">
+                            <table class="basic_info_table set-table w-100">
+                              <colgroup>
+                                  <col style="width: 2%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 10%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 15%;">
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th>NO</th>
+                                  <th>거래처명</th>
+                                  <th>거래처구분</th>
+                                  <th>인증분류</th>
+                                  <th>인증일자(허가일자)</th>
+                                  <th>인증번호(허가번호)</th>
+                                  <th>인증기관(허가기관)</th>
+                                  <th>허가장소</th>
+                                  <th>허가주소</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td><input type="number" placeholder=""></td>
+                                  <td><input type="text" placeholder=""></td>
+                                  <td><input type="text" placeholder=""></td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="식용란선별포장">식용란선별포장</option>
+                                      <option value="HACCP">HACCP</option>
+                                      <option value="동물복지">동물복지</option>
+                                      <option value="유기축산">유기축산</option>
+                                      <option value="친환경">친환경</option>
+                                      <option value="무항생제">무항생제</option>
+                                    </select>
+                                  </td>
+                                  <td><input type="text" class="date" placeholder=""></td>
+                                  <td><input type="text" placeholder=""></td>
+                                  <td><input type="text" placeholder=""></td>
+                                  <td><input type="text" placeholder=""></td>
+                                  <td><input type="text" placeholder=""></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row prog2">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                  <div class="top-card col-md-8">
+                    <div class="">
+                      <div class="search-box">
+                        <form action="#">
+                          <div class="cardrow">
+                            <div class="">
+                              <div class="col-125">
+                                <label for="fname">거래처명</label>
+                              </div>
+                              <div class="col-175">
+                                <div class="form">
+                                  <input class="" type="text" placeholder="" value="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cardrow">
+                            <div class="">
+                              <div class="col-125">
+                                <label for="fname">담당자명</label>
+                              </div>
+                              <div class="col-175">
+                                <div class="form">
+                                  <input type="text" placeholder="" value="" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="search-box-btn">
+                            <button><i class="fa fa-search"></i> 조회</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bot-card col-md-12">
+                    <div class="">
+                      <div class="">
+                        <form action="#">
+                          <div class="tabletop-btn">
+                            <button id="newbtn-incharge" class="newbtn" onclick="return false" style="background-color: #223189; color: #fff;">신규등록</button>
+                            <button onclick="return false"><i class="fas fa-angle-double-left"></i></button>
+                            <button onclick="return false"><i class="fas fa-angle-left"></i></button>
+                            <button onclick="return false">1</button>
+                            <button onclick="return false">2</button>
+                            <button onclick="return false">3</button>
+                            <button onclick="return false"><i class="fas fa-angle-right"></i></button>
+                            <button onclick="return false"><i class="fas fa-angle-double-right"></i></button>
+                          </div>
+                          <div class="tablerow">
+                            <table class="basic_info_table set-table w-100">
+                              <colgroup>
+                                  <col style="width: 2%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 5%;">
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th>NO</th>
+                                  <th>거래처명</th>
+                                  <th>담당자명</th>
+                                  <th>휴대폰번호</th>
+                                  <th>직책</th>
+                                  <th>담당업무</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td><input type="number" placeholder=""></td>
+                                  <td><input type="text" placeholder=""></td>
+                                  <td><input type="text" placeholder=""></td>
+                                  <td><input type="text" placeholder=""></td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="냉장">회장</option>
+                                      <option value="냉장">사장</option>
+                                      <option value="냉장">부장</option>
+                                      <option value="냉장">차장</option>
+                                      <option value="냉장">과장</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="장착">?</option>
+                                      <option value="미장착">??</option>
+                                    </select>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row prog2">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                  <div class="top-card col-md-8">
+                    <div class="">
+                      <div class="search-box">
+                        <form action="#">
+                          <div class="cardrow">
+                            <div class="">
+                              <div class="col-125">
+                                <label for="fname">거래처명</label>
+                              </div>
+                              <div class="col-175">
+                                <div class="form">
+                                  <input class="" type="text" placeholder="" value="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="search-box-btn">
+                            <button><i class="fa fa-search"></i> 조회</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bot-card col-md-12">
+                    <div class="">
+                      <div class="">
+                        <form action="#">
+                          <div class="tabletop-btn">
+                            <button id="newbtn-car-account" class="newbtn" onclick="return false" style="background-color: #223189; color: #fff;">신규등록</button>
+                            <button onclick="return false"><i class="fas fa-angle-double-left"></i></button>
+                            <button onclick="return false"><i class="fas fa-angle-left"></i></button>
+                            <button onclick="return false">1</button>
+                            <button onclick="return false">2</button>
+                            <button onclick="return false">3</button>
+                            <button onclick="return false"><i class="fas fa-angle-right"></i></button>
+                            <button onclick="return false"><i class="fas fa-angle-double-right"></i></button>
+                          </div>
+                          <div class="tablerow">
+                            <table class="basic_info_table set-table w-100">
+                              <colgroup>
+                                  <col style="width: 2%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 5%;">
+                                  <col style="width: 5%;">
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th>NO</th>
+                                  <th>거래처명</th>
+                                  <th>차량명</th>
+                                  <th>차량번호</th>
+                                  <th>차량구분</th>
+                                  <th>GPS장착</th>
+                                  <th>축산차량등록</th>
+                                  <th>축산차량번호</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td><input type="number" placeholder=""></td>
+                                  <td><input type="text" placeholder=""></td>
+                                  <td><input type="text" placeholder=""></td>
+                                  <td><input type="text" placeholder=""></td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="냉장">냉장</option>
+                                      <option value="냉동">냉동</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="장착">장착</option>
+                                      <option value="미장착">미장착</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="등록">등록</option>
+                                      <option value="미등록">미등록</option>
+                                    </select>
+                                  </td>
+                                  <td><input type="text" placeholder=""></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /. PAGE INNER  -->
+        </div>
+    </article>
+    
+    
+    <div class="popup-bg">
+      <div id="newbtn-certify-account-pop" class="popup-window">
+        <div class="popup-header">
+          <div class="popup-title">인증정보 등록</div>
+          <button class="popup-close-btn"><i class="far fa-window-close"></i></button>
+        </div>
+        <div class="popup-cont">
+          <div class="top-card col-md-12">
+            <div class="">
+              <div class="inner-box">
+                <form action="#">
+                  <div class="cardrow">
+                    <div class="inputbox">
+                      <div class="col-25">
+                        <label for="fname">거래처명</label>
+                      </div>
+                      <div class="col-75">
+                        <div class="form">
+                          <input class="search-input" type="text" placeholder="" value="">
+                          <div class="btn-group"><input type="button" class="input-btn search-btn" /><i class="fa fa-search"></i></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cardrow">
+                    <div class="inputbox">
+                      <div class="col-25">
+                        <label for="fname">인증분류</label>
+                      </div>
+                      <div class="col-75">
+                        <div class="form">
+                            <select name="" id="">
+                              <option value="">선택</option>
+                              <option value="식용란선별포장">식용란 선별포장</option>
+                              <option value="HACCP">HACCP</option>
+                              <option value="동물복지">동물복지</option>
+                              <option value="유기축산">유기축산</option>
+                              <option value="친환경">친환경</option>
+                              <option value="무항생제">무항생제</option>
+                            </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="inputbox">
+                      <div class="col-25">
+                        <label for="fname">인증일자<br>&#40;허가일자&#41;</label>
+                      </div>
+                      <div class="col-75">
+                        <div class="form">
+                          <input type="text" class="date date-input" placeholder="" value="" />
+                          <span><i class="far fa-calendar-alt"></i></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cardrow">
+                    <div class="inputbox">
+                      <div class="col-25">
+                        <label for="fname">인증번호<br>&#40;허가번호&#41;</label>
+                      </div>
+                      <div class="col-75">
+                        <div class="form">
+                          <input type="text" placeholder="" value="" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="inputbox">
+                      <div class="col-25">
+                        <label for="fname">인증기관<br>&#40;허가기관&#41;</label>
+                      </div>
+                      <div class="col-75">
+                        <div class="form">
+                          <input class="search-input" type="text" placeholder="" value="">
+                          <div class="btn-group"><input type="button" class="input-btn search-btn" /><i class="fa fa-search"></i></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cardrow">
+                    <div class="inputbox">
+                      <div class="col-25">
+                        <label for="fname">허가장소</label>
+                      </div>
+                      <div class="col-75">
+                        <div class="form">
+                          <div class="chk-box">
+                            <div class="chk-group">
+                              <input type="checkbox" id="chk1" class="" />
+                              <label for="chk1">농장 내부</label>
+                            </div>
+                            <div class="chk-group">
+                              <input type="checkbox" id="chk2" class="" />
+                              <label for="chk2">농장 외부</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cardrow">
+                    <div class="inputbox">
+                      <div class="col-25">
+                        <label for="fname">허가주소</label>
+                      </div>
+                      <div class="col-75">
+                        <div class="form">
+                          <input class="search-input" type="text" placeholder="" value="">
+                          <div class="btn-group"><input type="button" class="input-btn search-btn" /><i class="fa fa-search"></i></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="inputbox">
+                      <div class="col-25">
+                        <label for="fname">상세주소</label>
+                      </div>
+                      <div class="col-75">
+                        <div class="form">
+                          <input class="" type="text" placeholder="" value="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup-footer">
+          <button>적용</button>
+        </div>
+      </div>
+      <div id="newbtn-incharge-pop" class="popup-window">
+        <div class="popup-header">
+          <div class="popup-title">담당자정보 등록</div>
+          <button class="popup-close-btn"><i class="far fa-window-close"></i></button>
+        </div>
+        <div class="popup-cont">
+          <div class="top-card col-md-12">
+            <div class="">
+              <div class="inner-box">
+                <form action="#">
+                  <div class="cardrow">
+                    <div class="inputbox">
+                      <div class="col-25">
+                        <label for="fname">거래처명</label>
+                      </div>
+                      <div class="col-75">
+                        <div class="form">
+                          <input class="search-input" type="text" placeholder="" value="">
+                          <div class="btn-group"><input type="button" class="input-btn search-btn" /><i class="fa fa-search"></i></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cardrow">
+                    <div class="inputbox">
+                      <div class="col-25">
+                        <label for="fname">담당자명</label>
+                      </div>
+                      <div class="col-75">
+                        <div class="form">
+                          <input type="text" placeholder="" value="" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="inputbox">
+                      <div class="col-25">
+                        <label for="fname">휴대폰번호</label>
+                      </div>
+                      <div class="col-75">
+                        <div class="form">
+                          <input type="text" placeholder="010-1234-5678" value="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cardrow">
+                    <div class="inputbox">
+                      <div class="col-25">
+                        <label for="fname">직책</label>
+                      </div>
+                      <div class="col-75">
+                        <div class="form">
+                          <select id="country" name="country">
+                            <option>선택</option>
+                            <option value="australia">회장</option>
+                            <option value="australia">사장</option>
+                            <option value="australia">부장</option>
+                            <option value="australia">차장</option>
+                            <option value="australia">과장</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="inputbox">
+                      <div class="col-25">
+                        <label for="fname">담당업무</label>
+                      </div>
+                      <div class="col-75">
+                        <div class="form">
+                          <select id="country" name="country">
+                            <option>선택</option>
+                            <option value="australia">?</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup-footer">
+          <button>적용</button>
+        </div>
+      </div>
+      <div id="newbtn-car-account-pop" class="popup-window">
+        <div class="popup-header">
+          <div class="popup-title">차량정보 등록</div>
+          <button class="popup-close-btn"><i class="far fa-window-close"></i></button>
+        </div>
+        <div class="popup-cont">
+          <div class="top-card col-md-12">
+            <div class="">
+              <div class="inner-box">
+                <form action="#">
+                  <div class="cardrow">
+                    <div class="inputbox">
+                      <div class="col-25">
+                        <label for="fname">거래처명</label>
+                      </div>
+                      <div class="col-75">
+                        <div class="form">
+                          <input class="search-input" type="text" placeholder="" value="">
+                          <div class="btn-group"><input type="button" class="input-btn search-btn" /><i class="fa fa-search"></i></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="inputbox">
+                      <div class="col-25">
+                        <label for="fname">차량소유주</label>
+                      </div>
+                      <div class="col-75">
+                        <div class="form">
+                          <input class="" type="text" placeholder="" value="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cardrow">
+                    <div class="inputbox">
+                      <div class="col-25">
+                        <label for="fname">차량명</label>
+                      </div>
+                      <div class="col-75">
+                        <div class="form">
+                          <input type="text" placeholder="" value="" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="inputbox">
+                      <div class="col-25">
+                        <label for="fname">차량번호</label>
+                      </div>
+                      <div class="col-75">
+                        <div class="form">
+                          <input type="text" placeholder="" value="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cardrow">
+                    <div class="inputbox">
+                      <div class="col-25">
+                        <label for="fname">차량구분</label>
+                      </div>
+                      <div class="col-75">
+                        <div class="form">
+                          <select id="country" name="country">
+                            <option>선택</option>
+                            <option value="australia">냉장?</option>
+                            <option value="australia">냉동?</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="inputbox">
+                      <div class="col-25">
+                        <label for="fname">GPS 장착유무</label>
+                      </div>
+                      <div class="col-75">
+                        <div class="form">
+                          <select id="">
+                            <option value="장착">장착</option>
+                            <option value="미장착">미장착</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cardrow">
+                    <div class="inputbox">
+                      <div class="col-25">
+                        <label for="fname">축산차량등록</label>
+                      </div>
+                      <div class="col-75">
+                        <div class="form">
+                          <select id="">
+                            <option value="등록">등록</option>
+                            <option value="미등록">미등록</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="inputbox">
+                      <div class="col-25">
+                        <label for="fname">축산차량번호</label>
+                      </div>
+                      <div class="col-75">
+                        <div class="form">
+                          <input type="text" placeholder="" value="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup-footer">
+          <button>적용</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /. WRAPPER  -->
+
+  <!-- JS Scripts-->
+
+  <!-- Bootstrap Js -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="materialize/js/materialize.min.js"></script>
+
+  <!-- Metis Menu Js -->
+  <script src="js/jquery.metisMenu.js"></script>
+
+  <!-- 달력 -->
+  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script> -->
+
+  <!-- Custom Js -->
+  <script src="js/custom-scripts.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/mj_js.js"></script>
+  
+</body>
+
+</html>

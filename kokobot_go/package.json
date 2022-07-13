@@ -1,0 +1,27 @@
+{
+  "name": "koko",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "chart": "^0.1.2",
+    "chart.js": "^2.9.4",
+    "chartjs-gauge": "^0.3.0",
+    "chartjs-plugin-doughnutlabel": "^2.0.3",
+    "connect-pg-simple": "^7.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "express-session": "^1.17.2",
+    "fullcalendar": "^5.11.0",
+    "pg": "^8.7.3"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kokobot</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- Bootstrap Styles-->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+
+    <!-- jQuery Js -->
+    <script src="js/jquery-1.10.2.js"></script>
+
+    <!-- 달력 -->
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> -->
+    <script type="text/javascript" src="calendar/moment.js"></script>
+    <script type="text/javascript" src="calendar/moment-with-locales.js"></script>
+    <script type="text/javascript" src="calendar/daterangepicker.js"></script>
+    <script type="text/javascript" src="calendar/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="calendar/daterangepicker.css" />
+
+    <!-- 숫자키패드 -->
+    <link href="css/num_keypad.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/num_keypad.js"></script>
+
+    <!-- Custom Styles-->
+    <link href="css/custom-styles.css" rel="stylesheet" />
+    <link href="css/form.css" rel="stylesheet" />
+    <link href="css/table.css" rel="stylesheet" />
+    <link href="css/media.css" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <article id="wrapper-top">
+            <nav class="navbar navbar-default top-navbar" role="navigation">
+                <div class="nav_top">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle waves-effect waves-dark" data-toggle="collapse"
+                            data-target=".sidebar-collapse">
+                            <span class="sr-only"></span>
+                        </button>
+                        <a class="navbar-brand waves-effect waves-dark" href="index.html"><img src="img/logo.png" />
+                            <p><strong>KOKOBOT</strong></p>
+                            <br /><span>양계 농장 통합관리 시스템</span>
+                        </a>
+                        <div id="sideNav" href="">
+                            <i class="material-icons dp48">toc</i>
+                        </div>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown4"><i
+                                    class="fa fa-envelope fa-fw"></i> 문서보관함<i class="material-icons right"></i></a>
+                        </li>
+                        <li>
+                            <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown3"><i
+                                    class="fa fa-tasks fa-fw"></i> 하하하<i class="material-icons right"></i></a>
+                        </li>
+                        <li>
+                            <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown2"><i
+                                    class="fa fa-bell fa-fw"></i><span class="badge">10</span>알림<i
+                                    class="material-icons right"></i></a>
+                        </li>
+                        <li>
+                            <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown1"><i
+                                    class="fa fa-user fa-fw"></i>농장주<i class="material-icons right"></i></a>
+                        </li>
+                    </ul>
+                    <div id="search-bar">
+                        <div id="search-bar-bg">
+                            <button id="search-btn" class="search-bar-btn">
+                                <img src="img/search.png" />
+                            </button>
+                            <form action="#" method="post">
+                                <input id="search-word" type="search" placeholder="검색어를 입력해보세요" />
+                            </form>
+                            <button id="close-btn" class="search-bar-btn">
+                                <img src="img/close.png" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav_bot">
+                    <div id="under-navbar" class="" role="navigation">
+                        <ul>
+                            <li class="active">
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보1<span class="after_tri active"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보2<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보3<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보4<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보5<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보6<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보7<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보8<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보9<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보10<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보11<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보12<span class="after_tri"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="sub-navbar">
+                        <ul class="active">
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브1</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브2</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브3</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브4</a></li>
+                            <li><a href="#">서브4</a></li>
+                            <li><a href="#">서브4</a></li>
+                            <li><a href="#">서브4</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브5</a></li>
+                            <li><a href="#">서브5</a></li>
+                            <li><a href="#">서브5</a></li>
+                            <li><a href="#">서브5</a></li>
+                            <li><a href="#">서브5</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브6</a></li>
+                            <li><a href="#">서브6</a></li>
+                            <li><a href="#">서브6</a></li>
+                            <li><a href="#">서브6</a></li>
+                            <li><a href="#">서브6</a></li>
+                            <li><a href="#">서브6</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브7</a></li>
+                            <li><a href="#">서브7</a></li>
+                            <li><a href="#">서브7</a></li>
+                            <li><a href="#">서브7</a></li>
+                            <li><a href="#">서브7</a></li>
+                            <li><a href="#">서브7</a></li>
+                            <li><a href="#">서브7</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브10</a></li>
+                            <li><a href="#">서브10</a></li>
+                            <li><a href="#">서브10</a></li>
+                            <li><a href="#">서브10</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브11</a></li>
+                            <li><a href="#">서브11</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브12</a></li>
+                            <li><a href="#">서브12</a></li>
+                            <li><a href="#">서브12</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Dropdown Structure -->
+            <ul id="dropdown1" class="dropdown-content">
+                <li>
+                    <a href="#"><i class="fa fa-user fa-fw"></i>기초정보</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-gear fa-fw"></i>설정</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-sign-out fa-fw"></i>로그아웃</a>
+                </li>
+            </ul>
+        </article>
+        <!--/. NAV TOP  -->
+        <article id="wrapper-under">
+            <div class="left-side">
+                <nav class="navbar-default navbar-side" role="navigation">
+                    <div class="sidebar-collapse">
+                        <ul class="nav" id="main-menu">
+                            <li>
+                                <a href="#" class="waves-effect waves-dark"><i
+                                        class="fas fa-check-circle"></i>교정관리<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="#" ><span></span>자가교정 내역조회</a>
+                                        <ul class="nav nav-third-level"></ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class=""><span></span>자가교정 관리등록</a>
+                                        <ul class="nav nav-third-level"></ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class=""><span></span>외부 위탁교정 내역조회</a>
+                                        <ul class="nav nav-third-level"></ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class=""><span></span>외부 위탁교정 관리등록</a>
+                                        <ul class="nav nav-third-level"></ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect"><i class="fas fa-check-circle"></i>환경센서 직접측정<span
+                                        class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li><a href="#" class=""><span></span>온도</a></li>
+                                    <li><a href="#" class=""><span></span>습도</a></li>
+                                    <li><a href="#" class=""><span></span>CO2</a></li>
+                                    <li><a href="#" class=""><span></span>암모니아</a></li>
+                                    <li><a href="#" class=""><span></span>조도</a></li>
+                                    <li><a href="#" class=""><span></span>풍향</a></li>
+                                    <li><a href="#" class=""><span></span>강우</a></li>
+                                    <li><a href="#" class=""><span></span>음압</a></li>
+                                    <li><a href="#" class=""><span></span>이산화황</a></li>
+                                    <li><a href="#" class=""><span></span>복합악취</a></li>
+                                </ul>
+                            </li>
+                            <li class="active">
+                                <a href="#" class="waves-effect waves-dark"><i class="fas fa-check-circle"></i>저수조관리<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="#" class="prog1-active"><span></span>자가청소 내역조회</a>
+                                        <ul class="nav nav-third-level"></ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class=""><span></span>자가청소 관리등록</a>
+                                        <ul class="nav nav-third-level"></ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class=""><span></span>외부 위탁청소 내역조회</a>
+                                        <ul class="nav nav-third-level"></ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class=""><span></span>외부 위탁청소 관리등록</a>
+                                        <ul class="nav nav-third-level"></ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect waves-dark"><i class="fas fa-check-circle"></i>창고관리</a>
+                                <ul class="nav nav-second-level"></ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!-- /. NAV SIDE  -->
+            <div id="page-wrapper">
+                <div id="page-inner">
+                    <!-- /. ROW  -->
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 prog1 active">
+                            <div class="row prog2 active ">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="top-card col-md-8">
+                                        <div class="">
+                                            <div class="search-box">
+                                                <form action="#">
+                                                    <div class="cardrow">
+                                                        <div class="inputleft">
+                                                            <div class="col-25">
+                                                                <label for="fname"
+                                                                    style="position: static; transform: none; margin-top: 13px;">기간별 조회</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <input type="text" class="daterange date-input" name="" value="" />
+                                                                    <span><i class="far fa-calendar-alt"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="period-box">
+                                                            <button class="period" onclick="return false">1주일</button>
+                                                            <button class="period" onclick="return false">1개월</button>
+                                                            <button class="period" onclick="return false">3개월</button>
+                                                            <button class="period" onclick="return false">6개월</button>
+                                                            <button class="period" onclick="return false">1년</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="search-box-btn">
+                                                        <button><i class="fa fa-search"></i> 조회</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bot-card col-md-12">
+                                        <div class="">
+                                            <div class="">
+                                                <form action="#">
+                                                    <div class="tabletop-btn">
+                                                        <button id="newbtn-userinfo" class="newbtn" onclick="return false" style="background-color: #223189; color: #fff;">신규등록
+                                                        </button>
+                                                        <button onclick="return false"><i
+                                                                class="fas fa-angle-double-left"></i></button>
+                                                        <button onclick="return false"><i
+                                                                class="fas fa-angle-left"></i></button>
+                                                        <button onclick="return false">1</button>
+                                                        <button onclick="return false">2</button>
+                                                        <button onclick="return false">3</button>
+                                                        <button onclick="return false"><i
+                                                                class="fas fa-angle-right"></i></button>
+                                                        <button onclick="return false"><i
+                                                                class="fas fa-angle-double-right"></i></button>
+                                                    </div>
+                                                    <div class="tablerow">
+                                                        <table class="basic_info_table set-table w-100">
+                                                            <colgroup>
+                                                                <col style="width: 5%;">
+                                                                <col style="width: 5%;">
+                                                                <col style="width: 5%;">
+                                                                <col style="width: 5%;">
+                                                                <col style="width: 5%;">
+                                                                <col style="width: 5%;">
+                                                                <col style="width: 5%;">
+                                                                <col style="width: 10%;">
+                                                                <col style="width: 1%;">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>청소일시</th>
+                                                                    <th>청소방법</th>
+                                                                    <th>작업자</th>
+                                                                    <th>작업시간&#40;단위:시간&#41;</th>
+                                                                    <th>약품사용 유무</th>
+                                                                    <th>청소 상태</th>
+                                                                    <th>잠금장치 상태</th>
+                                                                    <th>비고</th>
+                                                                    <th>상세보기</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td><input type="text" placeholder=""></td>
+                                                                    <td><input type="text" placeholder=""></td>
+                                                                    <td><input type="text" placeholder=""></td>
+                                                                    <td><input type="text" placeholder=""></td>
+                                                                    <td><input type="text" placeholder=""></td>
+                                                                    <td><input type="text" placeholder=""></td>
+                                                                    <td><input type="text" placeholder=""></td>
+                                                                    <td><input type="text" placeholder=""></td>
+                                                                    <td><input type="text" placeholder=""></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 prog1">
+                            <div class="row prog2 active">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="top-card col-md-8">
+                                        <div class="">
+                                            <div class="inner-box">
+                                                <form action="#">
+                                                    <div class="cardrow">
+                                                        <div class="inputleft">
+                                                            <div class="col-25">
+                                                                <label for="fname">청소일시</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <input type="text" class="date date-input" name=""
+                                                                        value="" />
+                                                                    <span><i class="far fa-calendar-alt"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="inputright">
+                                                            <div class="col-25">
+                                                                <label for="fname">청소방법</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <select id="" name="">
+                                                                        <option>선택</option>
+                                                                        <option value="">전체</option>
+                                                                        <option value="">테스트</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cardrow">
+                                                        <div class="inputleft">
+                                                            <div class="col-25">
+                                                                <label for="fname">작업자</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <input class="search-input" type="text"  placeholder="" value="">
+                                                                    <div class="btn-group">
+                                                                        <input type="button"   class="input-btn" /><i class="fa fa-search"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="inputright">
+                                                            <div class="col-25">
+                                                                <label for="fname">작업시간</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <input type="number" class="num-input" placeholder="" value=""><span>시간</span>
+                                                                </div>                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cardrow">
+                                                        <div class="inputleft">
+                                                            <div class="col-25">
+                                                                <label for="fname">청소상태</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <fieldset class="radio-bg">
+                                                                        <div class="radio-group float-left" style="margin-right: 5px;">
+                                                                            <input type="radio" name="radio_2" value="양호" id="radio_2_1" class="float-left" checked />
+                                                                            <label class="float-left" for="radio_2_1">양호</label>
+                                                                        </div>
+                                                                        <div class="radio-group float-left">
+                                                                            <input type="radio" name="radio_2" value="불량" id="radio_2_2" class="float-left" />
+                                                                            <label class="float-left" for="radio_2_2">불량</label>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                </div>
+                                                            </div>                                                            
+                                                        </div>
+                                                        <div class="inputright">
+                                                            <div class="col-25">
+                                                                <label for="fname">잠금장치 상태</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <fieldset class="radio-bg">
+                                                                        <div class="radio-group float-left" style="margin-right: 5px;">
+                                                                            <input type="radio" name="radio_3" value="양호" id="radio_3_1" class="float-left" checked />
+                                                                            <label class="float-left" for="radio_3_1">양호</label>
+                                                                        </div>
+                                                                        <div class="radio-group float-left">
+                                                                            <input type="radio" name="radio_3" value="불량" id="radio_3_2" class="float-left" />
+                                                                            <label class="float-left" for="radio_3_2">불량</label>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                </div>
+                                                            </div>  
+                                                        </div>
+                                                    </div>
+                                                    <div class="cardrow">
+                                                        <div>
+                                                          <div class="col-125">
+                                                            <label for="fname">비고</label>
+                                                          </div>
+                                                          <div class="col-175">
+                                                            <div class="form">
+                                                              <input type="text" placeholder="" value="" />
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                    </div>                                                    
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bot-card col-md-12">
+                                        <div>
+                                            <div>
+                                                <form action="#">
+                                                    <div class="tabletop-btn">
+                                                        <button id="newbtn-userinfo" class="newbtn" onclick="return false" style="background-color: #223189; color: #fff;">약품추가
+                                                        </button>
+                                                    </div>
+                                                    <div class="tablerow">
+                                                        <table class="basic_info_table set-table w-100">
+                                                            <colgroup>
+                                                                <col style="width: 5%;">
+                                                                <col style="width: 5%;">
+                                                                <col style="width: 5%;">
+                                                                <col style="width: 5%;">
+                                                                <col style="width: 1%;">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>내부/외부</th>
+                                                                    <th>약품종류</th>
+                                                                    <th>약품명</th>
+                                                                    <th>사용량&#40;단위&#41;</th>
+                                                                    <th>
+                                                                        <div class="row-btn row-add" onclick="rowAdd(this)">
+                                                                        </div>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td><input type="text" placeholder=""></td>
+                                                                    <td><input type="text" placeholder=""></td>
+                                                                    <td><input type="text" placeholder=""></td>
+                                                                    <td><input type="text" placeholder=""></td>
+                                                                    <td><div class="row-btn row-delete" onclick="rowDelete(this)"></div></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-4 right-side">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div>
+                                            <div class="inner-box">
+                                                <form action="#">
+                                                    <div class="tabletop-btn">
+                                                        <button id="newbtn-certify-account" class="newbtn" onclick="return false"  style="background-color: #223189; color: #fff;">계란출하</button>
+                                                        <button onclick="return false"><i  class="fas fa-angle-double-left"></i></button>
+                                                        <button onclick="return false"><i class="fas fa-angle-left"></i></button>
+                                                        <button onclick="return false">1</button>
+                                                        <button onclick="return false">2</button>
+                                                        <button onclick="return false">3</button>
+                                                        <button onclick="return false"><i class="fas fa-angle-right"></i></button>
+                                                        <button onclick="return false"><i class="fas fa-angle-double-right"></i></button>
+                                                    </div>
+                                                    <div class="tablerow">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>0</th>
+                                                                    <th>등록일자</th>
+                                                                    <th>입고시각</th>
+                                                                    <th>제품명</th>
+                                                                    <th>제품명</th>
+                                                                    <th>제품명</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>1</td>
+                                                                    <td>
+                                                                        <span>2021-08-01</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span>01:00:00</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span></span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span></span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span></span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 prog1">
+                            <div class="row prog2 active ">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="top-card col-md-8">
+                                        <div>
+                                            <div class="search-box">
+                                                <form action="#">
+                                                    <div class="cardrow">
+                                                        <div class="inputleft">
+                                                            <div class="col-25">
+                                                                <label for="fname"
+                                                                    style="position: static; transform: none; margin-top: 13px;">청소 일시</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <input type="text" class="daterange date-input" name="" value="" />
+                                                                    <span><i class="far fa-calendar-alt"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="period-box">
+                                                            <button class="period" onclick="return false">1주일</button>
+                                                            <button class="period" onclick="return false">1개월</button>
+                                                            <button class="period" onclick="return false">3개월</button>
+                                                            <button class="period" onclick="return false">6개월</button>
+                                                            <button class="period" onclick="return false">1년</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="search-box-btn">
+                                                        <button><i class="fa fa-search"></i> 조회</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bot-card col-md-12">
+                                        <div>
+                                            <div>
+                                                <form action="#">
+                                                    <div class="tabletop-btn">
+                                                        <button id="newbtn-userinfo" class="newbtn" onclick="return false" style="background-color: #223189; color: #fff;">신규등록</button>
+                                                        <button onclick="return false"><i class="fas fa-angle-double-left"></i></button>
+                                                        <button onclick="return false"><i class="fas fa-angle-left"></i></button>
+                                                        <button onclick="return false">1</button>
+                                                        <button onclick="return false">2</button>
+                                                        <button onclick="return false">3</button>
+                                                        <button onclick="return false"><i class="fas fa-angle-right"></i></button>
+                                                        <button onclick="return false"><i class="fas fa-angle-double-right"></i></button>
+                                                    </div>
+                                                    <div class="tablerow">
+                                                        <table class="basic_info_table set-table w-100">
+                                                            <colgroup>
+                                                                <col style="width: 5%;">
+                                                                <col style="width: 5%;">
+                                                                <col style="width: 5%;">
+                                                                <col style="width: 5%;">
+                                                                <col style="width: 5%;">
+                                                                <col style="width: 5%;">
+                                                                <col style="width: 5%;">
+                                                                <col style="width: 5%;">
+                                                                <col style="width: 5%;">
+                                                                <col style="width: 10%;">
+                                                                <col style="width: 1%;">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>청소일시</th>
+                                                                    <th>청소방법</th>
+                                                                    <th>위탁업체명</th>
+                                                                    <th>작업시간&#40;단위:시간&#41;</th>
+                                                                    <th>약품사용 유무</th>
+                                                                    <th>청소 상태</th>
+                                                                    <th>잠금장치 상태</th>
+                                                                    <th>위탁비용</th>
+                                                                    <th>잔금</th>
+                                                                    <th>비고</th>
+                                                                    <th>상세보기</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td><input type="text" placeholder=""></td>
+                                                                    <td><input type="text" placeholder=""></td>
+                                                                    <td><input type="text" placeholder=""></td>
+                                                                    <td><input type="text" placeholder=""></td>
+                                                                    <td><input type="text" placeholder=""></td>
+                                                                    <td><input type="text" placeholder=""></td>
+                                                                    <td><input type="text" placeholder=""></td>
+                                                                    <td><input type="text" placeholder=""></td>
+                                                                    <td><input type="text" placeholder=""></td>
+                                                                    <td><input type="text" placeholder=""></td>
+                                                                    <td><input type="text" placeholder=""></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 prog1">
+                            <div class="row prog2 active">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="top-card col-md-8">
+                                        <div>
+                                            <div class="inner-box">
+                                                <form action="#">
+                                                    <div class="cardrow">
+                                                        <div class="inputleft">
+                                                            <div class="col-25">
+                                                                <label for="fname">청소일시</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <input type="text" class="date date-input" name=""
+                                                                        value="" />
+                                                                    <span><i class="far fa-calendar-alt"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="inputright">
+                                                            <div class="col-25">
+                                                                <label for="fname">청소방법</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <select id="" name="">
+                                                                        <option>선택</option>
+                                                                        <option value="">전체</option>
+                                                                        <option value="">테스트</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cardrow">
+                                                        <div class="inputleft">
+                                                            <div class="col-25">
+                                                                <label for="fname">위탁 업체명</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <input class="search-input" type="text"  placeholder="" value="">
+                                                                    <div class="btn-group">
+                                                                        <input type="button"   class="input-btn" /><i class="fa fa-search"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="inputright">
+                                                            <div class="col-25">
+                                                                <label for="fname">위탁비용</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <input type="number" class="num-input" placeholder="" value=""><span>원</span>
+                                                                </div>                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cardrow">
+                                                        <div class="inputleft">
+                                                            <div class="col-25">
+                                                                <label for="fname">지급금</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <input type="number" class="num-input" placeholder="" value=""><span>원</span>
+                                                                 </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="inputright">
+                                                            <div class="col-25">
+                                                                <label for="fname">잔금</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <input disabled type="number" class="num-input" placeholder="" value=""><span>원</span>
+                                                                </div>                                                                
+                                                            </div>
+                                                        </div>                                                        
+                                                    </div>
+                                                    <div class="cardrow">
+                                                        <div class="inputleft">
+                                                            <div class="col-25">
+                                                                <label for="fname">청소상태</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <fieldset class="radio-bg">
+                                                                        <div class="radio-group float-left" style="margin-right: 5px;">
+                                                                            <input type="radio" name="radio_2" value="양호" id="radio_2_1" class="float-left" checked />
+                                                                            <label class="float-left" for="radio_2_1">양호</label>
+                                                                        </div>
+                                                                        <div class="radio-group float-left">
+                                                                            <input type="radio" name="radio_2" value="불량" id="radio_2_2" class="float-left" />
+                                                                            <label class="float-left" for="radio_2_2">불량</label>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                </div>
+                                                            </div>                                                            
+                                                        </div>
+                                                        <div class="inputright">
+                                                            <div class="col-25">
+                                                                <label for="fname">잠금장치 상태</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <fieldset class="radio-bg">
+                                                                        <div class="radio-group float-left" style="margin-right: 5px;">
+                                                                            <input type="radio" name="radio_3" value="양호" id="radio_3_1" class="float-left" checked />
+                                                                            <label class="float-left" for="radio_3_1">양호</label>
+                                                                        </div>
+                                                                        <div class="radio-group float-left">
+                                                                            <input type="radio" name="radio_3" value="불량" id="radio_3_2"  class="float-left" />
+                                                                            <label class="float-left"  for="radio_3_2">불량</label>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                </div>
+                                                            </div>  
+                                                        </div>
+                                                    </div>
+                                                    <div class="cardrow">
+                                                        <div>
+                                                          <div class="col-125">
+                                                            <label for="fname">비고</label>
+                                                          </div>
+                                                          <div class="col-175">
+                                                            <div class="form">
+                                                              <input type="text" placeholder="" value="" />
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                    </div>                                                    
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bot-card col-md-12">
+                                        <div>
+                                            <div>
+                                                <form action="#">
+                                                    <div class="tabletop-btn">
+                                                        <button id="newbtn-userinfo" class="newbtn" onclick="return false" style="background-color: #223189; color: #fff;">약품추가
+                                                        </button>
+                                                    </div>
+                                                    <div class="tablerow">
+                                                        <table class="basic_info_table set-table w-100">
+                                                            <colgroup>
+                                                                <col style="width: 5%;">
+                                                                <col style="width: 5%;">
+                                                                <col style="width: 5%;">
+                                                                <col style="width: 5%;">
+                                                                <col style="width: 1%;">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>내부/외부</th>
+                                                                    <th>약품종류</th>
+                                                                    <th>약품명</th>
+                                                                    <th>사용량&#40;단위&#41;</th>
+                                                                    <th>
+                                                                        <div class="row-btn row-add"
+                                                                            onclick="rowAdd(this)"></div>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td><input type="text" placeholder=""></td>
+                                                                    <td><input type="text" placeholder=""></td>
+                                                                    <td><input type="text" placeholder=""></td>
+                                                                    <td><input type="text" placeholder=""></td>
+                                                                    <td><div class="row-btn row-delete" onclick="rowDelete(this)"></div></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-4 right-side">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div>
+                                            <div class="inner-box">
+                                                <form action="#">
+                                                    <div class="tabletop-btn">
+                                                        <button id="newbtn-certify-account" class="newbtn"
+                                                            onclick="return false"
+                                                            style="background-color: #223189; color: #fff;">계란출하</button>
+                                                        <button onclick="return false"><i
+                                                                class="fas fa-angle-double-left"></i></button>
+                                                        <button onclick="return false"><i
+                                                                class="fas fa-angle-left"></i></button>
+                                                        <button onclick="return false">1</button>
+                                                        <button onclick="return false">2</button>
+                                                        <button onclick="return false">3</button>
+                                                        <button onclick="return false"><i
+                                                                class="fas fa-angle-right"></i></button>
+                                                        <button onclick="return false"><i
+                                                                class="fas fa-angle-double-right"></i></button>
+                                                    </div>
+                                                    <div class="tablerow">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>0</th>
+                                                                    <th>등록일자</th>
+                                                                    <th>입고시각</th>
+                                                                    <th>제품명</th>
+                                                                    <th>제품명</th>
+                                                                    <th>제품명</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>1</td>
+                                                                    <td>
+                                                                        <span>2021-08-01</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span>01:00:00</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span></span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span></span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span></span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer>
+                        <div class="fbtn-group">
+                            <button class="fpdf">PDF출력</button>
+                            <button class="fexcel">엑셀 다운로드</button>
+                            <button class="fexcel">엑셀 업로드</button>
+                            <button class="finit">초기화</button>
+                            <button class="fsave">저장</button>
+                        </div>
+                    </footer>
+                </div>
+                <!-- /. PAGE INNER  -->
+            </div>
+        </article>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+
+    <!-- Bootstrap Js -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="materialize/js/materialize.min.js"></script>
+
+    <!-- Metis Menu Js -->
+    <script src="js/jquery.metisMenu.js"></script>
+
+    <!-- Custom Js -->
+    <script src="js/custom-scripts.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

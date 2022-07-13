@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kokobot</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- Bootstrap Styles-->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+
+    <!-- jQuery Js -->
+    <script src="js/jquery-1.10.2.js"></script>
+
+    <!-- 달력 -->
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> -->
+    <script type="text/javascript" src="calendar/moment.js"></script>
+    <script type="text/javascript" src="calendar/moment-with-locales.js"></script>
+    <script type="text/javascript" src="calendar/daterangepicker.js"></script>
+    <script type="text/javascript" src="calendar/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="calendar/daterangepicker.css" />
+
+    <!-- 숫자키패드 -->
+    <link href="css/num_keypad.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/num_keypad.js"></script>
+
+    <!-- Custom Styles-->
+    <link href="css/custom-styles.css" rel="stylesheet" />
+    <link href="css/form.css" rel="stylesheet" />
+    <link href="css/table.css" rel="stylesheet" />
+    <link href="css/media.css" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <article id="wrapper-top">
+            <nav class="navbar navbar-default top-navbar" role="navigation">
+                <div class="nav_top">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle waves-effect waves-dark" data-toggle="collapse"
+                            data-target=".sidebar-collapse">
+                            <span class="sr-only"></span>
+                        </button>
+                        <a class="navbar-brand waves-effect waves-dark" href="index.html"><img src="img/logo.png" />
+                            <p><strong>KOKOBOT</strong></p>
+                            <br /><span>양계 농장 통합관리 시스템</span>
+                        </a>
+                        <div id="sideNav" href="">
+                            <i class="material-icons dp48">toc</i>
+                        </div>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown4"><i
+                                    class="fa fa-envelope fa-fw"></i> 문서보관함<i class="material-icons right"></i></a>
+                        </li>
+                        <li>
+                            <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown3"><i
+                                    class="fa fa-tasks fa-fw"></i> 하하하<i class="material-icons right"></i></a>
+                        </li>
+                        <li>
+                            <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown2"><i
+                                    class="fa fa-bell fa-fw"></i><span class="badge">10</span>알림<i
+                                    class="material-icons right"></i></a>
+                        </li>
+                        <li>
+                            <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown1"><i
+                                    class="fa fa-user fa-fw"></i>농장주<i class="material-icons right"></i></a>
+                        </li>
+                    </ul>
+                    <div id="search-bar">
+                        <div id="search-bar-bg">
+                            <button id="search-btn" class="search-bar-btn">
+                                <img src="img/search.png" />
+                            </button>
+                            <form action="#" method="post">
+                                <input id="search-word" type="search" placeholder="검색어를 입력해보세요" />
+                            </form>
+                            <button id="close-btn" class="search-bar-btn">
+                                <img src="img/close.png" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav_bot">
+                    <div id="under-navbar" class="" role="navigation">
+                        <ul>
+                            <li class="active">
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보1<span class="after_tri active"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보2<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보3<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보4<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보5<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보6<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보7<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보8<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보9<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보10<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보11<span class="after_tri"></span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user fa-fw"></i><br />메뉴정보12<span class="after_tri"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="sub-navbar">
+                        <ul class="active">
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브1</a></li>
+                            <li><a href="#">서브1</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브2</a></li>
+                            <li><a href="#">서브2</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브3</a></li>
+                            <li><a href="#">서브3</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브4</a></li>
+                            <li><a href="#">서브4</a></li>
+                            <li><a href="#">서브4</a></li>
+                            <li><a href="#">서브4</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브5</a></li>
+                            <li><a href="#">서브5</a></li>
+                            <li><a href="#">서브5</a></li>
+                            <li><a href="#">서브5</a></li>
+                            <li><a href="#">서브5</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브6</a></li>
+                            <li><a href="#">서브6</a></li>
+                            <li><a href="#">서브6</a></li>
+                            <li><a href="#">서브6</a></li>
+                            <li><a href="#">서브6</a></li>
+                            <li><a href="#">서브6</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브7</a></li>
+                            <li><a href="#">서브7</a></li>
+                            <li><a href="#">서브7</a></li>
+                            <li><a href="#">서브7</a></li>
+                            <li><a href="#">서브7</a></li>
+                            <li><a href="#">서브7</a></li>
+                            <li><a href="#">서브7</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                            <li><a href="#">서브8</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                            <li><a href="#">서브9</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브10</a></li>
+                            <li><a href="#">서브10</a></li>
+                            <li><a href="#">서브10</a></li>
+                            <li><a href="#">서브10</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브11</a></li>
+                            <li><a href="#">서브11</a></li>
+                        </ul>
+                        <ul class="">
+                            <li><a href="#">서브12</a></li>
+                            <li><a href="#">서브12</a></li>
+                            <li><a href="#">서브12</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Dropdown Structure -->
+            <ul id="dropdown1" class="dropdown-content">
+                <li>
+                    <a href="#"><i class="fa fa-user fa-fw"></i>기초정보</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-gear fa-fw"></i>설정</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-sign-out fa-fw"></i>로그아웃</a>
+                </li>
+            </ul>
+        </article>
+        <!--/. NAV TOP  -->
+        <article id="wrapper-under">
+            <div class="left-side">
+                <nav class="navbar-default navbar-side" role="navigation">
+                    <div class="sidebar-collapse">
+                        <ul class="nav" id="main-menu">
+                            <li>
+                                <a href="#" class="waves-effect waves-dark"><i class="fas fa-check-circle"></i>자체평가<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="#" class="prog1-active"><span></span>산란계</a>
+                                        <ul class="nav nav-third-level"></ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class=""><span></span>육계</a>
+                                        <ul class="nav nav-third-level"></ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="active">
+                                <a href="#" class="waves-effect waves-dark"><i class="fas fa-check-circle"></i>인증평가</a>
+                                <ul class="nav nav-second-level">
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect waves-dark"><i class="fas fa-check-circle"></i>외부평가 문서관리<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="#" class="prog1-active"><span></span>산란계</a>
+                                        <ul class="nav nav-third-level"></ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class=""><span></span>육계</a>
+                                        <ul class="nav nav-third-level"></ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect waves-dark"><i class="fas fa-check-circle"></i>사후관리평가</a>
+                                <ul class="nav nav-second-level">
+                                </ul>
+                            </li>                            
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!-- /. NAV SIDE  -->
+            <div id="page-wrapper">
+                <div id="page-inner">
+                    <!-- /. ROW  -->
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 prog1 active">
+                            <div class="row prog2 active ">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="top-card col-md-8">
+                                        <div class="">
+                                          <div class="inner-box">
+                                              
+                                            <form action="#">
+                                                <div class="cardrow">
+                                                    <div class="inputleft">
+                                                        <div class="col-25">
+                                                            <label for="fname">평가작성일</label>
+                                                        </div>
+                                                        <div class="col-75">
+                                                            <div class="form">
+                                                                <input type="text" class="date date-input" name="" value="" />
+                                                                <span><i class="far fa-calendar-alt"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    <div class="bot-card col-md-12">
+                                        <div class="">
+                                            <div class="">
+                                                <form action="#">
+                                                    <div class="tablerow">
+                                                        <table class="haccp-test-table">
+                                                            <colgroup>
+                                                                <col style="width: 10%;">
+                                                                <col style="width: 15%;">
+                                                                <col style="width: 4%;">
+                                                                <col style="width: 20%;">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr></tr>
+                                                                <tr>
+                                                                    <th>평가 항목</th>
+                                                                    <th>평가 내용</th>
+                                                                    <th>평가 결과</th>
+                                                                    <th>비고</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td rowspan="2"><b>1. HACCP팀</b></td>
+                                                                    <td>1. HACCP팀을 구성하고 책임자와 구성원의 역할을 업무특성 및 수행업무를 반영하여 지정하고 있는가?</td>
+                                                                    <td><div class="table-radio">
+                                                                        <div><input type="radio" name="1-1" value="0"><label>0</label></div>
+                                                                        <div><input type="radio" name="1-1" value="1"><label>1</label></div>
+                                                                        <div><input type="radio" name="1-1" value="2"><label>2</label></div>
+                                                                        <div><input type="radio" name="1-1" value="3"><label>3</label></div>
+                                                                        <div><input type="radio" name="1-1" value="4"><label>4</label></div>
+                                                                        <div><input type="radio" name="1-1" value="5" checked><label>5</label></div>
+                                                                    </div></td>
+                                                                    <td><input type="text"></td>                                                                    
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="txt-left">2. HACCP 팀장 및 구성원이 HACCP의 개념과 원칙, 절차 등과 각자의 역할에 대하여 충분히 이해하고 적극적으로 참여하여 활동하고 있는가?</td>
+                                                                    <td><div class="table-radio">
+                                                                            <div><input type="radio" name="1-2" value="0"><label>0</label></div>
+                                                                            <div><input type="radio" name="1-2" value="1"><label>1</label></div>
+                                                                            <div><input type="radio" name="1-2" value="2"><label>2</label></div>
+                                                                            <div><input type="radio" name="1-2" value="3"><label>3</label></div>
+                                                                            <div><input type="radio" name="1-2" value="4"><label>4</label></div>
+                                                                            <div><input checked type="radio" name="1-2" value="5" checked><label>5</label></div>
+                                                                        </div></td>
+                                                                    <td><input type="text"></td>                                                                    
+                                                                </tr>
+                                                                <tr>
+                                                                    <td rowspan="2"><b>2. 가축설명서․ 관리 절차도 및 평면도</b></td>
+                                                                    <td>1. 가축&#40;원유․알 등 포함&#41;설명서가 구체적으로 기술되어 있는가?</td>
+                                                                    <td><div class="table-radio">
+                                                                        <div><input type="radio" name="2-1" value="0"><label>0</label></div>
+                                                                        <div><input type="radio" name="2-1" value="1"><label>1</label></div>
+                                                                        <div><input type="radio" name="2-1" value="2"><label>2</label></div>
+                                                                        <div><input type="radio" name="2-1" value="3"><label>3</label></div>
+                                                                        <div><input type="radio" name="2-1" value="4"><label>4</label></div>
+                                                                        <div><input type="radio" name="2-1" value="5" checked ><label>5</label></div>
+                                                                    </div></td>
+                                                                    <td><input type="text"></td>                                                                    
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="txt-left">2. 사양&#40;부화&#41;관리절차도 및 농장&#40;부화장&#41;평면도를 작성하였으며 현장과 일치하는가?</td>
+                                                                    <td><div class="table-radio">
+                                                                            <div><input type="radio" name="2-2" value="0"><label>0</label></div>
+                                                                            <div><input type="radio" name="2-2" value="1"><label>1</label></div>
+                                                                            <div><input type="radio" name="2-2" value="2"><label>2</label></div>
+                                                                            <div><input type="radio" name="2-2" value="3"><label>3</label></div>
+                                                                            <div><input type="radio" name="2-2" value="4"><label>4</label></div>
+                                                                            <div><input type="radio" name="2-2" value="5" checked><label>5</label></div>
+                                                                        </div></td>
+                                                                    <td><input type="text"></td>                                                                    
+                                                                </tr>
+                                                                <tr>
+                                                                    <td rowspan="1"><b>3. 위해요인 분석</b></td>
+                                                                    <td>1. 반입에서 출하 단계까지 모든 공정(절차)에 대한 위해요소를 도출하고, 별표 2에 따른 위해요소분석표를 적절히 작성하였는가?</td>
+                                                                    <td><div class="table-radio">
+                                                                        <div><input type="radio" name="3-1" value="0"><label>0</label></div>
+                                                                        <div><input type="radio" name="3-1" value="2"><label>2</label></div>
+                                                                        <div><input type="radio" name="3-1" value="4"><label>4</label></div>
+                                                                        <div><input type="radio" name="3-1" value="6"><label>6</label></div>
+                                                                        <div><input type="radio" name="3-1" value="8"><label>8</label></div>
+                                                                        <div><input type="radio" name="3-1" value="10" checked><label>10</label></div>
+                                                                    </div></td>
+                                                                    <td><input type="text"></td>                                                                    
+                                                                </tr>
+                                                                <tr>
+                                                                    <td rowspan="2"><b>4. CCP 중요관리점의 결정 및 한계기준의 설정</b></td>
+                                                                    <td>1. CCP는 별표 2의 CCP 결정원칙에 따라 적절하게 결정되었는가?</td>
+                                                                    <td><div class="table-radio">
+                                                                        <div><input type="radio" name="4-1" value="0"><label>0</label></div>
+                                                                        <div><input type="radio" name="4-1" value="2"><label>2</label></div>
+                                                                        <div><input type="radio" name="4-1" value="4"><label>4</label></div>
+                                                                        <div><input type="radio" name="4-1" value="6"><label>6</label></div>
+                                                                        <div><input type="radio" name="4-1" value="8"><label>8</label></div>
+                                                                        <div><input type="radio" name="4-1" value="10" checked><label>10</label></div>
+                                                                    </div></td>
+                                                                    <td><input type="text"></td>                                                                    
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="txt-left">2. 한계기준은 도출된 위해요소를 관리하기에 충분한가?</td>
+                                                                    <td><div class="table-radio">
+                                                                            <div><input type="radio" name="4-2" value="0"><label>0</label></div>
+                                                                            <div><input type="radio" name="4-2" value="2"><label>2</label></div>
+                                                                            <div><input type="radio" name="4-2" value="4"><label>4</label></div>
+                                                                            <div><input type="radio" name="4-2" value="6"><label>6</label></div>
+                                                                            <div><input type="radio" name="4-2" value="8"><label>8</label></div>
+                                                                            <div><input type="radio" name="4-2" value="10" checked><label>10</label></div>
+                                                                        </div></td>
+                                                                    <td><input type="text"></td>                                                                    
+                                                                </tr>
+                                                                <tr>
+                                                                    <td rowspan="5"><b>5. CCP의 모니터링 및 개선조치</b></td>
+                                                                    <td>1. 모니터링 방법은 한계기준을 충분히 관리할 수 있도록 설정되어 있는가?</td>
+                                                                    <td><div class="table-radio">
+                                                                        <div><input type="radio" name="5-1" value="0"><label>0</label></div>
+                                                                        <div><input type="radio" name="5-1" value="1"><label>1</label></div>
+                                                                        <div><input type="radio" name="5-1" value="2"><label>2</label></div>
+                                                                        <div><input type="radio" name="5-1" value="3"><label>3</label></div>
+                                                                        <div><input type="radio" name="5-1" value="4"><label>4</label></div>
+                                                                        <div><input type="radio" name="5-1" value="5" checked><label>5</label></div>
+                                                                    </div></td>
+                                                                    <td><input type="text"></td>                                                                    
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="txt-left">2. 모니터링 담당자는 자신의 역할을 잘 숙지하고 있는가?</td>
+                                                                    <td><div class="table-radio">
+                                                                            <div><input type="radio" name="5-2" value="0"><label>0</label></div>
+                                                                            <div><input type="radio" name="5-2" value="1"><label>1</label></div>
+                                                                            <div><input type="radio" name="5-2" value="2"><label>2</label></div>
+                                                                            <div><input type="radio" name="5-2" value="3"><label>3</label></div>
+                                                                            <div><input type="radio" name="5-2" value="4"><label>4</label></div>
+                                                                            <div><input type="radio" name="5-2" value="5" checked><label>5</label></div>
+                                                                        </div></td>
+                                                                    <td><input type="text"></td>                                                                    
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="txt-left">3. 모니터링 절차에 따라 실시하고 있으며 그 결과를 기록유지하고 있는가?</td>
+                                                                    <td><div class="table-radio">
+                                                                            <div><input type="radio" name="5-3" value="0"><label>0</label></div>
+                                                                            <div><input type="radio" name="5-3" value="1"><label>1</label></div>
+                                                                            <div><input type="radio" name="5-3" value="2"><label>2</label></div>
+                                                                            <div><input type="radio" name="5-3" value="3"><label>3</label></div>
+                                                                            <div><input type="radio" name="5-3" value="4"><label>4</label></div>
+                                                                            <div><input type="radio" name="5-3" value="5" checked><label>5</label></div>
+                                                                        </div></td>
+                                                                    <td><input type="text"></td>                                                                    
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="txt-left">4. 모니터링에 사용되는 장비는 적절히 교정하여 관리하고 있는가?</td>
+                                                                    <td><div class="table-radio">
+                                                                            <div><input type="radio" name="5-4" value="0"><label>0</label></div>
+                                                                            <div><input type="radio" name="5-4" value="1"><label>1</label></div>
+                                                                            <div><input type="radio" name="5-4" value="2"><label>2</label></div>
+                                                                            <div><input type="radio" name="5-4" value="3"><label>3</label></div>
+                                                                            <div><input type="radio" name="5-4" value="4"><label>4</label></div>
+                                                                            <div><input type="radio" name="5-4" value="5" checked><label>5</label></div>
+                                                                        </div></td>
+                                                                    <td><input type="text"></td>                                                                    
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="txt-left">5. 개선조치 절차 및 방법에 따라 적절히 실시하고 있으며 그 결과를 기록유지하고 있는가?</td>
+                                                                    <td><div class="table-radio">
+                                                                            <div><input type="radio" name="5-5" value="0"><label>0</label></div>
+                                                                            <div><input type="radio" name="5-5" value="2"><label>2</label></div>
+                                                                            <div><input type="radio" name="5-5" value="4"><label>4</label></div>
+                                                                            <div><input type="radio" name="5-5" value="6"><label>6</label></div>
+                                                                            <div><input type="radio" name="5-5" value="8"><label>8</label></div>
+                                                                            <div><input type="radio" name="5-5" value="10" checked><label>10</label></div>
+                                                                        </div></td>
+                                                                    <td><input type="text"></td>                                                                    
+                                                                </tr>
+                                                                <tr>
+                                                                    <td rowspan="2"><b>6. HACCP 시스템 검증</b></td>
+                                                                    <td>1. 최초검증을 실시하고 HACCP 관리계획에 대한 검증은 정기적으로 실시하고 있는가?</td>
+                                                                    <td><div class="table-radio">
+                                                                        <div><input type="radio" name="6-1" value="0"><label>0</label></div>
+                                                                        <div><input type="radio" name="6-1" value="1"><label>1</label></div>
+                                                                        <div><input type="radio" name="6-1" value="2"><label>2</label></div>
+                                                                        <div><input type="radio" name="6-1" value="3"><label>3</label></div>
+                                                                        <div><input type="radio" name="6-1" value="4"><label>4</label></div>
+                                                                        <div><input type="radio" name="6-1" value="5" checked><label>5</label></div>
+                                                                    </div></td>
+                                                                    <td><input type="text"></td>                                                                    
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="txt-left">2. 검증결과, 부적합 사항에 대한 개선조치 등 사후관리가 수행되었는가?</td>
+                                                                    <td><div class="table-radio">
+                                                                            <div><input type="radio" name="6-2" value="0"><label>0</label></div>
+                                                                            <div><input type="radio" name="6-2" value="1"><label>1</label></div>
+                                                                            <div><input type="radio" name="6-2" value="2"><label>2</label></div>
+                                                                            <div><input type="radio" name="6-2" value="3"><label>3</label></div>
+                                                                            <div><input type="radio" name="6-2" value="4"><label>4</label></div>
+                                                                            <div><input type="radio" name="6-2" value="5" checked><label>5</label></div>
+                                                                        </div></td>
+                                                                    <td><input type="text"></td>                                                                    
+                                                                </tr>
+                                                                <tr>
+                                                                    <td rowspan="2"><b>7. 교육, 훈련</b></td>
+                                                                    <td>1. HACCP 시스템의 효율적 운영을 위한 교육․훈련절차 및 계획이 확립되어 있는가?</td>
+                                                                    <td><div class="table-radio">
+                                                                        <div><input type="radio" name="7-1" value="0"><label>0</label></div>
+                                                                        <div><input type="radio" name="7-1" value="1"><label>1</label></div>
+                                                                        <div><input type="radio" name="7-1" value="2"><label>2</label></div>
+                                                                        <div><input type="radio" name="7-1" value="3"><label>3</label></div>
+                                                                        <div><input type="radio" name="7-1" value="4"><label>4</label></div>
+                                                                        <div><input type="radio" name="7-1" value="5" checked><label>5</label></div>
+                                                                    </div></td>
+                                                                    <td><input type="text"></td>                                                                    
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="txt-left">2. 교육․훈련은 교육․훈련계획 및 절차에 따라 실시되고 그 기록이 유지되고 있는가?</td>
+                                                                    <td><div class="table-radio">
+                                                                            <div><input type="radio" name="7-2" value="0"><label>0</label></div>
+                                                                            <div><input type="radio" name="7-2" value="1"><label>1</label></div>
+                                                                            <div><input type="radio" name="7-2" value="2"><label>2</label></div>
+                                                                            <div><input type="radio" name="7-2" value="3"><label>3</label></div>
+                                                                            <div><input type="radio" name="7-2" value="4"><label>4</label></div>
+                                                                            <div><input type="radio" name="7-2" value="5" checked><label>5</label></div>
+                                                                        </div></td>
+                                                                    <td><input type="text"></td>                                                                    
+                                                                </tr>                                                                                                         
+                                                            </tbody>
+                                                            <tfoot>
+                                                                <td colspan="2">합계</td>
+                                                                <td><input disabled type="text"></td>
+                                                                <td style="color: red;">*총 점수 100점 
+                                                                    &#183; 85점 이상 : 적합
+                                                                    &#183; 70점 이상 85점 미만 : 보완
+                                                                    &#183; 70점 미만 : 부적합</td>
+                                                            </tfoot>
+                                                        </table>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer>
+                        <div class="fbtn-group">
+                            <button class="fpdf">PDF출력</button>
+                            <button class="fexcel">엑셀 다운로드</button>
+                            <button class="fexcel">엑셀 업로드</button>
+                            <button class="finit">초기화</button>
+                            <button class="fsave">저장</button>
+                        </div>
+                    </footer>
+                </div>
+                <!-- /. PAGE INNER  -->
+            </div>
+        </article>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+
+    <!-- Bootstrap Js -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="materialize/js/materialize.min.js"></script>
+
+    <!-- Metis Menu Js -->
+    <script src="js/jquery.metisMenu.js"></script>
+
+    <!-- Custom Js -->
+    <script src="js/custom-scripts.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

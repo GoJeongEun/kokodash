@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>kokobot</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!-- Bootstrap Styles-->
+  <link href="css/bootstrap.css" rel="stylesheet" />
+  <!-- FontAwesome Styles-->
+  <link href="css/font-awesome.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+
+  <!-- jQuery Js -->
+  <script src="js/jquery-1.10.2.js"></script>
+
+  <!-- 달력 -->
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> -->
+  <script type="text/javascript" src="calendar/moment.js"></script>
+  <script type="text/javascript" src="calendar/moment-with-locales.js"></script>
+  <script type="text/javascript" src="calendar/daterangepicker.js"></script>
+  <script type="text/javascript" src="calendar/moment.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="calendar/daterangepicker.css" />
+
+  <!-- 숫자키패드 -->
+  <link href="css/num_keypad.css" rel="stylesheet" />
+  <script type="text/javascript" src="js/num_keypad.js"></script>
+
+  <!-- Custom Styles-->
+  <link href="css/custom-styles.css" rel="stylesheet" />
+  <link href="css/form.css" rel="stylesheet" />
+  <link href="css/table.css" rel="stylesheet" />
+  <link href="css/media.css" rel="stylesheet" />
+  <link href="css/popup.css" rel="stylesheet" />
+  <!-- Google Fonts-->
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="wrapper">
+    <article id="wrapper-top">
+      <nav class="navbar navbar-default top-navbar" role="navigation">
+        <%- include ('top-navbar.html') %>
+      </nav>
+      <!-- Dropdown Structure -->
+      <ul id="dropdown1" class="dropdown-content">
+        <li>
+          <a href="#"><i class="fa fa-user fa-fw"></i>기초정보</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-gear fa-fw"></i>설정</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-sign-out fa-fw"></i>로그아웃</a>
+        </li>
+      </ul>
+    </article>
+    <!--/. NAV TOP  -->
+    <article id="wrapper-under">
+      <div class="left-side">
+        <nav class="navbar-default navbar-side" role="navigation">
+          <div class="sidebar-collapse">
+            <ul class="nav" id="main-menu">
+              <li class="">
+                <a href="Z_farm_test1_apply" class="waves-effect"><i class="fas fa-check-circle"></i>검사신청</a>
+              </li>
+              <li class="active">
+                <a href="Z_farm_test2_search" class="waves-effect"><i class="fas fa-check-circle"></i>검사신청 조회</a>
+              </li>
+              <li class="">
+                <a href="Z_farm_test3_result" class="waves-effect"><i class="fas fa-check-circle"></i>검사완료 보고</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- /. NAV SIDE  -->
+      <div id="page-wrapper">
+        <div id="page-inner">
+          <!-- /. ROW  -->
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 prog1 active">
+              <div class="row prog2 active">
+                <div class="">
+                  <div class="top-card col-md-8">
+                    <div class="">
+                      <div class="search-box">
+                        <form action="#">
+                          <div class="cardrow">
+                            <div class="">
+                              <div class="col-125">
+                                <label for="fname" style="position: static; transform: none; margin-top: 13px;">검사종류</label>
+                              </div>
+                              <div class="col-175">
+                                <div class="form">
+                                  <div class="chk-box chk-box-auto">
+                                    <div class="chk-group">
+                                      <input type="checkbox" id="check1" class="" />
+                                      <label for="check1">살모넬라</label>
+                                    </div>
+                                    <div class="chk-group">
+                                      <input type="checkbox" id="check2" class="" />
+                                      <label for="check2">살모넬라</label>
+                                    </div>
+                                    <div class="chk-group">
+                                      <input type="checkbox" id="check3" class="" />
+                                      <label for="check3">살모넬라</label>
+                                    </div>
+                                    <div class="chk-group">
+                                      <input type="checkbox" id="check4" class="" />
+                                      <label for="check4">살모넬라</label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cardrow">
+                            <div class="">
+                              <div class="col-125">
+                                <label for="fname" style="position: static; transform: none; margin-top: 13px;">진행사항</label>
+                              </div>
+                              <div class="col-175">
+                                <div class="form">
+                                  <div class="chk-box chk-box-auto">
+                                    <div class="chk-group">
+                                      <input type="checkbox" id="check5" class="" checked/>
+                                      <label for="check5">검사중</label>
+                                    </div>
+                                    <div class="chk-group">
+                                      <input type="checkbox" id="check6" class="" checked/>
+                                      <label for="check6">검사완료</label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="search-box-btn">
+                            <button><i class="fa fa-search"></i> 조회</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bot-card col-md-12">
+                  <div class="">
+                    <div class="">
+                      <form action="#">
+                        <div class="tabletop-btn">
+                          <button id="newbtn-certify-account" class="newbtn" onclick="return false"
+                            style="background-color: #223189; color: #fff;">신규 검사신청</button>
+                          <button id="newbtn-certify-account" class="newbtn" onclick="return false"
+                            style="border-color: #223189; ">검사완료 등록</button>
+                          <button onclick="return false"><i class="fas fa-angle-double-left"></i></button>
+                          <button onclick="return false"><i class="fas fa-angle-left"></i></button>
+                          <button onclick="return false">1</button>
+                          <button onclick="return false">2</button>
+                          <button onclick="return false">3</button>
+                          <button onclick="return false"><i class="fas fa-angle-right"></i></button>
+                          <button onclick="return false"><i class="fas fa-angle-double-right"></i></button>
+                        </div>
+                        <!-- <div class="cardrow tablerow"> -->
+                        <div class="tablerow">
+                          <table class="egg_table">
+                            <colgroup>
+                              <col style="width: 5%;">
+                              <col style="width: 5%;">
+                              <col style="width: 5%;">
+                              <col style="width: 5%;">
+                              <col style="width: 5%;">
+                              <col style="width: 5%;">
+                              <col style="width: 5%;">
+                              <col style="width: 5%;">
+                              <col style="width: 5%;">
+                              <col style="width: 5%;">
+                              <col style="width: 5%;">
+                              <col style="width: 5%;">
+                              <col style="width: 5%;">
+                              <col style="width: 5%;">
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th>진행상태</th>
+                                <th>검사신청일</th>
+                                <th>검사완료일</th>
+                                <th>검사종류</th>
+                                <th>의뢰기관&#40;검사자&#41;</th>
+                                <th>의뢰사유</th>
+                                <th>결과</th>
+                                <th>성적서</th>
+                                <th>조치내역</th>
+                                <th>거래정보</th>
+                                <th>검사비용</th>
+                                <th>부가세</th>
+                                <th>총 지급금</th>
+                                <th>잔금</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><input disabled type="text"></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td><input type="number"></td>
+                                <td><input type="text"></td>
+                                <td><input type="number"></td>
+                                <td><input type="number"></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/.row-->
+          </div>
+          <footer>
+            <div class="fbtn-group">
+              <button class="fpdf">PDF출력</button>
+              <button class="fexcel">엑셀 다운로드</button>
+              <button class="fexcel">엑셀 업로드</button>
+              <button class="finit">초기화</button>
+              <button class="fsave">저장</button>
+            </div>
+          </footer>
+        </div>
+        <footer>
+          <div class="fbtn-group">
+            <button class="fpdf">PDF출력</button>
+            <button class="fexcel">엑셀 다운로드</button>
+            <button class="fexcel">엑셀 업로드</button>
+            <button class="finit">초기화</button>
+            <button class="fsave">저장</button>
+          </div>
+        </footer>
+      </div>
+      <!-- /. PAGE INNER  -->
+  </div>
+  </article>
+  <!-- /. PAGE WRAPPER  -->
+  </div>
+  <!-- /. WRAPPER  -->
+  <!-- JS Scripts-->
+
+  <!-- Bootstrap Js -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="materialize/js/materialize.min.js"></script>
+
+  <!-- Metis Menu Js -->
+  <script src="js/jquery.metisMenu.js"></script>
+  <script src="js/mj_js.js"></script>
+  <!-- Custom Js -->
+  <script src="js/custom-scripts.js"></script>
+  <script src="js/common.js"></script>
+</body>
+
+</html>

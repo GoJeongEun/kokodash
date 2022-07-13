@@ -1,0 +1,212 @@
+p {
+    font-family: 'Manrope', sans-serif;
+}
+.accessbox {
+    /* background: white; */
+    height: 90px;
+    width: 100%;
+    /* box-sizing: border-box;
+    box-shadow: 0px 2px 12px rgb(0 0 0 / 10%);
+    border-radius: 10px; */
+}
+.access {
+    display: flex;
+    margin: 0;
+    justify-content: space-around;
+    padding: 0.7rem 1.5rem;
+    flex-wrap: nowrap;
+    height: 90px;
+    width: 100%;
+}
+li.middle_title p {
+    margin-left: 35px;
+}
+.middle_title::before {
+    content: '';
+    width: 27px;
+    height: 27px;
+    background-image: url(/icon/inout.png);
+    position: absolute;
+    background-size: 25px;
+    background-repeat: no-repeat;
+}   
+/* 상단탑 이벤트 바 */
+.accessT p {
+    margin: 0;
+    text-align: center;
+}
+.accessT .eventTitle {
+    color: #606266;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.accessT > .num {
+    color: black;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.accessT .compare.down {
+    color: #DA100B;
+
+}
+.accessT .compare{
+    color: #1672EC;
+    font-weight: 600;
+}
+.accessT .compare.up {
+    color: #1F8B24;
+}
+.accessCar {
+    margin-top: 25px;
+    margin-right: 25px;
+    width: 28%;
+}
+.datesearch {
+    height: 32px;
+    padding: 0 1rem;
+    background: #1672EC;
+    border: 1px solid #e4e7ed;
+    color: white;
+    border-radius: 4px;
+    border: 1px solid #1672ec;
+    margin-left: 5px;
+}
+.carTitleBox {
+    margin-top: 10px;
+}
+.carTitle h4 {
+    font-weight: bold;
+}
+.carTitleBox div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+span.searchIcon {
+    position: absolute;
+    padding: 0.4rem;
+}
+span.searchIcon i {
+    width: 15px;
+    margin-left: 5px;
+}
+.iconCon input {
+    height: 32px;
+    width: 180px;
+    padding-left: 30px;
+}
+.qrbox {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    background: white;
+    box-shadow: 0px 1px 1px rgb(0 0 0 / 6%), 0px 3px 8px rgb(0 0 0 / 15%);
+    border-radius: 5px;
+}
+.qrbox li.qrstyle img {
+    padding: 0.7rem;
+}
+.carImgbox {
+    margin: 17px 0px;
+}
+li.carImg {
+    display: flex;
+    justify-content: center;
+}
+li.carImg img {
+    width: 60%;
+}
+.carInputBox div {
+    float: left;
+}
+.carRight {
+    width: 41%;
+}
+.carLeft {
+    width: 59%;
+}
+.carLeft p {
+    width: 100%;
+    font-weight: 500;
+    color: #000;
+    display: flex;
+}
+.carLeft p input {
+    width: 66%;
+    height: 30px;
+    color: #333;
+    font-weight: 300;
+    margin-left: 5px;
+}
+.carRight p {
+    width: 95%;
+    font-weight: 500;
+    color: #000;    
+}
+.carRight p textarea {
+    width: 100%;
+    height: 85px;
+    color: #333;
+    font-weight: 300;
+}
+.carImg.two img {
+    width: 50%;
+}
+/* 방문자 테이블 */
+.mainConBox {
+    margin-top: 25px;
+    width: 70.33333%;
+    margin-right: 0;
+}
+.tabcon {
+    display: flex;
+}
+.tabBox li {
+    padding: 0.5rem 1.5rem;
+    background: #fff;
+    border: 1px solid #dadada;
+}
+.tabBox li {
+    color: #606266;
+}
+.tabBox li:first-child {
+    border-radius: 4px 0px 0px 4px;
+}
+.tabBox li:last-child {
+    border-radius: 0px 4px 4px 0px;
+}
+.tabBox li.active {
+    background: #1672EC;
+    border: 1px solid #1672EC;
+}
+.tabBox li.active a {
+    color: white;
+    font-weight: bold;
+}
+.tabContainer {
+    display: block;
+}
+.flex-end {
+    display: flex;
+    align-items: center;
+}
+.tabBox {
+    display: flex;
+    justify-content: space-between;
+}
+.tabTitle h4{
+    font-weight: bold;
+}
+.tabContainer {
+    display: block;
+}
+.tabBox {
+    display: flex;
+    justify-content: space-between;
+}
+.searchBox {
+    margin-right: 10px;
+}
+
+

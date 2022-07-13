@@ -1,0 +1,1832 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>정기소독</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!-- Bootstrap Styles-->
+  <link href="css/bootstrap.css" rel="stylesheet" />
+  <!-- FontAwesome Styles-->
+  <link href="css/font-awesome.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+
+  <!-- jQuery Js -->
+  <script src="js/jquery-1.10.2.js"></script>
+
+  <!-- 달력 -->
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> -->
+  <script type="text/javascript" src="calendar/moment.js"></script>
+  <script type="text/javascript" src="calendar/moment-with-locales.js"></script>
+  <script type="text/javascript" src="calendar/daterangepicker.js"></script>
+  <script type="text/javascript" src="calendar/moment.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="calendar/daterangepicker.css" />
+
+  <!-- Custom Styles-->
+  <link href="css/custom-styles.css" rel="stylesheet" />
+  <link href="css/form.css" rel="stylesheet" />
+  <link href="css/table.css" rel="stylesheet" />
+  <link href="css/popup.css" rel="stylesheet" />
+  <link href="css/media.css" rel="stylesheet" />
+  <!-- Google Fonts-->
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="wrapper">
+    <article id="wrapper-top">
+      <nav class="navbar navbar-default top-navbar" role="navigation">
+        <div class="nav_top">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle waves-effect waves-dark" data-toggle="collapse"
+              data-target=".sidebar-collapse">
+              <span class="sr-only"></span>
+            </button>
+            <a class="navbar-brand waves-effect waves-dark" href="index.html"><img src="img/logo.png" />
+              <p><strong>KOKOBOT</strong></p>
+              <br /><span>양계 농장 통합관리 시스템</span>
+            </a>
+            <div id="sideNav" href="">
+              <i class="material-icons dp48">toc</i>
+            </div>
+          </div>
+          <ul class="nav navbar-top-links navbar-right">
+            <li>
+              <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown4"><i
+                  class="fa fa-envelope fa-fw"></i> 문서보관함<i class="material-icons right"></i></a>
+            </li>
+            <li>
+              <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown3"><i
+                  class="fa fa-tasks fa-fw"></i> 하하하<i class="material-icons right"></i></a>
+            </li>
+            <li>
+              <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown2"><i
+                  class="fa fa-bell fa-fw"></i><span class="badge">10</span>알림<i class="material-icons right"></i></a>
+            </li>
+            <li>
+              <a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown1"><i
+                  class="fa fa-user fa-fw"></i>농장주<i class="material-icons right"></i></a>
+            </li>
+          </ul>
+          <div id="search-bar">
+            <div id="search-bar-bg">
+              <button id="search-btn" class="search-bar-btn">
+                <img src="img/search.png" />
+              </button>
+              <form action="#" method="post">
+                <input id="search-word" type="search" placeholder="검색어를 입력해보세요" />
+              </form>
+              <button id="close-btn" class="search-bar-btn">
+                <img src="img/close.png" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="nav_bot">
+          <div id="under-navbar" class="" role="navigation">
+            <ul>
+              <li class="active">
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보1<span class="after_tri active"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보2<span class="after_tri"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보3<span class="after_tri"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보4<span class="after_tri"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보5<span class="after_tri"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보6<span class="after_tri"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보7<span class="after_tri"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보8<span class="after_tri"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보9<span class="after_tri"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보10<span class="after_tri"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보11<span class="after_tri"></span>
+              </li>
+              <li>
+                <i class="fa fa-user fa-fw"></i><br />메뉴정보12<span class="after_tri"></span>
+              </li>
+            </ul>
+          </div>
+          <div id="sub-navbar">
+            <ul class="active">
+              <li><a class="sub-active" href="#">서브1</a></li>
+              <li><a href="#">서브1</a></li>
+              <li><a href="#">서브1</a></li>
+              <li><a href="#">서브1</a></li>
+              <li><a href="#">서브1</a></li>
+              <li><a href="#">서브1</a></li>
+              <li><a href="#">서브1</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브2</a></li>
+              <li><a href="#">서브2</a></li>
+              <li><a href="#">서브2</a></li>
+              <li><a href="#">서브2</a></li>
+              <li><a href="#">서브2</a></li>
+              <li><a href="#">서브2</a></li>
+              <li><a href="#">서브2</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브3</a></li>
+              <li><a href="#">서브3</a></li>
+              <li><a href="#">서브3</a></li>
+              <li><a href="#">서브3</a></li>
+              <li><a href="#">서브3</a></li>
+              <li><a href="#">서브3</a></li>
+              <li><a href="#">서브3</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브4</a></li>
+              <li><a href="#">서브4</a></li>
+              <li><a href="#">서브4</a></li>
+              <li><a href="#">서브4</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브5</a></li>
+              <li><a href="#">서브5</a></li>
+              <li><a href="#">서브5</a></li>
+              <li><a href="#">서브5</a></li>
+              <li><a href="#">서브5</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브6</a></li>
+              <li><a href="#">서브6</a></li>
+              <li><a href="#">서브6</a></li>
+              <li><a href="#">서브6</a></li>
+              <li><a href="#">서브6</a></li>
+              <li><a href="#">서브6</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브7</a></li>
+              <li><a href="#">서브7</a></li>
+              <li><a href="#">서브7</a></li>
+              <li><a href="#">서브7</a></li>
+              <li><a href="#">서브7</a></li>
+              <li><a href="#">서브7</a></li>
+              <li><a href="#">서브7</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브8</a></li>
+              <li><a href="#">서브8</a></li>
+              <li><a href="#">서브8</a></li>
+              <li><a href="#">서브8</a></li>
+              <li><a href="#">서브8</a></li>
+              <li><a href="#">서브8</a></li>
+              <li><a href="#">서브8</a></li>
+              <li><a href="#">서브8</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브9</a></li>
+              <li><a href="#">서브9</a></li>
+              <li><a href="#">서브9</a></li>
+              <li><a href="#">서브9</a></li>
+              <li><a href="#">서브9</a></li>
+              <li><a href="#">서브9</a></li>
+              <li><a href="#">서브9</a></li>
+              <li><a href="#">서브9</a></li>
+              <li><a href="#">서브9</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브10</a></li>
+              <li><a href="#">서브10</a></li>
+              <li><a href="#">서브10</a></li>
+              <li><a href="#">서브10</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브11</a></li>
+              <li><a href="#">서브11</a></li>
+            </ul>
+            <ul class="">
+              <li><a href="#">서브12</a></li>
+              <li><a href="#">서브12</a></li>
+              <li><a href="#">서브12</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Dropdown Structure -->
+      <ul id="dropdown1" class="dropdown-content">
+        <li>
+          <a href="#"><i class="fa fa-user fa-fw"></i>기초정보</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-gear fa-fw"></i>설정</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-sign-out fa-fw"></i>로그아웃</a>
+        </li>
+      </ul>
+    </article>
+    <!--/. NAV TOP  -->
+    <article id="wrapper-under">
+      <div class="left-side">
+        <nav class="navbar-default navbar-side" role="navigation">
+          <div class="sidebar-collapse">
+            <ul class="nav" id="main-menu">
+              <li class="subsub active">
+                <a href="#" class="waves-effect"><i class="fas fa-check-circle"></i>정기소독<span
+                    class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                  <li>
+                    <a href="#" class="prog1-active">
+                      <span></span>정기자가소독설정</a>
+                    <ul class="nav nav-third-level">
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="">
+                      <span></span>정기자가소독<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level ">
+                      <li class="prog2-active">
+                        <a href="#">1. 소독정보</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">2. 임상관찰</a><button>수정</button>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="">
+                      <span></span>정기위탁소독<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level ">
+                      <li class="prog2-active">
+                        <a href="#">1. 소독정보</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">2. 임상관찰</a><button>수정</button>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="subsub ">
+                <a href="#" class="waves-effect"><i class="fas fa-check-circle"></i>소독<span
+                    class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                  <li>
+                    <a href="#" class="prog1-active">
+                      <span></span>자가소독<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level collapse in" aria-expanded="true">
+                      <li class="prog2-active">
+                        <a href="#">1. 소독정보</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">2. 임상관찰</a><button>수정</button>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="">
+                      <span></span>위탁소독<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level ">
+                      <li class="prog2-active">
+                        <a href="#">1. 소독정보</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">2. 임상관찰</a><button>수정</button>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="subsub ">
+                <a href="#" class="waves-effect"><i class="fas fa-check-circle"></i>구서<span
+                    class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                  <li>
+                    <a href="#" class="prog1-active">
+                      <span></span>자가소독<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level collapse in" aria-expanded="true">
+                      <li class="prog2-active">
+                        <a href="#">1. 소독정보</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">2. 임상관찰</a><button>수정</button>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="">
+                      <span></span>위탁소독<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level ">
+                      <li class="prog2-active">
+                        <a href="#">1. 소독정보</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">2. 임상관찰</a><button>수정</button>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="subsub ">
+                <a href="#" class="waves-effect"><i class="fas fa-check-circle"></i>해충<span
+                    class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                  <li>
+                    <a href="#" class="prog1-active">
+                      <span></span>자가소독<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level collapse in" aria-expanded="true">
+                      <li class="prog2-active">
+                        <a href="#">1. 소독정보</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">2. 임상관찰</a><button>수정</button>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="">
+                      <span></span>위탁소독<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level ">
+                      <li class="prog2-active">
+                        <a href="#">1. 소독정보</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">2. 임상관찰</a><button>수정</button>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="subsub ">
+                <a href="#" class="waves-effect"><i class="fas fa-check-circle"></i>질병관리<span
+                    class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                  <li>
+                    <a href="#" class="prog1-active">
+                      <span></span>질병관찰<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level collapse in" aria-expanded="true">
+                      <li class="prog2-active">
+                        <a href="#">1. 관찰정보</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">2. 동물병원의뢰</a><button>수정</button>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- /. NAV SIDE  -->
+      <div id="page-wrapper">
+        <div id="page-inner">
+          <!-- /. ROW  -->
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 prog1 active">
+              <div class="row prog2 active">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                  <div class="top-card col-md-8">
+                    <div class="">
+                      <div class="inner-box">
+                        <form action="#">
+                          <div class="cardrow">
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">실시시각</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input type="text" class="time date-input" name="" value="" /><span><i class="far fa-clock"></i></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">소독책임자</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <select name="" id="">
+                                    <option value="">담당 책임직원 사수</option>
+                                    <option value="">담당 책임직원 부사수</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bot-card col-md-8">
+                    <div class="">
+                      <div class="">
+                        <form action="#">
+                          <!-- <div class="tabletop-btn">
+                            <button id="newbtn-certify-account" class="newbtn" onclick="return false"
+                              style="background-color: #223189; color: #fff;">소독약품조회</button>
+                            <button onclick="return false"><i class="fas fa-angle-double-left"></i></button>
+                          </div> -->
+                          <div class="tablerow">
+                            <table class="set-table w-100 plus_minus">
+                              <thead>
+                                <tr>
+                                  <th></th>
+                                  <th>실시자</th>
+                                  <th>실시장소</th>
+                                  <th>실시대상</th>
+                                  <th>실시방법</th>
+                                  <th>실시장비</th>
+                                  <th>약품사용</th>
+                                  <th>약품구분</th>
+                                  <th>약품명-제조사</th>
+                                  <th>
+                                    <div class="row-btn row-add" onclick="rowAdd(this)"></div>
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="">담당직원</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="">선택</option>
+                                      <option value="">1동</option>
+                                      <option value="">2동</option>
+                                      <option value="">~동</option>
+                                      <option value="">n동</option>
+                                      <option value="">계사외부</option>
+                                      <option value="">농장출입구</option>
+                                      <option value="">산란실</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="">선택</option>
+                                      <option value="">분뇨</option>
+                                      <option value="">바닥</option>
+                                      <option value="">동물몸체</option>
+                                      <option value="">발굽</option>
+                                      <option value="">깔짚</option>
+                                      <option value="">발판</option>
+                                      <option value="">기타</option>
+                                      <option value="">등등</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="">선택</option>
+                                      <option value="">분무</option>
+                                      <option value="">훈증</option>
+                                      <option value="">증기</option>
+                                      <option value="">물끓임</option>
+                                      <option value="">발효</option>
+                                      <option value="">자외선</option>
+                                      <option value="">기구 / 장치이용</option>
+                                      <option value="">기타</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="">선택</option>
+                                      <option value="">차량소독기</option>
+                                      <option value="">대인소독기</option>
+                                      <option value="">동력살분무기</option>
+                                      <option value="">초미립살포기</option>
+                                      <option value="">연막소독기</option>
+                                      <option value="">연무소독기</option>
+                                      <option value="">분무기</option>
+                                      <option value="">기타</option>
+                                    </select>
+                                  </td>
+                                  <td><input type="button" class="" value="약품조회"></td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="">선택</option>
+                                      <option value="">일반소독제</option>
+                                      <option value="">쥐약</option>
+                                      <option value="">해충약</option>
+                                    </select>
+                                  </td>
+                                  <td><input type="text" class="" value="다지워약-엄브렐러 / 지워져약-트라이셀 / 군대치약-군대"></td>
+                                  <td>
+                                    <div class="row-btn row-delete" onclick="rowDelete(this)"></div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="col-xs-12 col-sm-12 col-md-4 right-side">
+                <div class="row">
+                  <div class="col-xs-12">
+                      <div class="">
+                        <div class="inner-box">
+                          <form action="#">
+                            <div class="tabletop-btn">
+                              <button id="#" class="newbtn" onclick="return false" style="background-color: #223189; color: #fff;">신규등록</button>
+                              <button onclick="return false"><i class="fas fa-angle-double-left"></i></button>
+                              <button onclick="return false"><i class="fas fa-angle-left"></i></button>
+                              <button onclick="return false">1</button>
+                              <button onclick="return false">2</button>
+                              <button onclick="return false">3</button>
+                              <button onclick="return false"><i class="fas fa-angle-right"></i></button>
+                              <button onclick="return false"><i class="fas fa-angle-double-right"></i></button>
+                            </div>
+                            <div class="tablerow">
+                              <table>
+                                <thead>
+                                  <tr>
+                                    <th></th>
+                                    <th>등록일자</th>
+                                    <th>입고시각</th>
+                                    <th>제품명</th>
+                                    <th>제품명</th>
+                                    <th>제품명</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>
+                                      <span>2021-08-01</span>
+                                    </td>
+                                    <td>
+                                      <span>01:00:00</span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 prog1 ">
+              <div class="row prog2 active">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                  <div class="top-card col-md-8">
+                    <div class="">
+                      <div class="inner-box">
+                        <form action="#">
+                          <div class="cardrow">
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">실시일자</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input type="text" class="date date-input" name="" value="" /><span><i class="far fa-calendar-alt"></i></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">실시시각</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input type="text" class="time date-input" name="" value="" /><span><i class="far fa-clock"></i></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cardrow">
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">실시자</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <select name="" id="">
+                                    <option value="">담당직원</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cardrow">
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">실시장소</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input class="search-input" type="text" placeholder="실시장소 지정" value="" disabled>
+                                  <div class="btn-group">
+                                    <div class="chk-popup-btn">
+                                      <input type="button" class="input-btn" />
+                                      <i class="far fa-check-square"></i>
+                                    </div>
+                                    <div class="chk-popup">
+                                      <div class="chk-popup-cont">
+                                        <div class="form">
+                                          <div class="chk-box">
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp000" class="" />
+                                              <label for="chkp000">1동</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp00" class="" />
+                                              <label for="chkp00">2동</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp01" class="" />
+                                              <label for="chkp01">3동</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp02" class="" />
+                                              <label for="chkp02">~동</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp03" class="" />
+                                              <label for="chkp03">n동</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp04" class="" />
+                                              <label for="chkp04">농장출입구</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp05" class="" />
+                                              <label for="chkp05">계사외부</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp06" class="" />
+                                              <label for="chkp06">산란실</label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="chk-popup-footer">
+                                        <button onclick="return false">적용</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">실시대상</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input class="search-input" type="text" placeholder="실시대상 지정" value="" disabled>
+                                  <div class="btn-group">
+                                    <div class="chk-popup-btn">
+                                      <input type="button" class="input-btn" />
+                                      <i class="far fa-check-square"></i>
+                                    </div>
+                                    <div class="chk-popup">
+                                      <div class="chk-popup-cont">
+                                        <div class="form">
+                                          <div class="chk-box">
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp2000" class="" />
+                                              <label for="chkp2000">분뇨</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp200" class="" />
+                                              <label for="chkp200">바닥</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp201" class="" />
+                                              <label for="chkp201">동물몸체</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp202" class="" />
+                                              <label for="chkp202">발굽</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp203" class="" />
+                                              <label for="chkp203">깔짚</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp204" class="" />
+                                              <label for="chkp204">발판</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp205" class="" />
+                                              <label for="chkp205">등등</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp206" class="" />
+                                              <label for="chkp206">기타</label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="chk-popup-footer">
+                                        <button onclick="return false">적용</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cardrow">
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">실시방법</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input class="search-input" type="text" placeholder="실시방법 지정" value="" disabled>
+                                  <div class="btn-group">
+                                    <div class="chk-popup-btn">
+                                      <input type="button" class="input-btn" />
+                                      <i class="far fa-check-square"></i>
+                                    </div>
+                                    <div class="chk-popup">
+                                      <div class="chk-popup-cont">
+                                        <div class="form">
+                                          <div class="chk-box">
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp3000" class="" />
+                                              <label for="chkp3000">분무</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp300" class="" />
+                                              <label for="chkp300">훈증</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp301" class="" />
+                                              <label for="chkp301">증기</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp302" class="" />
+                                              <label for="chkp302">물끓임</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp303" class="" />
+                                              <label for="chkp303">발효</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp304" class="" />
+                                              <label for="chkp304">자외선</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp305" class="" />
+                                              <label for="chkp305">기구/장치이용</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp306" class="" />
+                                              <label for="chkp306">기타</label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="chk-popup-footer">
+                                        <button onclick="return false">적용</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">실시장비</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input class="search-input" type="text" placeholder="실시장비 지정" value="" disabled>
+                                  <div class="btn-group">
+                                    <div class="chk-popup-btn">
+                                      <input type="button" class="input-btn" />
+                                      <i class="far fa-check-square"></i>
+                                    </div>
+                                    <div class="chk-popup">
+                                      <div class="chk-popup-cont">
+                                        <div class="form">
+                                          <div class="chk-box">
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp4000" class="" />
+                                              <label for="chkp4000">차량소독기</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp400" class="" />
+                                              <label for="chkp400">대인소독기</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp401" class="" />
+                                              <label for="chkp401">동력살분무기</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp402" class="" />
+                                              <label for="chkp402">초미립살포기</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp403" class="" />
+                                              <label for="chkp403">연막소독기</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp404" class="" />
+                                              <label for="chkp404">연무소독기</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp405" class="" />
+                                              <label for="chkp405">분무기</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp406" class="" />
+                                              <label for="chkp406">기타</label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="chk-popup-footer">
+                                        <button onclick="return false">적용</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cardrow">
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">약품사용유무</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <fieldset class="radio-bg useORnot">
+                                    <div class="radio-group float-left" style="margin-right: 5px;">
+                                      <input type="radio" name="d1" value="미사용" id="d1_1" class="float-left" checked />
+                                      <label class="float-left" for="d1_1">미사용</label>
+                                    </div>
+                                    <div class="radio-group float-left">
+                                      <input type="radio" name="d1" value="사용" id="d1_2" class="float-left" />
+                                      <label class="float-left" for="d1_2">사용</label>
+                                    </div>
+                                  </fieldset>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bot-card col-md-8" style="display: none;">
+                    <div class="">
+                      <div class="">
+                        <form action="#">
+                          <div class="tabletop-btn">
+                            <button id="newbtn-certify-account" class="newbtn" onclick="return false"
+                              style="background-color: #223189; color: #fff;">소독약품재고조회</button>
+                            <!-- <button onclick="return false"><i class="fas fa-angle-double-left"></i></button> -->
+                          </div>
+                          <div class="tablerow">
+                            <table class="set-table w-100 plus_minus">
+                              <thead>
+                                <tr>
+                                  <th></th>
+                                  <th>약품종류</th>
+                                  <th>제품명</th>
+                                  <th>제조사</th>
+                                  <th>
+                                    <div class="row-btn row-add" onclick="rowAdd(this)"></div>
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="">선택</option>
+                                      <option value="">일반소독제</option>
+                                      <option value="">쥐약</option>
+                                      <option value="">해충약</option>
+                                    </select>
+                                  </td>
+                                  <td><input type="text" class=""></td>
+                                  <td><input type="text" class=""></td>
+                                  <td>
+                                    <div class="row-btn row-delete" onclick="rowDelete(this)"></div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row prog2 ">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                  <div class="top-card col-md-8">
+                    <div class="">
+                      <div class="inner-box">
+                        <form action="#">
+                          <h4>소독임상관찰</h4>
+                          <div class="set-box">
+                            <div class="cardrow">
+                              <div class="inputbox">
+                                <div class="col-25">
+                                  <label for="fname">임상관찰</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <select id="country" name="country">
+                                      <option>선택</option>
+                                      <option value="australia">이상없음</option>
+                                      <option value="australia">이상있음</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="inputbox">
+                                <div class="col-25">
+                                  <label for="fname">임상관찰조치</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <select id="country" name="country">
+                                      <option>선택</option>
+                                      <option value="australia">조치없음</option>
+                                      <option value="australia">조치있음</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bot-card col-md-8" style="display: none;">
+                    <div class="">
+                      <div class="">
+                        <form action="#">
+                          <h4>소독약품임상관찰</h4>
+                          <div class="tablerow">
+                            <table class="set-table w-100 ">
+                              <thead>
+                                <tr>
+                                  <th></th>
+                                  <th>약품종류</th>
+                                  <th>제품명</th>
+                                  <th>제조사</th>
+                                  <th>임상관찰</th>
+                                  <th>임상관찰조치</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="">선택</option>
+                                      <option value="">일반소독제</option>
+                                      <option value="">쥐약</option>
+                                      <option value="">해충약</option>
+                                    </select>
+                                  </td>
+                                  <td><input type="text" class=""></td>
+                                  <td><input type="text" class=""></td>
+                                  <td>
+                                    <select>
+                                      <option value="">이상없음</option>
+                                      <option value="">이상있음</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select>
+                                      <option value="">조치없음</option>
+                                      <option value="">조치있음</option>
+                                    </select>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-4 right-side">
+                <div class="row">
+                  <div class="col-xs-12">
+                      <div class="">
+                        <div class="inner-box">
+                          <form action="#">
+                            <div class="tabletop-btn">
+                              <button id="#" class="newbtn" onclick="return false" style="background-color: #223189; color: #fff;">신규등록</button>
+                              <button onclick="return false"><i class="fas fa-angle-double-left"></i></button>
+                              <button onclick="return false"><i class="fas fa-angle-left"></i></button>
+                              <button onclick="return false">1</button>
+                              <button onclick="return false">2</button>
+                              <button onclick="return false">3</button>
+                              <button onclick="return false"><i class="fas fa-angle-right"></i></button>
+                              <button onclick="return false"><i class="fas fa-angle-double-right"></i></button>
+                            </div>
+                            <div class="tablerow">
+                              <table>
+                                <thead>
+                                  <tr>
+                                    <th></th>
+                                    <th>등록일자</th>
+                                    <th>입고시각</th>
+                                    <th>제품명</th>
+                                    <th>제품명</th>
+                                    <th>제품명</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>
+                                      <span>2021-08-01</span>
+                                    </td>
+                                    <td>
+                                      <span>01:00:00</span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 prog1 ">
+              <div class="row prog2 active">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                  <div class="top-card col-md-8">
+                    <div class="">
+                      <div class="inner-box">
+                        <form action="#">
+                          <div class="cardrow">
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">실시일자</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input type="text" class="datetime date-input" name="" value="" /><span><i class="far fa-calendar-alt"></i></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">실시시각</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input type="text" class="time date-input" name="" value="" /><span><i class="far fa-clock"></i></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cardrow">
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">실시처</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input class="search-input" type="text" placeholder="" value="">
+                                  <div class="btn-group search-btn"><input type="button" class="input-btn " /><i class="fa fa-search"></i></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cardrow">
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">실시장소</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input class="search-input" type="text" placeholder="실시장소 지정" value="" disabled>
+                                  <div class="btn-group">
+                                    <div class="chk-popup-btn">
+                                      <input type="button" class="input-btn" />
+                                      <i class="far fa-check-square"></i>
+                                    </div>
+                                    <div class="chk-popup">
+                                      <div class="chk-popup-cont">
+                                        <div class="form">
+                                          <div class="chk-box">
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp000" class="" />
+                                              <label for="chkp000">1동</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp00" class="" />
+                                              <label for="chkp00">2동</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp01" class="" />
+                                              <label for="chkp01">3동</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp02" class="" />
+                                              <label for="chkp02">~동</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp03" class="" />
+                                              <label for="chkp03">n동</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp04" class="" />
+                                              <label for="chkp04">농장출입구</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp05" class="" />
+                                              <label for="chkp05">계사외부</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp06" class="" />
+                                              <label for="chkp06">산란실</label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="chk-popup-footer">
+                                        <button onclick="return false">적용</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">실시대상</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input class="search-input" type="text" placeholder="실시대상 지정" value="" disabled>
+                                  <div class="btn-group">
+                                    <div class="chk-popup-btn">
+                                      <input type="button" class="input-btn" />
+                                      <i class="far fa-check-square"></i>
+                                    </div>
+                                    <div class="chk-popup">
+                                      <div class="chk-popup-cont">
+                                        <div class="form">
+                                          <div class="chk-box">
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp2000" class="" />
+                                              <label for="chkp2000">분뇨</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp200" class="" />
+                                              <label for="chkp200">바닥</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp201" class="" />
+                                              <label for="chkp201">동물몸체</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp202" class="" />
+                                              <label for="chkp202">발굽</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp203" class="" />
+                                              <label for="chkp203">깔짚</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp204" class="" />
+                                              <label for="chkp204">발판</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp205" class="" />
+                                              <label for="chkp205">등등</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp206" class="" />
+                                              <label for="chkp206">기타</label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="chk-popup-footer">
+                                        <button onclick="return false">적용</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cardrow">
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">실시방법</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input class="search-input" type="text" placeholder="실시방법 지정" value="" disabled>
+                                  <div class="btn-group">
+                                    <div class="chk-popup-btn">
+                                      <input type="button" class="input-btn" />
+                                      <i class="far fa-check-square"></i>
+                                    </div>
+                                    <div class="chk-popup">
+                                      <div class="chk-popup-cont">
+                                        <div class="form">
+                                          <div class="chk-box">
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp3000" class="" />
+                                              <label for="chkp3000">분무</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp300" class="" />
+                                              <label for="chkp300">훈증</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp301" class="" />
+                                              <label for="chkp301">증기</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp302" class="" />
+                                              <label for="chkp302">물끓임</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp303" class="" />
+                                              <label for="chkp303">발효</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp304" class="" />
+                                              <label for="chkp304">자외선</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp305" class="" />
+                                              <label for="chkp305">기구/장치이용</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp306" class="" />
+                                              <label for="chkp306">기타</label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="chk-popup-footer">
+                                        <button onclick="return false">적용</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">실시장비</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input class="search-input" type="text" placeholder="실시장비 지정" value="" disabled>
+                                  <div class="btn-group">
+                                    <div class="chk-popup-btn">
+                                      <input type="button" class="input-btn" />
+                                      <i class="far fa-check-square"></i>
+                                    </div>
+                                    <div class="chk-popup">
+                                      <div class="chk-popup-cont">
+                                        <div class="form">
+                                          <div class="chk-box">
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp4000" class="" />
+                                              <label for="chkp4000">차량소독기</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp400" class="" />
+                                              <label for="chkp400">대인소독기</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp401" class="" />
+                                              <label for="chkp401">동력살분무기</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp402" class="" />
+                                              <label for="chkp402">초미립살포기</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp403" class="" />
+                                              <label for="chkp403">연막소독기</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp404" class="" />
+                                              <label for="chkp404">연무소독기</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp405" class="" />
+                                              <label for="chkp405">분무기</label>
+                                            </div>
+                                            <div class="chk-group">
+                                              <input type="checkbox" id="chkp406" class="" />
+                                              <label for="chkp406">기타</label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="chk-popup-footer">
+                                        <button onclick="return false">적용</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cardrow">
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">약품사용유무</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <fieldset class="radio-bg useORnot">
+                                    <div class="radio-group float-left" style="margin-right: 5px;">
+                                      <input type="radio" name="d2" value="미사용" id="d2_1" class="float-left" checked />
+                                      <label class="float-left" for="d2_1">미사용</label>
+                                    </div>
+                                    <div class="radio-group float-left">
+                                      <input type="radio" name="d2" value="사용" id="d2_2" class="float-left" />
+                                      <label class="float-left" for="d2_2">사용</label>
+                                    </div>
+                                  </fieldset>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">부가가치세</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <select name="" id="">
+                                    <option value="">부가세포함</option>
+                                    <option value="">부가세미포함</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cardrow">
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">외부비용</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input type="number" class="num-input" placeholder="" value=""><span>원</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">결제금액</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input type="number" class="num-input" placeholder="" value=""><span>원</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cardrow">
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">잔금</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input type="number" class="num-input" placeholder="" value=""><span>원</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">결제방법</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <select name="" id="">
+                                    <option value="">현금</option>
+                                    <option value="">카드결제</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bot-card col-md-8" style="display: none;">
+                    <div class="">
+                      <div class="">
+                        <form action="#">
+                          <div class="tabletop-btn">
+                            <button id="newbtn-certify-account" class="newbtn" onclick="return false"
+                              style="background-color: #223189; color: #fff;">소독약품정보조회</button>
+                            <!-- <button onclick="return false"><i class="fas fa-angle-double-left"></i></button> -->
+                          </div>
+                          <div class="tablerow">
+                            <table class="set-table w-100 plus_minus">
+                              <thead>
+                                <tr>
+                                  <th></th>
+                                  <th>약품종류</th>
+                                  <th>제품명</th>
+                                  <th>제조사</th>
+                                  <th>
+                                    <div class="row-btn row-add" onclick="rowAdd(this)"></div>
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="">선택</option>
+                                      <option value="">일반소독제</option>
+                                      <option value="">쥐약</option>
+                                      <option value="">해충약</option>
+                                    </select>
+                                  </td>
+                                  <td><input type="text" class=""></td>
+                                  <td><input type="text" class=""></td>
+                                  <td>
+                                    <div class="row-btn row-delete" onclick="rowDelete(this)"></div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row prog2">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                  <div class="top-card col-md-8">
+                    <div class="">
+                      <div class="inner-box">
+                        <form action="#">
+                          <h4>소독임상관찰</h4>
+                          <div class="set-box">
+                            <div class="cardrow">
+                              <div class="inputbox">
+                                <div class="col-25">
+                                  <label for="fname">임상관찰</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <select id="country" name="country">
+                                      <option>선택</option>
+                                      <option value="australia">이상없음</option>
+                                      <option value="australia">이상있음</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="inputbox">
+                                <div class="col-25">
+                                  <label for="fname">임상관찰조치</label>
+                                </div>
+                                <div class="col-75">
+                                  <div class="form">
+                                    <select id="country" name="country">
+                                      <option>선택</option>
+                                      <option value="australia">조치없음</option>
+                                      <option value="australia">조치있음</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bot-card col-md-8" style="display: none;">
+                    <div class="">
+                      <div class="">
+                        <form action="#">
+                          <h4>소독약품임상관찰</h4>
+                          <div class="tablerow">
+                            <table class="set-table w-100 ">
+                              <thead>
+                                <tr>
+                                  <th></th>
+                                  <th>약품종류</th>
+                                  <th>제품명</th>
+                                  <th>제조사</th>
+                                  <th>임상관찰</th>
+                                  <th>임상관찰조치</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="">선택</option>
+                                      <option value="">일반소독제</option>
+                                      <option value="">쥐약</option>
+                                      <option value="">해충약</option>
+                                    </select>
+                                  </td>
+                                  <td><input type="text" class=""></td>
+                                  <td><input type="text" class=""></td>
+                                  <td>
+                                    <select>
+                                      <option value="">이상없음</option>
+                                      <option value="">이상있음</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select>
+                                      <option value="">조치없음</option>
+                                      <option value="">조치있음</option>
+                                    </select>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-4 right-side">
+                <div class="row">
+                  <div class="col-xs-12">
+                      <div class="">
+                        <div class="inner-box">
+                          <form action="#">
+                            <div class="tabletop-btn">
+                              <button id="#" class="newbtn" onclick="return false" style="background-color: #223189; color: #fff;">신규등록</button>
+                              <button onclick="return false"><i class="fas fa-angle-double-left"></i></button>
+                              <button onclick="return false"><i class="fas fa-angle-left"></i></button>
+                              <button onclick="return false">1</button>
+                              <button onclick="return false">2</button>
+                              <button onclick="return false">3</button>
+                              <button onclick="return false"><i class="fas fa-angle-right"></i></button>
+                              <button onclick="return false"><i class="fas fa-angle-double-right"></i></button>
+                            </div>
+                            <div class="tablerow">
+                              <table>
+                                <thead>
+                                  <tr>
+                                    <th></th>
+                                    <th>등록일자</th>
+                                    <th>입고시각</th>
+                                    <th>제품명</th>
+                                    <th>제품명</th>
+                                    <th>제품명</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>
+                                      <span>2021-08-01</span>
+                                    </td>
+                                    <td>
+                                      <span>01:00:00</span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>
+                                      <span>2021-08-01</span>
+                                    </td>
+                                    <td>
+                                      <span>01:00:00</span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>
+                                      <span>2021-08-01</span>
+                                    </td>
+                                    <td>
+                                      <span>01:00:00</span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>
+                                      <span>2021-08-01</span>
+                                    </td>
+                                    <td>
+                                      <span>01:00:00</span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>
+                                      <span>2021-08-01</span>
+                                    </td>
+                                    <td>
+                                      <span>01:00:00</span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>
+                                      <span>2021-08-01</span>
+                                    </td>
+                                    <td>
+                                      <span>01:00:00</span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>
+                                      <span>2021-08-01</span>
+                                    </td>
+                                    <td>
+                                      <span>01:00:00</span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /. PAGE INNER  -->
+        </div>
+    </article>
+    <footer>
+      <div>
+        <div class="fbtn-group-left">
+          <button class="fprev">이전</button>
+          <button class="fafter">다음</button>
+          <button class="fsave">저장</button>
+          <button class="finit">초기화</button>
+        </div>
+        <div class="fbtn-group-right">
+          <button class="fpdf">PDF 다운로드</button>
+          <button class="fexcel excelDown">엑셀 다운로드</button>
+          <button class="fexcel excelUp">엑셀 업로드</button>
+        </div>
+      </div>
+    </footer>
+    <!-- /. PAGE WRAPPER  -->
+  </div>
+  <!-- /. WRAPPER  -->
+  <!-- JS Scripts-->
+  
+  <script>
+    $(".useORnot").on('change',function(){
+      var tango = $(this).children('div:first-of-type').children('input');
+      var tango1 = $(this).closest('.top-card').next('.bot-card');
+      var tango2 = $(this).closest('.prog2').next('.prog2').find('.bot-card');
+      if(tango.is(':checked')) {
+        tango1.hide();
+        tango2.hide();
+      } else {
+        tango1.show();
+        tango2.show();
+      }
+    })
+  </script>
+
+  <!-- Bootstrap Js -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="materialize/js/materialize.min.js"></script>
+
+  <!-- Metis Menu Js -->
+  <script src="js/jquery.metisMenu.js"></script>
+
+  <!-- Custom Js -->
+  <script src="js/custom-scripts.js"></script>
+  <script src="js/common.js"></script>
+</body>
+
+</html>

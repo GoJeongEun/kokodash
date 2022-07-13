@@ -1,0 +1,1164 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>약품사용</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!-- Bootstrap Styles-->
+  <link href="css/bootstrap.css" rel="stylesheet" />
+  <!-- FontAwesome Styles-->
+  <link href="css/font-awesome.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+
+  <!-- jQuery Js -->
+  <script src="js/jquery-1.10.2.js"></script>
+
+  <!-- 달력 -->
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> -->
+  <script type="text/javascript" src="calendar/moment.js"></script>
+  <script type="text/javascript" src="calendar/moment-with-locales.js"></script>
+  <script type="text/javascript" src="calendar/daterangepicker.js"></script>
+  <script type="text/javascript" src="calendar/moment.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="calendar/daterangepicker.css" />
+
+  <!-- Custom Styles-->
+  <link href="css/custom-styles.css" rel="stylesheet" />
+  <link href="css/form.css" rel="stylesheet" />
+  <link href="css/table.css" rel="stylesheet" />
+  <link href="css/popup.css" rel="stylesheet" />
+  <link href="css/media.css" rel="stylesheet" />
+  <!-- Google Fonts-->
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="wrapper">
+    <article id="wrapper-top">
+      <nav class="navbar navbar-default top-navbar" role="navigation">
+        <%- include ('top-navbar.html') %>
+      </nav>
+      <!-- Dropdown Structure -->
+      <ul id="dropdown1" class="dropdown-content">
+        <li>
+          <a href="#"><i class="fa fa-user fa-fw"></i>기초정보</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-gear fa-fw"></i>설정</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-sign-out fa-fw"></i>로그아웃</a>
+        </li>
+      </ul>
+    </article>
+    <!--/. NAV TOP  -->
+    <article id="wrapper-under">
+      <div class="left-side">
+        <nav class="navbar-default navbar-side" role="navigation">
+          <div class="sidebar-collapse">
+            <ul class="nav" id="main-menu">
+              <li class="subsub ">
+                <a href="#" class="waves-effect"><i class="fas fa-check-circle"></i>약품입고<span
+                    class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                  <li>
+                    <a href="#" class="prog1-active">
+                      <span></span>약품입고<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level collapse in" aria-expanded="true">
+                      <li class="prog2-active">
+                        <a href="#">1. 거래정보</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">2. 입고정보</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">3. 차량정보</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">4. 임상관찰</a><button>수정</button>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="subsub active">
+                <a href="#" class="waves-effect"><i class="fas fa-check-circle"></i>약품사용<span
+                    class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                  <li>
+                    <a href="#" class="prog1-active">
+                      <span></span>의약품사용<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level collapse in" aria-expanded="true">
+                      <li class="prog2-active">
+                        <a href="#">1. 사용정보</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">2. 임상관찰</a><button>수정</button>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="">
+                      <span></span>소독약품사용<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level ">
+                      <li class="prog2-active">
+                        <a href="#">1. 사용정보</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">2. 임상관찰</a><button>수정</button>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="subsub ">
+                <a href="#" class="waves-effect"><i class="fas fa-check-circle"></i>약품판매<span
+                    class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                  <li>
+                    <a href="#" class="prog1-active">
+                      <span></span>약품판매<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level collapse in" aria-expanded="true">
+                      <li class="prog2-active">
+                        <a href="#">1. 거래정보</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">2. 판매정보</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">3. 차량정보</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">4. 임상관찰</a><button>수정</button>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="subsub ">
+                <a href="#" class="waves-effect"><i class="fas fa-check-circle"></i>약품반품<span
+                    class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                  <li>
+                    <a href="#" class="prog1-active">
+                      <span></span>구매반품<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level collapse in" aria-expanded="true">
+                      <li class="prog2-active">
+                        <a href="#">1. 거래정보</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">2. 반품정보</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">3. 차량정보</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">4. 임상관찰</a><button>수정</button>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="">
+                      <span></span>판매회수<span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level ">
+                      <li class="prog2-active">
+                        <a href="#">1. 거래정보</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">2. 회수정보</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">3. 차량정보</a><button>수정</button>
+                      </li>
+                      <li class="">
+                        <a href="#">4. 임상관찰</a><button>수정</button>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="subsub ">
+                <a href="#" class="waves-effect"><i class="fas fa-check-circle"></i>약품폐기</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- /. NAV SIDE  -->
+      <div id="page-wrapper">
+        <div id="page-inner">
+          <!-- /. ROW  -->
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 prog1 active">
+              <div class="row prog2 active">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                  <div class="top-card col-md-8">
+                    <div class="">
+                      <div class="inner-box">
+                        <form action="#">
+                          <div class="cardrow">
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">사용일시</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input type="text" class="datetime date-input" name="" value="" /><span><i
+                                      class="far fa-calendar-alt"></i></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">사용장소</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <select name="" id="">
+                                    <option value="">선택</option>
+                                    <option value="">1동</option>
+                                    <option value="">n동</option>
+                                    <option value="">방사지</option>
+                                    <option value="">기타</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cardrow">
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">최종휴약기간</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input type="number" class="num-input" placeholder="" value="" disabled><span>일</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">최종휴약만료일</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input type="text" class="date date-input" name="" value="" disabled /><span><i
+                                      class="far fa-calendar-alt"></i></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cardrow">
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">외부약품반입</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <fieldset class="radio-bg ">
+                                    <div class="radio-group float-left" style="margin-right: 5px;">
+                                      <input type="radio" name="radio_1" value="미반입" id="radio_1_1" class="float-left"
+                                        checked />
+                                      <label class="float-left" for="radio_1_1">미반입</label>
+                                    </div>
+                                    <div class="radio-group float-left">
+                                      <input type="radio" name="radio_1" value="반입" id="radio_1_2" class="float-left" />
+                                      <label class="float-left" for="radio_1_2">반입</label>
+                                    </div>
+                                  </fieldset>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">외부비용</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input type="number" class="num-input" placeholder="" value="" disabled><span>원</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cardrow">
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">결제금액</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input type="number" class="num-input" placeholder="" value="" disabled><span>원</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">잔금</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input type="number" class="num-input" placeholder="" value="" disabled><span>원</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bot-card col-md-12">
+                    <div class="">
+                      <div class="">
+                        <form action="#">
+                          <div class="tabletop-btn">
+                            <button id="newbtn-certify-account" class="newbtn" onclick="return false"
+                              style="background-color: #223189; color: #fff;">신규등록</button>
+                            <!-- <button onclick="return false"><i class="fas fa-angle-double-left"></i></button> -->
+                          </div>
+                          <div class="tablerow">
+                            <table class="set-table w-100 plus_minus">
+                              <colgroup>
+                                <col width="40px">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="35px">
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th></th>
+                                  <th>약품종류</th>
+                                  <th>제품명</th>
+                                  <th>제조사</th>
+                                  <th>규격</th>
+                                  <th>사용량</th>
+                                  <th>단위</th>
+                                  <th>휴약기간</th>
+                                  <th>휴약만료일</th>
+                                  <th>사용목적</th>
+                                  <th>접종방법</th>
+                                  <th>주사침사용개수</th>
+                                  <th>주사침분실여부</th>
+                                  <th>
+                                    <div class="row-btn row-add" onclick="rowAdd(this)"></div>
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="">선택</option>
+                                      <option value="">백신</option>
+                                      <option value="">항균제</option>
+                                      <option value="">항생제</option>
+                                      <option value="">항균/항생제</option>
+                                      <option value="">면역강화제</option>
+                                      <option value="">영양제</option>
+                                      <option value="">면역강화/영양제</option>
+                                      <option value="">일반치료제</option>
+                                      <option value="">기타</option>
+                                    </select>
+                                  </td>
+                                  <td><input type="text" class=""></td>
+                                  <td><input type="text" class=""></td>
+                                  <td>
+                                    <select>
+                                      <option value="">선택</option>
+                                      <option value="">100mL</option>
+                                    </select>
+                                  </td>
+                                  <td><input type="number" placeholder=""></td>
+                                  <td>
+                                    <select>
+                                      <option value="">개</option>
+                                      <option value="">포</option>
+                                      <option value="">정</option>
+                                    </select>
+                                  </td>
+                                  <td><input type="number" placeholder=""></td>
+                                  <td><input type="text" class="date"></td>
+                                  <td>
+                                    <select>
+                                      <option value="">선택</option>
+                                      <option value="">질병예방</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select>
+                                      <option value="">선택</option>
+                                      <option value="">피하주사</option>
+                                      <option value="">분무</option>
+                                    </select>
+                                  </td>
+                                  <td><input type="number" placeholder=""></td>
+                                  <td>
+                                    <select>
+                                      <option value="">무</option>
+                                      <option value="">유</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <div class="row-btn row-delete" onclick="rowDelete(this)"></div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                              <tfoot>
+                                <tr>
+                                  <td>합계</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td class="tfoot-sum"><span>합계</span></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td class="tfoot-sum"><span>합계</span></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                              </tfoot>
+                            </table>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row prog2 ">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                  <div class="bot-card col-md-8">
+                    <div class="">
+                      <div class="">
+                        <form action="#">
+                          <div class="tablerow">
+                            <table class="set-table w-100 ">
+                              <colgroup>
+                                <col width="40px">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="8%">
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th></th>
+                                  <th>약품종류</th>
+                                  <th>제품명</th>
+                                  <th>제조사</th>
+                                  <th>규격</th>
+                                  <th>사용량</th>
+                                  <th>단위</th>
+                                  <th>휴약기간</th>
+                                  <th>휴약만료일</th>
+                                  <th>사용목적</th>
+                                  <th>접종방법</th>
+                                  <th>주사침사용개수</th>
+                                  <th>주사침분실여부</th>
+                                  <th>임상관찰</th>
+                                  <th>임상관찰조치</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="">선택</option>
+                                      <option value="">백신</option>
+                                      <option value="">항균제</option>
+                                      <option value="">항생제</option>
+                                      <option value="">항균/항생제</option>
+                                      <option value="">면역강화제</option>
+                                      <option value="">영양제</option>
+                                      <option value="">면역강화/영양제</option>
+                                      <option value="">일반치료제</option>
+                                      <option value="">기타</option>
+                                    </select>
+                                  </td>
+                                  <td><input type="text" class=""></td>
+                                  <td><input type="text" class=""></td>
+                                  <td>
+                                    <select>
+                                      <option value="">선택</option>
+                                      <option value="">100mL</option>
+                                    </select>
+                                  </td>
+                                  <td><input type="number" placeholder=""></td>
+                                  <td>
+                                    <select>
+                                      <option value="">개</option>
+                                      <option value="">포</option>
+                                      <option value="">정</option>
+                                    </select>
+                                  </td>
+                                  <td><input type="number" placeholder=""></td>
+                                  <td><input type="text" class="date"></td>
+                                  <td>
+                                    <select>
+                                      <option value="">선택</option>
+                                      <option value="">질병예방</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select>
+                                      <option value="">선택</option>
+                                      <option value="">피하주사</option>
+                                      <option value="">분무</option>
+                                    </select>
+                                  </td>
+                                  <td><input type="number" placeholder=""></td>
+                                  <td>
+                                    <select>
+                                      <option value="">무</option>
+                                      <option value="">유</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select>
+                                      <option value="">이상없음</option>
+                                      <option value="">이상있음</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select>
+                                      <option value="">조치없음</option>
+                                      <option value="">조치있음</option>
+                                    </select>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-4 right-side">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="">
+                      <div class="inner-box">
+                        <form action="#">
+                          <div class="tabletop-btn">
+                            <button id="#" class="newbtn" onclick="return false"
+                              style="background-color: #223189; color: #fff;">신규등록</button>
+                            <button onclick="return false"><i class="fas fa-angle-double-left"></i></button>
+                            <button onclick="return false"><i class="fas fa-angle-left"></i></button>
+                            <button onclick="return false">1</button>
+                            <button onclick="return false">2</button>
+                            <button onclick="return false">3</button>
+                            <button onclick="return false"><i class="fas fa-angle-right"></i></button>
+                            <button onclick="return false"><i class="fas fa-angle-double-right"></i></button>
+                          </div>
+                          <div class="tablerow">
+                            <table>
+                              <thead>
+                                <tr>
+                                  <th></th>
+                                  <th>등록일자</th>
+                                  <th>입고시각</th>
+                                  <th>제품명</th>
+                                  <th>제품명</th>
+                                  <th>제품명</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <span>2021-08-01</span>
+                                  </td>
+                                  <td>
+                                    <span>01:00:00</span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <span>2021-08-01</span>
+                                  </td>
+                                  <td>
+                                    <span>01:00:00</span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <span>2021-08-01</span>
+                                  </td>
+                                  <td>
+                                    <span>01:00:00</span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <span>2021-08-01</span>
+                                  </td>
+                                  <td>
+                                    <span>01:00:00</span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <span>2021-08-01</span>
+                                  </td>
+                                  <td>
+                                    <span>01:00:00</span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <span>2021-08-01</span>
+                                  </td>
+                                  <td>
+                                    <span>01:00:00</span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <span>2021-08-01</span>
+                                  </td>
+                                  <td>
+                                    <span>01:00:00</span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 prog1 ">
+              <div class="row prog2 active">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                  <div class="top-card col-md-8">
+                    <div class="">
+                      <div class="inner-box">
+                        <form action="#">
+                          <div class="cardrow">
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">사용일시</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input type="text" class="datetime date-input" name="" value="" /><span><i
+                                      class="far fa-calendar-alt"></i></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">사용장소</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <select name="" id="">
+                                    <option value="">선택</option>
+                                    <option value="">1동</option>
+                                    <option value="">n동</option>
+                                    <option value="">방사지</option>
+                                    <option value="">출입구 소독시설</option>
+                                    <option value="">기타</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cardrow">
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">외부약품반입</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <fieldset class="radio-bg ">
+                                    <div class="radio-group float-left" style="margin-right: 5px;">
+                                      <input type="radio" name="radio_1" value="미반입" id="radio_2_1" class="float-left"
+                                        checked />
+                                      <label class="float-left" for="radio_2_1">미반입</label>
+                                    </div>
+                                    <div class="radio-group float-left">
+                                      <input type="radio" name="radio_1" value="반입" id="radio_2_2" class="float-left" />
+                                      <label class="float-left" for="radio_2_2">반입</label>
+                                    </div>
+                                  </fieldset>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">외부비용</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input type="number" class="num-input" placeholder="" value="" disabled><span>원</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cardrow">
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">결제금액</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input type="number" class="num-input" placeholder="" value="" disabled><span>원</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="inputbox">
+                              <div class="col-25">
+                                <label for="fname">잔금</label>
+                              </div>
+                              <div class="col-75">
+                                <div class="form">
+                                  <input type="number" class="num-input" placeholder="" value="" disabled><span>원</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bot-card col-md-12">
+                    <div class="">
+                      <div class="">
+                        <form action="#">
+                          <div class="tabletop-btn">
+                            <button id="newbtn-certify-account" class="newbtn" onclick="return false"
+                              style="background-color: #223189; color: #fff;">소독약품재고조회</button>
+                            <!-- <button onclick="return false"><i class="fas fa-angle-double-left"></i></button> -->
+                          </div>
+                          <div class="tablerow">
+                            <table class="set-table w-100 plus_minus">
+                              <thead>
+                                <tr>
+                                  <th></th>
+                                  <th>약품종류</th>
+                                  <th>제품명</th>
+                                  <th>제조사</th>
+                                  <th>규격</th>
+                                  <th>사용량 &#40;L&#41;</th>
+                                  <th>물희석량 &#40;L&#41;</th>
+                                  <th>
+                                    <div class="row-btn row-add" onclick="rowAdd(this)"></div>
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="">선택</option>
+                                      <option value="">일반소독제</option>
+                                      <option value="">구서</option>
+                                      <option value="">해충</option>
+                                      <option value="">기타</option>
+                                    </select>
+                                  </td>
+                                  <td><input type="text" class=""></td>
+                                  <td><input type="text" class=""></td>
+                                  <td>
+                                    <select>
+                                      <option value="">선택</option>
+                                      <option value="">100mL</option>
+                                    </select>
+                                  </td>
+                                  <td><input type="number" placeholder=""></td>
+                                  <td><input type="number" placeholder=""></td>
+                                  <td>
+                                    <div class="row-btn row-delete" onclick="rowDelete(this)"></div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                              <tfoot>
+                                <tr>
+                                  <td>합계</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td class="tfoot-sum"><span>합계</span></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                              </tfoot>
+                            </table>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row prog2">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                  <div class="bot-card col-md-8">
+                    <div class="">
+                      <div class="">
+                        <form action="#">
+                          <div class="tablerow">
+                            <table class="set-table w-100 ">
+                              <thead>
+                                <tr>
+                                  <th></th>
+                                  <th>약품종류</th>
+                                  <th>제품명</th>
+                                  <th>제조사</th>
+                                  <th>규격</th>
+                                  <th>사용량 &#40;L&#41;</th>
+                                  <th>물희석량 &#40;L&#41;</th>
+                                  <th>임상관찰</th>
+                                  <th>임상관찰조치</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <select name="" id="">
+                                      <option value="">선택</option>
+                                      <option value="">일반소독제</option>
+                                      <option value="">구서</option>
+                                      <option value="">해충</option>
+                                      <option value="">기타</option>
+                                    </select>
+                                  </td>
+                                  <td><input type="text" class=""></td>
+                                  <td><input type="text" class=""></td>
+                                  <td>
+                                    <select>
+                                      <option value="">선택</option>
+                                      <option value="">100mL</option>
+                                    </select>
+                                  </td>
+                                  <td><input type="number" placeholder=""></td>
+                                  <td><input type="number" placeholder=""></td>
+                                  <td>
+                                    <select>
+                                      <option value="">이상없음</option>
+                                      <option value="">이상있음</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select>
+                                      <option value="">조치없음</option>
+                                      <option value="">조치있음</option>
+                                    </select>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-4 right-side">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="">
+                      <div class="inner-box">
+                        <form action="#">
+                          <div class="tabletop-btn">
+                            <button id="#" class="newbtn" onclick="return false"
+                              style="background-color: #223189; color: #fff;">신규등록</button>
+                            <button onclick="return false"><i class="fas fa-angle-double-left"></i></button>
+                            <button onclick="return false"><i class="fas fa-angle-left"></i></button>
+                            <button onclick="return false">1</button>
+                            <button onclick="return false">2</button>
+                            <button onclick="return false">3</button>
+                            <button onclick="return false"><i class="fas fa-angle-right"></i></button>
+                            <button onclick="return false"><i class="fas fa-angle-double-right"></i></button>
+                          </div>
+                          <div class="tablerow">
+                            <table>
+                              <thead>
+                                <tr>
+                                  <th></th>
+                                  <th>등록일자</th>
+                                  <th>입고시각</th>
+                                  <th>제품명</th>
+                                  <th>제품명</th>
+                                  <th>제품명</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <span>2021-08-01</span>
+                                  </td>
+                                  <td>
+                                    <span>01:00:00</span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <span>2021-08-01</span>
+                                  </td>
+                                  <td>
+                                    <span>01:00:00</span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <span>2021-08-01</span>
+                                  </td>
+                                  <td>
+                                    <span>01:00:00</span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <span>2021-08-01</span>
+                                  </td>
+                                  <td>
+                                    <span>01:00:00</span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <span>2021-08-01</span>
+                                  </td>
+                                  <td>
+                                    <span>01:00:00</span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <span>2021-08-01</span>
+                                  </td>
+                                  <td>
+                                    <span>01:00:00</span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <span>2021-08-01</span>
+                                  </td>
+                                  <td>
+                                    <span>01:00:00</span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                  <td>
+                                    <span></span>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /. PAGE INNER  -->
+        </div>
+    </article>
+    <footer>
+      <div>
+        <div class="fbtn-group-left">
+          <button class="fprev">이전</button>
+          <button class="fafter">다음</button>
+          <button class="fsave">저장</button>
+          <button class="finit">초기화</button>
+        </div>
+        <div class="fbtn-group-right">
+          <button class="fpdf">PDF 다운로드</button>
+          <button class="fexcel excelDown">엑셀 다운로드</button>
+          <button class="fexcel excelUp">엑셀 업로드</button>
+        </div>
+      </div>
+    </footer>
+    <!-- /. PAGE WRAPPER  -->
+  </div>
+  <!-- /. WRAPPER  -->
+  <!-- JS Scripts-->
+
+  <!-- Bootstrap Js -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="materialize/js/materialize.min.js"></script>
+
+  <!-- Metis Menu Js -->
+  <script src="js/jquery.metisMenu.js"></script>
+  <script src="js/mj_js.js"></script>
+  <!-- Custom Js -->
+  <script src="js/custom-scripts.js"></script>
+  <script src="js/common.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+/*창고 css */
+.mainConinner {
+    display: flex;
+    flex-wrap: wrap;
+}
+.Boxcustom {
+    margin-right: 1%;
+}
+.warehouse {
+    display: flex;
+    width: 100%;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+.wareText h4{
+    font-weight: bold;
+    color: #505050;
+}
+.wareItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wareItemText {
+    width: 73%;
+    margin: 0 auto
+}
+.wareItemText h4 {
+    font-weight: 500;
+}
+.wareItemBox {
+    background: rgba(235, 242, 255, 0.6);
+    width: 45%;
+    border-radius: 15px;
+    margin-bottom: 4%;
+}
+.wareIcon img{
+    width: 20px;
+    height: 20px;
+    vertical-align: sub;
+}
+.wareArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.3rem 0;
+}
+.wareItemleft {
+    float: left;
+    padding-bottom: 1rem;
+}
+.elliptic_B {
+    background:#EBF2FF;
+    border-radius: 50%;
+    width: 105px;
+    height: 105px;
+    display: flex;
+    align-items: center;
+}
+.elliptic_B > .elliptic_W {
+    margin: 0 auto;
+}
+.elliptic_W {
+    background: white;
+    z-index: 1;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.wareItemright {
+    padding: 1rem;
+}
+.wareItemright h4 {
+    color: #505050;
+    font-weight: 500;
+    margin: 0;
+}
+.wareItemright p {
+    margin: 0;
+    font-weight: 700;
+}
+.wareItemright .bold {
+    font-weight: bold;
+    font-size: 2rem;
+}
+.wareItemright .bold.hot {
+    color: #FF0000;
+}
+.wareItemright .bold.cold {
+    color: #1672EC;
+}
+.imgContainer {
+    position: absolute;
+    margin-top: 26px;
+    margin-left: 29px;
+}
+.imgContainer.W{
+    margin-left: 35px ;
+}
+.twohouse {
+    margin-top: 1%;
+    width: 100%;
+}
+.twohouse .wareItemBox {
+    width: 80%;
+}
+.twohouse .wareArea li {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,41 @@
+.middle_title::before {
+    content: '';
+    width: 27px;
+    height: 27px;
+    background-image: url(/icon/gpIcon.png);
+    position: absolute;
+    background-size: 25px;
+    background-repeat: no-repeat;
+}
+li.middle_title p {
+    margin-left: 35px;
+}
+#HHchart, #HDchart {
+    max-width: 260px;
+    max-height: 260px;
+}
+
+.chartItem {
+    display: flex;
+    width: 32.6666666%;
+    justify-content: space-around;
+}
+.chartBox > li:not(:last-child) {
+    margin-right: 1%;
+}
+.mainConBox {
+    margin-top: 20px;
+}
+.tabContainer {
+    justify-content: space-between;
+}
+.tabTitle h4 {
+    font-weight: bold;
+}
+.gpConBox {
+    margin-top: 20px;
+    width: 49.444444%;
+}
+.gpConBox:nth-child(odd) {
+    margin-right: 1%;
+}

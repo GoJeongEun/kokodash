@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Bootstrap Styles-->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+     <!-- Custom Styles-->
+     <link href="css/custom-styles.css" rel="stylesheet" />
+     <link href="css/common.css" rel="stylesheet" />
+     <link href="css/Farmstatus.css" rel="stylesheet" />
+     <link href="css/Farmdong.css" rel="stylesheet" />
+     <!-- script -->
+     <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Google Fonts-->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- slider js -->
+    <script type="text/javascript" src="js/slider.js"></script>
+    <!-- Slick Plugin -->
+    <link rel="stylesheet" type="text/css" href="plugin/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="plugin/slick/slick-theme.css" />
+    <script type="text/javascript" src="plugin/slick/slick.js"></script>    
+    <!-- Chart js cdn-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>꼬꼬 대시보드</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <article id="wrapper-top">
+            <nav class="navbar navbar-default top-navbar" role="navigation">
+                <%- include ('top-navbar.html') %>
+            </nav>
+        </article>
+        <article id="middle header">
+            <div class="middlenav">
+                <ul class="middle inner">
+                    <li class="middle_title">
+                        <p>한밭농장 1동(사육관리)</p>
+                    </li>
+                    <li class="middle_caption">
+                        <select id="farm">
+                            <option value="한밭농장">전체농장</option>
+                            <option value="한밭농장">한밭농장</option>
+                            <option value="아리농장">아리농장</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+        </article>
+                <div class="mainCon">
+                    <div class="mainConinner row">
+                        <div class="left row">
+                            <div class="topDongbox">
+                                <ul class="topDong">
+                                    <li class="topDongItem">
+                                        <div class="topDongicon">
+                                            <a href="">
+                                                <img src="icon/chicken.png" alt="none">     
+                                            </a>
+                                        </div>
+                                        <div class="topDongT">
+                                            <p class="font-B">176Day(27주)</p>
+                                            <p class="font-g">60,000/59,853</p>
+                                        </div>
+                                    </li>
+                                    <li class="topDongItem">
+                                        <div class="topDongicon">
+                                            <a href="#">
+                                                <img src="icon/chickV1.png" alt="none">     
+                                            </a>
+                                        </div>
+                                        <div class="topDongT">
+                                            <p class="font-B">70Day(10주)</p>
+                                            <p class="font-g">50,000/48,900</p>
+                                        </div>
+                                    </li>
+                                    <li class="topDongItem">
+                                        <div class="topDongicon">
+                                            <a href="#">
+                                                 <img src="icon/chick.png" alt="none">     
+                                             </a>
+                                        </div>
+                                        <div class="topDongT">
+                                            <p class="font-B">10Day(2주)</p>
+                                            <p class="font-g">50,000/49,998</p>
+                                        </div>
+                                    </li>
+                                    <li class="topDongItem">
+                                        <div class="topDongicon">
+                                            <a href="#">
+                                                <img src="icon/rooster.png" alt="none">     
+                                            </a>    
+                                        </div>
+                                        <div class="topDongT">
+                                            <p class="font-B">365Day(52주)</p>
+                                            <p class="font-g">50,000/48,600</p>
+                                        </div>
+                                    </li>
+                                    <li class="topDongItem">
+                                        <div class="topDongicon">
+                                            <a href="#">
+                                                 <img src="icon/chicken.png" alt="none">     
+                                            </a>
+                                        </div>
+                                        <div class="topDongT">
+                                            <p class="font-B">342Day(48주)</p>
+                                            <p class="font-g">60,000/59,800</p>
+                                        </div>
+                                    </li>
+                                    <li class="topDongItem">
+                                        <div class="topDongicon">
+                                            <a href="#" >
+                                                <img src="icon/chicken.png" alt="none">     
+                                            </a>
+                                        </div>
+                                        <div class="topDongT">
+                                            <p class="font-B">365Day(52주)</p>
+                                            <p class="font-g">50,000/49,730</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="chickenProfile col-lg-3 Boxcustom w30">
+                                   <div class="chickenImg">
+                                       <img src="img/chicken.png" alt="치킨프로필">
+                                   </div>
+                                   <div class="chickenTitle">
+                                       <p>이력 1-210302-000001</p>
+                                       <p>하이라인브라운</p>
+                                       <p>27주 176일령</p>
+                                       <p>한밭농장 | 1동</p>
+                                       <p>입추수수 60,000</p>
+                                   </div>
+                            </div>
+                            <div class="chartBox Boxcustom col-lg-3 w22" id="chickenBox" >
+                                <div class="chart-00">
+                                    <canvas id="dongChart"></canvas>
+                                </div>
+                            </div>   
+                            <div class="chartBox Boxcustom col-lg-4 w22">
+                                <div class="chart-00">
+                                    <canvas id="survivalChart"></canvas>
+                                </div>
+                            </div>
+                            <div class="chartBox Boxcustom col-lg-4 w30" style="height: 180px; margin-right: 0;">
+                                <div class="chart-00">
+                                   <canvas id="spawnChart"></canvas>
+                                </div>
+                            </div>
+                            <div class="dongConBox col-lg-12 Boxcustom">
+                                <ul class="borderC">
+                                    <li class="border">
+                                        <div class="blue"></div>
+                                    </li>
+                                    <li class="border-item">
+                                        <div class="Circle"></div>
+                                        <div class="CircleT">
+                                            <p>부화일</p>
+                                            <p>21.08.23</p>
+                                        </div>
+                                    </li>
+                                    <li class="border-item">
+                                        <div class="Circle"></div>
+                                        <div class="CircleT">
+                                            <p>입추일</p>
+                                            <p>21.11.20</p>
+                                        </div>
+                                    </li>
+                                    <li class="border-item">
+                                        <div class="Circle"></div>
+                                        <div class="CircleT">
+                                            <p>초산일령</p>
+                                            <p>21.12.20</p>
+                                        </div>
+                                    </li>
+                                    <li class="border-item">
+                                        <div class="Circle"></div>
+                                        <div class="CircleT">
+                                            <p>산란피크</p>
+                                            <p>22.01.20</p>
+                                        </div>
+                                    </li>
+                                    <li class="border-item">
+                                        <div class="Circle"></div>
+                                        <div class="CircleT">
+                                            <p>현재</p>
+                                            <p>27주(176일령)</p>
+                                        </div>
+                                    </li>
+                                    <li class="border-item">
+                                        <div class="Circle"></div>
+                                        <div class="CircleT">
+                                            <p>출하예정일</p>
+                                            <p>22.12.25</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="ArrowC">
+                                    <li class="ArrowItem">
+                                        <div class="square">
+                                            <div class="squareT">
+                                                <p>1. 어린병아리</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="ArrowItem">
+                                        <div class="square">
+                                            <div class="squareT">
+                                                <p>2. 중 병아리</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="ArrowItem">
+                                        <div class="square">
+                                            <div class="squareT">
+                                                <p>3. 큰 병아리</p>
+                                                <span class="triG"></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="ArrowItem">
+                                        <div class="square active">
+                                            <div class="squareT">
+                                                <p>4. 산란 전기</p>
+                                                <span class="triB"></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="ArrowItem">
+                                        <div class="square">
+                                            <div class="squareT">
+                                                <p>5. 산란 후기</p>
+                                                <span class="triG"></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </div>
+                         </div>
+                         <div class="dayTabBox">
+                            <ul class="dayTab">
+                                <li class="dayTabItem active">
+                                    <a href="#">7일</a>
+                                </li>
+                                <li class="dayTabItem">
+                                    <a href="#">14일</a>
+                                </li>
+                                <li class="dayTabItem">
+                                    <a href="#">30일</a>
+                                </li>
+                            </ul>
+                         </div>
+                         <div class="farmdongTableC col-lg-12 Boxcustom">
+                            <div class="tabContainer">
+                                <li class="tabBox">
+                                    <div class="tabItem active">
+                                        <a href="#">사육</a>
+                                    </div>
+                                    <div class="tabItem">
+                                        <a href="#">생산(산란)</a>
+                                    </div>
+                                    <div class="tabItem">
+                                        <a href="#">사료</a>
+                                    </div>
+                                    <div class="tabItem">
+                                        <a href="#">약품</a>
+                                    </div>
+                                    <div class="tabItem">
+                                        <a href="#">환경</a>
+                                    </div>
+                                    <div class="tabItem">
+                                        <a href="#">인공지능분석</a>
+                                    </div>
+                                </li>
+                                <div class="tabImgBox">
+                                    <ul class="tabImg">
+                                        <li class="tabImgItem">
+                                            <a href="#" alt="테이블">
+                                                <img src="icon/tableIcon_B.png" alt="">
+                                            </a>
+                                        </li>
+                                        <li class="tabImgItem">
+                                            <a href="#" alt="차트">
+                                                <img src="icon/chartIcon.png" alt="">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tableC">
+                                <div class="chart48 col-lg-6 Boxcustom">
+                                    <canvas id="dieoutChart"></canvas>
+                                </div>
+                                <div class="chart48 col-lg-6 Boxcustom">
+                                    <canvas id="WeightChart"></canvas>
+                                </div>
+                                <div class="chart48 col-lg-6 Boxcustom">
+                                    <canvas id="feedChart"></canvas>
+                                </div>
+                                <div class="chart48 col-lg-6 Boxcustom">
+                                    <canvas id="waterChart"></canvas>
+                                </div>
+                                <div class="chart48 col-lg-6 Boxcustom">
+                                    <canvas id="temperatureChart"></canvas>
+                                </div>
+                                <div class="chart48 col-lg-6 Boxcustom">
+                                    <canvas id="humidityChart"></canvas>
+                                </div>
+                            </div>
+                         </div>
+                        </div>
+                       <div class="right">
+                            <div class="eventSlide">
+                                <ul class="eventCard slider">
+                                    <li class="eventItem ">
+                                        <div class="eventIcon">
+                                            <img src="icon/Thermometer.png" alt="온도계" style="width: 25px; margin-left: 1rem;">
+                                        </div>
+                                        <div class="eventT">
+                                            <p class="font-B">적정 온도 22°C</p>
+                                            <p class="font-g">현재 온도 <span style="color: #1672Ec;">24.6°C</span></p>
+                                        </div>
+                                    </li>
+                                    <li class="eventItem">
+                                        <div class="eventIcon">
+                                            <img src="icon/Humidity.png" alt="습도">
+                                        </div>
+                                        <div class="eventT">
+                                            <p class="font-B">적정 습도 50%</p>
+                                            <p class="font-g">현재 습도 55%</span></p>
+                                        </div>
+                                    </li>
+                                    <li class="eventItem">
+                                        <div class="eventIcon">
+                                            <img src="icon/sun.png" alt="조도">
+                                        </div>
+                                        <div class="eventT">
+                                            <p class="font-B">적정 조도 45lux</p>
+                                            <p class="font-g">현재 조도 <span style="color: #1672Ec;">25lux</span></p>
+                                        </div>
+                                    </li>
+                                    <li class="eventItem">
+                                        <div class="eventIcon">
+                                            <img src="icon/nh3.png" alt="암모니아" style="width: 36px;margin-left: 0.5rem;">
+                                        </div>
+                                        <div class="eventT">
+                                            <p class="font-B">적정 수치 45ppm</p>
+                                            <p class="font-g">현재 수치 <span style="color: #ED9526;">47ppm</span></p>
+                                        </div>
+                                    </li>
+                                    <li class="eventItem">
+                                        <div class="eventIcon">
+                                            <img src="icon/co2.png" alt="이산화탄소">
+                                        </div>
+                                        <div class="eventT">
+                                            <p class="font-B">적정 수치 24ppm</p>
+                                            <p class="font-g">현재 수치 <span style="color: #DA100B;">52ppm</span></p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- <div class="newCalendar col-lg-7 Boxcustom">
+                                <div id="container" class="calendar-container"></div>
+                            </div> -->
+                            <div class="newCalendarTwo col-lg-7 Boxcustom">
+                                <div class="newCalendarT">
+                                    <span>
+                                        <img src="icon/Date_today.png" alt="달력아이콘">
+                                    </span>
+                                    <span class="Ctitle">Calendar</span>
+                                    <span><i class="fas fa-chevron-right"></i></span>
+                                </div>
+                                <div class="CalendarTable">
+                                    <div class="TableTopTitle">
+                                        <span><strong>02월16일,</strong>수요일</span>
+                                    </div>
+                                    <table>
+                                        <thead>
+                                            <td>일</td>
+                                            <td>월</td>
+                                            <td>화</td>
+                                            <td>수</td>
+                                            <td>목</td>
+                                            <td>금</td>
+                                            <td>토</td>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><div class="day">13</div></td>
+                                                <td><div class="day">14</div></td>
+                                                <td><div class="day">15</div></td>
+                                                <td><div class="day">16</div></td>
+                                                <td><div class="day">17</div></td>
+                                                <td><div class="day">18</div></td>
+                                                <td><div class="day">19</div></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="ScheduleBox">
+                                        <ul class="Schedule">
+                                            <li class="ScheduleItem">
+                                                <div class="ScheduleT">
+                                                    <div class="StitleL">
+                                                        <p class="font-B">2동 사육장 청소</p>
+                                                        <div>
+                                                            <input type="checkbox" id="Scustom01">
+                                                            <label for="Scustom01"></label>    
+                                                            <p class="font-g" id="inputcustom01">농장 내 이벤트</p>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="StitleR">
+                                                        <div class="ScheduleC"> 
+                                                            <p class="font-g">12:30</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="ScheduleT">
+                                                    <div class="StitleL">
+                                                        <p class="font-B">꼬꼬농장 미팅</p>
+                                                        <div>
+                                                            <input type="checkbox" id="Scustom02">
+                                                            <label for="Scustom02"></label>
+                                                            <p class="font-g">농장 내 이벤트</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="StitleR">
+                                                        <div class="ScheduleC"> 
+                                                            <p class="font-g">14:30</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                       </div> 
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Metis Menu Js -->
+    <script src="js/jquery.metisMenu.js"></script>
+    <!-- Custom Js -->
+    <script src="js/custom-scripts.js"></script>
+    <script src="js/mj_js.js"></script>
+     <!-- chart.js -->
+     <script type="text/javascript" src="js/chart01.js"></script>
+</body>
+<script>
+//setTimeout(function(){window.location.href="/traceabiltty"}, 6000)</script>
+</html>

@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kokobot</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- Bootstrap Styles-->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+
+    <!-- jQuery Js -->
+    <script src="js/jquery-1.10.2.js"></script>
+
+    <!-- 달력 -->
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> -->
+    <script type="text/javascript" src="calendar/moment.js"></script>
+    <script type="text/javascript" src="calendar/moment-with-locales.js"></script>
+    <script type="text/javascript" src="calendar/daterangepicker.js"></script>
+    <script type="text/javascript" src="calendar/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="calendar/daterangepicker.css" />
+
+    <!-- 숫자키패드 -->
+    <link href="css/num_keypad.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/num_keypad.js"></script>
+
+    <!-- Custom Styles-->
+    <link href="css/custom-styles.css" rel="stylesheet" />
+    <link href="css/form.css" rel="stylesheet" />
+    <link href="css/table.css" rel="stylesheet" />
+    <link href="css/media.css" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <article id="wrapper-top">
+            <nav class="navbar navbar-default top-navbar" role="navigation">
+                <%- include ('top-navbar.html') %>
+            </nav>
+            <!-- Dropdown Structure -->
+            <ul id="dropdown1" class="dropdown-content">
+                <li>
+                    <a href="#"><i class="fa fa-user fa-fw"></i>기초정보</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-gear fa-fw"></i>설정</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-sign-out fa-fw"></i>로그아웃</a>
+                </li>
+            </ul>
+        </article>
+        <!--/. NAV TOP  -->
+        <article id="wrapper-under">
+            <div class="left-side">
+                <nav class="navbar-default navbar-side" role="navigation">
+                    <div class="sidebar-collapse">
+                        <ul class="nav" id="main-menu">
+                            <li class="active">
+                                <a href="#" class="prog1-active" class="waves-effect waves-dark"><i
+                                        class="fas fa-check-circle"></i>교육</a>
+                                <ul class="nav nav-second-level"></ul>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect"><i class="fas fa-check-circle"></i>회의</a>
+                                <ul class="nav nav-second-level"></ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!-- /. NAV SIDE  -->
+            <div id="page-wrapper">
+                <div id="page-inner">
+                    <!-- /. ROW  -->
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 prog1 active">
+                            <div class="row prog2 active">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="top-card col-md-8">
+                                        <div class="">
+                                            <div class="inner-box">
+                                                <form action="#">
+                                                    <div class="cardrow">
+                                                        <div class="inputleft">
+                                                            <div class="col-25">
+                                                                <label for="fname">교육일시</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <input type="text" class="date date-input" name=""
+                                                                        value="" />
+                                                                    <span><i class="far fa-calendar-alt"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="inputright">
+                                                            <div class="col-25">
+                                                                <label for="fname">교육시간</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <input type="number" class="num-input" placeholder="" value=""><span>시간</span>
+                                                                  </div>                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cardrow">                                                        
+                                                        <div class="inputleft ">
+                                                            <div class="col-25">
+                                                                <label for="fname">교육구분</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <fieldset class="radio-bg">
+                                                                        <div class="radio-group float-left">
+                                                                            <input type="radio" name="radio_2"
+                                                                                value="내부교육" id="radio_2_1"
+                                                                                class="float-left" checked />
+                                                                            <label class="float-left"
+                                                                                for="radio_2_1">내부교육</label>
+                                                                        </div>
+                                                                        <div class="radio-group float-left">
+                                                                            <input type="radio" name="radio_2"
+                                                                                value="외부교육" id="radio_2_2"
+                                                                                class="float-left" />
+                                                                            <label class="float-left"
+                                                                                for="radio_2_2">외부교육</label>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="inputright">
+                                                            <div class="col-25">
+                                                                <label for="fname">교육기관</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <input class="search-input" type="text"
+                                                                        placeholder="" value="">
+                                                                    <div class="btn-group"><input type="button"
+                                                                            class="input-btn" /><i
+                                                                            class="fa fa-search"></i></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cardrow">
+                                                        <div class="inputleft">
+                                                            <div class="col-25">
+                                                                <label for="fname">교육자</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <input type="text" placeholder="" value="" />
+                                                                </div>
+                                                            </div>
+                                                        </div>                                                        
+                                                        <div class="inputright">
+                                                            <div class="col-25">
+                                                                <label for="fname">교육장소</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <input class="search-input" type="text"
+                                                                        placeholder="" value="">
+                                                                    <div class="btn-group"><input type="button"
+                                                                            class="input-btn" /><i
+                                                                            class="fa fa-search"></i></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cardrow">                                                        
+                                                        <div class="">
+                                                            <div class="col-125">
+                                                              <label for="fname">교육대상</label>
+                                                            </div>
+                                                            <div class="col-175">
+                                                              <div class="form">
+                                                                <div class="chk-box txt-small">
+                                                                  <div class="chk-group">
+                                                                    <input type="checkbox" id="chk00" class="" />
+                                                                    <label for="chk00">HACCP팀장</label>
+                                                                  </div>
+                                                                  <div class="chk-group">
+                                                                    <input type="checkbox" id="chk01" class="" />
+                                                                    <label for="chk01">대표</label>
+                                                                  </div>
+                                                                  <div class="chk-group">
+                                                                    <input type="checkbox" id="chk02" class="" />
+                                                                    <label for="chk02">테스트1</label>
+                                                                  </div>
+                                                                  <div class="chk-group">
+                                                                    <input type="checkbox" id="chk03" class="" />
+                                                                    <label for="chk03">테스트2</label>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-card col-md-8">
+                                        <div class="">
+                                            <div class="inner-box">
+                                                <form action="#">
+                                                    <div class="cardrow">
+                                                        <div class="">
+                                                            <div class="col-125">
+                                                                <label for="fname">교육제목</label>
+                                                            </div>
+                                                            <div class="col-175">
+                                                                <div class="form">
+                                                                    <input type="text" placeholder="" value="" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cardrow">
+                                                        <div class="">
+                                                            <div class="col-125">
+                                                                <label for="fname">교육내용</label>
+                                                            </div>
+                                                            <div class="col-175">
+                                                                <div class="form">
+                                                                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div> 
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-card col-md-8">
+                                        <div class="">
+                                            <div class="inner-box">
+                                                <form action="#">
+                                                    <div class="cardrow">
+                                                        <div class="inputleft">
+                                                            <div class="col-25">
+                                                                <label for="fname">집중도</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <fieldset class="radio-bg">
+                                                                        <div class="radio-group float-left">
+                                                                            <input type="radio" name="radio_3"
+                                                                                value="좋음" id="radio_3_1"
+                                                                                class="float-left" checked />
+                                                                            <label class="float-left"
+                                                                                for="radio_3_1">좋음</label>
+                                                                        </div>
+                                                                        <div class="radio-group float-left">
+                                                                            <input type="radio" name="radio_3"
+                                                                                value="보통" id="radio_3_2"
+                                                                                class="float-left" />
+                                                                            <label class="float-left"
+                                                                                for="radio_3_2">보통</label>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="inputright">
+                                                            <div class="col-25">
+                                                                <label for="fname">이해도</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <fieldset class="radio-bg">
+                                                                        <div class="radio-group float-left">
+                                                                            <input type="radio" name="radio_4"
+                                                                                value="좋음" id="radio_4_1"
+                                                                                class="float-left" checked />
+                                                                            <label class="float-left"
+                                                                                for="radio_4_1">좋음</label>
+                                                                        </div>
+                                                                        <div class="radio-group float-left">
+                                                                            <input type="radio" name="radio_4"
+                                                                                value="보통" id="radio_4_2"
+                                                                                class="float-left" />
+                                                                            <label class="float-left"
+                                                                                for="radio_4_2">보통</label>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cardrow">
+                                                        <div class="inputleft">
+                                                            <div class="col-25">
+                                                                <label for="fname">반영도</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <fieldset class="radio-bg">
+                                                                        <div class="radio-group float-left">
+                                                                            <input type="radio" name="radio_5"
+                                                                                value="좋음" id="radio_5_1"
+                                                                                class="float-left" checked />
+                                                                            <label class="float-left"
+                                                                                for="radio_5_1">좋음</label>
+                                                                        </div>
+                                                                        <div class="radio-group float-left">
+                                                                            <input type="radio" name="radio_5"
+                                                                                value="보통" id="radio_5_2"
+                                                                                class="float-left" />
+                                                                            <label class="float-left"
+                                                                                for="radio_5_2">보통</label>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="inputright">
+                                                            <div class="col-25">
+                                                                <label for="fname">개선조치</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <fieldset class="radio-bg">
+                                                                        <div class="radio-group float-left">
+                                                                            <input type="radio" name="radio_6"
+                                                                                value="좋음" id="radio_6_1"
+                                                                                class="float-left" checked />
+                                                                            <label class="float-left"
+                                                                                for="radio_6_1">좋음</label>
+                                                                        </div>
+                                                                        <div class="radio-group float-left">
+                                                                            <input type="radio" name="radio_6"
+                                                                                value="보통" id="radio_6_2"
+                                                                                class="float-left" />
+                                                                            <label class="float-left"
+                                                                                for="radio_6_2">보통</label>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cardrow">
+                                                        <div class="">
+                                                            <div class="col-125">
+                                                                <label for="fname">교육후 결과</label>
+                                                            </div>
+                                                            <div class="col-175">
+                                                                <div class="form">
+                                                                    <input type="text" placeholder="" value="" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cardrow">
+                                                        <div class="">
+                                                            <div class="col-125">
+                                                                <label for="fname">개선조치</label>
+                                                            </div>
+                                                            <div class="col-175">
+                                                                <div class="form">
+                                                                    <input type="text" placeholder="" value="" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cardrow">
+                                                        <div class="">
+                                                            <div class="col-125">
+                                                                <label for="fname">비고</label>
+                                                            </div>
+                                                            <div class="col-175">
+                                                                <div class="form">
+                                                                    <input type="text" placeholder="" value="" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-4 right-side">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="">
+                                            <div class="inner-box">
+                                                <form action="#">
+                                                    <div class="tabletop-btn">
+                                                        <button id="newbtn-certify-account" class="newbtn"
+                                                            onclick="return false"
+                                                            style="background-color: #223189; color: #fff;">계란출하</button>
+                                                        <button onclick="return false"><i
+                                                                class="fas fa-angle-double-left"></i></button>
+                                                        <button onclick="return false"><i
+                                                                class="fas fa-angle-left"></i></button>
+                                                        <button onclick="return false">1</button>
+                                                        <button onclick="return false">2</button>
+                                                        <button onclick="return false">3</button>
+                                                        <button onclick="return false"><i
+                                                                class="fas fa-angle-right"></i></button>
+                                                        <button onclick="return false"><i
+                                                                class="fas fa-angle-double-right"></i></button>
+                                                    </div>
+                                                    <div class="tablerow">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>0</th>
+                                                                    <th>등록일자</th>
+                                                                    <th>입고시각</th>
+                                                                    <th>제품명</th>
+                                                                    <th>제품명</th>
+                                                                    <th>제품명</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>1</td>
+                                                                    <td>
+                                                                        <span>2021-08-01</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span>01:00:00</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span></span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span></span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span></span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 prog1">
+                            <div class="row prog2 active ">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="top-card col-md-8">
+                                        <div class="">
+                                            <div class="search-box">
+                                                <form action="#">
+                                                    <div class="cardrow">
+                                                        <div class="">
+                                                            <div class="col-125">
+                                                                <label for="fname"
+                                                                    style="position: static; transform: none; margin-top: 13px;">교정
+                                                                    현황</label>
+                                                            </div>
+                                                            <div class="col-175">
+                                                                <div class="form">
+                                                                    <div class="chk-box chk-box-auto">
+                                                                        <div class="chk-group">
+                                                                            <input type="checkbox" id="chk0" class=""
+                                                                                checked />
+                                                                            <label for="chk0">완료</label>
+                                                                        </div>
+                                                                        <div class="chk-group">
+                                                                            <input type="checkbox" id="chk1" class=""
+                                                                                checked />
+                                                                            <label for="chk1">미완료</label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="search-box-btn">
+                                                        <button><i class="fa fa-search"></i> 조회</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--/.row-->
+                    </div>
+                    <footer>
+                        <div class="fbtn-group">
+                            <button class="fpdf">PDF출력</button>
+                            <button class="fexcel">엑셀 다운로드</button>
+                            <button class="fexcel">엑셀 업로드</button>
+                            <button class="finit">초기화</button>
+                            <button class="fsave">저장</button>
+                        </div>
+                    </footer>
+                </div>
+                <!-- /. PAGE INNER  -->
+            </div>
+        </article>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+
+    <!-- Bootstrap Js -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="materialize/js/materialize.min.js"></script>
+
+    <!-- Metis Menu Js -->
+    <script src="js/jquery.metisMenu.js"></script>
+
+    <!-- Custom Js -->
+    <script src="js/custom-scripts.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>
+=======
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kokobot</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- Bootstrap Styles-->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+
+    <!-- jQuery Js -->
+    <script src="js/jquery-1.10.2.js"></script>
+
+    <!-- 달력 -->
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> -->
+    <script type="text/javascript" src="calendar/moment.js"></script>
+    <script type="text/javascript" src="calendar/moment-with-locales.js"></script>
+    <script type="text/javascript" src="calendar/daterangepicker.js"></script>
+    <script type="text/javascript" src="calendar/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="calendar/daterangepicker.css" />
+
+    <!-- 숫자키패드 -->
+    <link href="css/num_keypad.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/num_keypad.js"></script>
+
+    <!-- Custom Styles-->
+    <link href="css/custom-styles.css" rel="stylesheet" />
+    <link href="css/form.css" rel="stylesheet" />
+    <link href="css/table.css" rel="stylesheet" />
+    <link href="css/media.css" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <article id="wrapper-top">
+            <nav class="navbar navbar-default top-navbar" role="navigation">
+                <%- include ('top-navbar.html') %>
+            </nav>
+            <!-- Dropdown Structure -->
+            <ul id="dropdown1" class="dropdown-content">
+                <li>
+                    <a href="#"><i class="fa fa-user fa-fw"></i>기초정보</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-gear fa-fw"></i>설정</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-sign-out fa-fw"></i>로그아웃</a>
+                </li>
+            </ul>
+        </article>
+        <!--/. NAV TOP  -->
+        <article id="wrapper-under">
+            <div class="left-side">
+                <nav class="navbar-default navbar-side" role="navigation">
+                    <div class="sidebar-collapse">
+                        <ul class="nav" id="main-menu">
+                            <li class="active">
+                                <a href="Z_farm_edu1_edu" class="prog1-active" class="waves-effect waves-dark"><i
+                                        class="fas fa-check-circle"></i>교육</a>
+                                <ul class="nav nav-second-level"></ul>
+                            </li>
+                            <li>
+                                <a href="Z_farm_edu2_meet" class="waves-effect"><i class="fas fa-check-circle"></i>회의</a>
+                                <ul class="nav nav-second-level"></ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!-- /. NAV SIDE  -->
+            <div id="page-wrapper">
+                <div id="page-inner">
+                    <!-- /. ROW  -->
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 prog1 active">
+                            <div class="row prog2 active">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="top-card col-md-8">
+                                        <div class="">
+                                            <div class="inner-box">
+                                                <form action="#">
+                                                    <div class="cardrow">
+                                                        <div class="inputleft">
+                                                            <div class="col-25">
+                                                                <label for="fname">교육일시</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <input type="text" class="date date-input" name=""
+                                                                        value="" />
+                                                                    <span><i class="far fa-calendar-alt"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="inputright">
+                                                            <div class="col-25">
+                                                                <label for="fname">교육시간</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <input type="number" class="num-input" placeholder="" value=""><span>시간</span>
+                                                                  </div>                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cardrow">                                                        
+                                                        <div class="inputleft ">
+                                                            <div class="col-25">
+                                                                <label for="fname">교육구분</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <fieldset class="radio-bg">
+                                                                        <div class="radio-group float-left">
+                                                                            <input type="radio" name="radio_2"
+                                                                                value="내부교육" id="radio_2_1"
+                                                                                class="float-left" checked />
+                                                                            <label class="float-left"
+                                                                                for="radio_2_1">내부교육</label>
+                                                                        </div>
+                                                                        <div class="radio-group float-left">
+                                                                            <input type="radio" name="radio_2"
+                                                                                value="외부교육" id="radio_2_2"
+                                                                                class="float-left" />
+                                                                            <label class="float-left"
+                                                                                for="radio_2_2">외부교육</label>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="inputright">
+                                                            <div class="col-25">
+                                                                <label for="fname">교육기관</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <input class="search-input" type="text"
+                                                                        placeholder="" value="">
+                                                                    <div class="btn-group"><input type="button"
+                                                                            class="input-btn" /><i
+                                                                            class="fa fa-search"></i></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cardrow">
+                                                        <div class="inputleft">
+                                                            <div class="col-25">
+                                                                <label for="fname">교육자</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <input type="text" placeholder="" value="" />
+                                                                </div>
+                                                            </div>
+                                                        </div>                                                        
+                                                        <div class="inputright">
+                                                            <div class="col-25">
+                                                                <label for="fname">교육장소</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <input class="search-input" type="text"
+                                                                        placeholder="" value="">
+                                                                    <div class="btn-group"><input type="button"
+                                                                            class="input-btn" /><i
+                                                                            class="fa fa-search"></i></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cardrow">                                                        
+                                                        <div class="">
+                                                            <div class="col-125">
+                                                              <label for="fname">교육대상</label>
+                                                            </div>
+                                                            <div class="col-175">
+                                                              <div class="form">
+                                                                <div class="chk-box txt-small">
+                                                                  <div class="chk-group">
+                                                                    <input type="checkbox" id="chk00" class="" />
+                                                                    <label for="chk00">HACCP팀장</label>
+                                                                  </div>
+                                                                  <div class="chk-group">
+                                                                    <input type="checkbox" id="chk01" class="" />
+                                                                    <label for="chk01">대표</label>
+                                                                  </div>
+                                                                  <div class="chk-group">
+                                                                    <input type="checkbox" id="chk02" class="" />
+                                                                    <label for="chk02">테스트1</label>
+                                                                  </div>
+                                                                  <div class="chk-group">
+                                                                    <input type="checkbox" id="chk03" class="" />
+                                                                    <label for="chk03">테스트2</label>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-card col-md-8">
+                                        <div class="">
+                                            <div class="inner-box">
+                                                <form action="#">
+                                                    <div class="cardrow">
+                                                        <div class="">
+                                                            <div class="col-125">
+                                                                <label for="fname">교육제목</label>
+                                                            </div>
+                                                            <div class="col-175">
+                                                                <div class="form">
+                                                                    <input type="text" placeholder="" value="" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cardrow">
+                                                        <div class="">
+                                                            <div class="col-125">
+                                                                <label for="fname">교육내용</label>
+                                                            </div>
+                                                            <div class="col-175">
+                                                                <div class="form">
+                                                                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div> 
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-card col-md-8">
+                                        <div class="">
+                                            <div class="inner-box">
+                                                <form action="#">
+                                                    <div class="cardrow">
+                                                        <div class="inputleft">
+                                                            <div class="col-25">
+                                                                <label for="fname">집중도</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <fieldset class="radio-bg">
+                                                                        <div class="radio-group float-left">
+                                                                            <input type="radio" name="radio_3"
+                                                                                value="좋음" id="radio_3_1"
+                                                                                class="float-left" checked />
+                                                                            <label class="float-left"
+                                                                                for="radio_3_1">좋음</label>
+                                                                        </div>
+                                                                        <div class="radio-group float-left">
+                                                                            <input type="radio" name="radio_3"
+                                                                                value="보통" id="radio_3_2"
+                                                                                class="float-left" />
+                                                                            <label class="float-left"
+                                                                                for="radio_3_2">보통</label>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="inputright">
+                                                            <div class="col-25">
+                                                                <label for="fname">이해도</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <fieldset class="radio-bg">
+                                                                        <div class="radio-group float-left">
+                                                                            <input type="radio" name="radio_4"
+                                                                                value="좋음" id="radio_4_1"
+                                                                                class="float-left" checked />
+                                                                            <label class="float-left"
+                                                                                for="radio_4_1">좋음</label>
+                                                                        </div>
+                                                                        <div class="radio-group float-left">
+                                                                            <input type="radio" name="radio_4"
+                                                                                value="보통" id="radio_4_2"
+                                                                                class="float-left" />
+                                                                            <label class="float-left"
+                                                                                for="radio_4_2">보통</label>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cardrow">
+                                                        <div class="inputleft">
+                                                            <div class="col-25">
+                                                                <label for="fname">반영도</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <fieldset class="radio-bg">
+                                                                        <div class="radio-group float-left">
+                                                                            <input type="radio" name="radio_5"
+                                                                                value="좋음" id="radio_5_1"
+                                                                                class="float-left" checked />
+                                                                            <label class="float-left"
+                                                                                for="radio_5_1">좋음</label>
+                                                                        </div>
+                                                                        <div class="radio-group float-left">
+                                                                            <input type="radio" name="radio_5"
+                                                                                value="보통" id="radio_5_2"
+                                                                                class="float-left" />
+                                                                            <label class="float-left"
+                                                                                for="radio_5_2">보통</label>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="inputright">
+                                                            <div class="col-25">
+                                                                <label for="fname">개선조치</label>
+                                                            </div>
+                                                            <div class="col-75">
+                                                                <div class="form">
+                                                                    <fieldset class="radio-bg">
+                                                                        <div class="radio-group float-left">
+                                                                            <input type="radio" name="radio_6"
+                                                                                value="좋음" id="radio_6_1"
+                                                                                class="float-left" checked />
+                                                                            <label class="float-left"
+                                                                                for="radio_6_1">좋음</label>
+                                                                        </div>
+                                                                        <div class="radio-group float-left">
+                                                                            <input type="radio" name="radio_6"
+                                                                                value="보통" id="radio_6_2"
+                                                                                class="float-left" />
+                                                                            <label class="float-left"
+                                                                                for="radio_6_2">보통</label>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cardrow">
+                                                        <div class="">
+                                                            <div class="col-125">
+                                                                <label for="fname">교육후 결과</label>
+                                                            </div>
+                                                            <div class="col-175">
+                                                                <div class="form">
+                                                                    <input type="text" placeholder="" value="" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cardrow">
+                                                        <div class="">
+                                                            <div class="col-125">
+                                                                <label for="fname">개선조치</label>
+                                                            </div>
+                                                            <div class="col-175">
+                                                                <div class="form">
+                                                                    <input type="text" placeholder="" value="" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cardrow">
+                                                        <div class="">
+                                                            <div class="col-125">
+                                                                <label for="fname">비고</label>
+                                                            </div>
+                                                            <div class="col-175">
+                                                                <div class="form">
+                                                                    <input type="text" placeholder="" value="" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-4 right-side">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="">
+                                            <div class="inner-box">
+                                                <form action="#">
+                                                    <div class="tabletop-btn">
+                                                        <button id="newbtn-certify-account" class="newbtn"
+                                                            onclick="return false"
+                                                            style="background-color: #223189; color: #fff;">계란출하</button>
+                                                        <button onclick="return false"><i
+                                                                class="fas fa-angle-double-left"></i></button>
+                                                        <button onclick="return false"><i
+                                                                class="fas fa-angle-left"></i></button>
+                                                        <button onclick="return false">1</button>
+                                                        <button onclick="return false">2</button>
+                                                        <button onclick="return false">3</button>
+                                                        <button onclick="return false"><i
+                                                                class="fas fa-angle-right"></i></button>
+                                                        <button onclick="return false"><i
+                                                                class="fas fa-angle-double-right"></i></button>
+                                                    </div>
+                                                    <div class="tablerow">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>0</th>
+                                                                    <th>등록일자</th>
+                                                                    <th>입고시각</th>
+                                                                    <th>제품명</th>
+                                                                    <th>제품명</th>
+                                                                    <th>제품명</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>1</td>
+                                                                    <td>
+                                                                        <span>2021-08-01</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span>01:00:00</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span></span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span></span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span></span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 prog1">
+                            <div class="row prog2 active ">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="top-card col-md-8">
+                                        <div class="">
+                                            <div class="search-box">
+                                                <form action="#">
+                                                    <div class="cardrow">
+                                                        <div class="">
+                                                            <div class="col-125">
+                                                                <label for="fname"
+                                                                    style="position: static; transform: none; margin-top: 13px;">교정
+                                                                    현황</label>
+                                                            </div>
+                                                            <div class="col-175">
+                                                                <div class="form">
+                                                                    <div class="chk-box chk-box-auto">
+                                                                        <div class="chk-group">
+                                                                            <input type="checkbox" id="chk0" class=""
+                                                                                checked />
+                                                                            <label for="chk0">완료</label>
+                                                                        </div>
+                                                                        <div class="chk-group">
+                                                                            <input type="checkbox" id="chk1" class=""
+                                                                                checked />
+                                                                            <label for="chk1">미완료</label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="search-box-btn">
+                                                        <button><i class="fa fa-search"></i> 조회</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--/.row-->
+                    </div>
+                    <footer>
+                        <div class="fbtn-group">
+                            <button class="fpdf">PDF출력</button>
+                            <button class="fexcel">엑셀 다운로드</button>
+                            <button class="fexcel">엑셀 업로드</button>
+                            <button class="finit">초기화</button>
+                            <button class="fsave">저장</button>
+                        </div>
+                    </footer>
+                </div>
+                <!-- /. PAGE INNER  -->
+            </div>
+        </article>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+
+    <!-- Bootstrap Js -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="materialize/js/materialize.min.js"></script>
+
+    <!-- Metis Menu Js -->
+    <script src="js/jquery.metisMenu.js"></script>
+    <script src="js/mj_js.js"></script>
+    <!-- Custom Js -->
+    <script src="js/custom-scripts.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>
+>>>>>>> .theirs
